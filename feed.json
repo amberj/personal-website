@@ -13,7 +13,7 @@
             "id": "https://amberj.github.io/personal-website/my-current-llm-workflow.html",
             "url": "https://amberj.github.io/personal-website/my-current-llm-workflow.html",
             "title": "My current LLM workflow",
-            "summary": "Current paid plans Lovable Claude Pro (to be used in Claude Desktop and Claude Code) OpenRouter Apps I use PWA: Google AI Studio (to use paid models like Gemini 2.5 Pro for free) Mac app: Claude Desktop Claude Code MCPs I’m using MCPs: MCP-esque integrations:&hellip;",
+            "summary": "Current paid plans Lovable Claude Pro (to be used in Claude Desktop and Claude Code) OpenRouter Apps I use PWA:&hellip;",
             "content_html": "<h2 id=\"current-paid-plans\">Current paid plans</h2>\n<ul>\n<li>Lovable</li>\n<li>Claude Pro (to be used in Claude Desktop and Claude Code)</li>\n<li>OpenRouter</li>\n</ul>\n<h2 id=\"apps-i-use\">Apps I use</h2>\n<ul>\n<li>PWA: Google AI Studio (to use paid models like <code>Gemini 2.5 Pro</code> for free)</li>\n<li>Mac app: Claude Desktop</li>\n<li>Claude Code</li>\n</ul>\n<h2 id=\"mcps-im-using\">MCPs I’m using</h2>\n<p>MCPs:</p><ul>\n<li>BrowserMCP.io</li>\n</ul>\n<p>MCP-esque integrations:</p><ul>\n<li>Google Drive native integration in Claude Desktop</li>\n</ul>\n",
             "author": {
                 "name": "Amber Jain"
@@ -27,7 +27,7 @@
             "id": "https://amberj.github.io/personal-website/ssh-clients-on-android.html",
             "url": "https://amberj.github.io/personal-website/ssh-clients-on-android.html",
             "title": "SSH clients on Android",
-            "summary": "Comparison My Requirements JuiceSSH Termius Termux PortX Allow saved snippet execution with click Yes (Paid) Yes (??) ?? No MOSH support Yes Yes (??) Sync saved servers across devices Yes (Paid) Yes (??) Price Free/License free?? Run ARM version of linux commands/apps Conclusion The development&hellip;",
+            "summary": "Comparison My Requirements JuiceSSH Termius Termux PortX Allow saved snippet execution with click Yes (Paid) Yes (??) ?? No MOSH&hellip;",
             "content_html": "<h2 id=\"comparison\">Comparison</h2>\n<table>\n<thead>\n<tr>\n<th>My Requirements</th>\n<th>JuiceSSH</th>\n<th>Termius</th>\n<th>Termux</th>\n<th>PortX</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Allow saved snippet execution with click</td>\n<td>Yes (Paid)</td>\n<td>Yes (??)</td>\n<td>??</td>\n<td>No</td>\n</tr>\n<tr>\n<td>MOSH support</td>\n<td>Yes</td>\n<td>Yes (??)</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Sync saved servers across devices</td>\n<td>Yes (Paid)</td>\n<td>Yes (??)</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Price</td>\n<td>Free/License</td>\n<td>free??</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Run ARM version of linux commands/apps</td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n</tbody></table>\n<h2 id=\"conclusion\">Conclusion</h2>\n<ul>\n<li>The development on jubes SSH has stopped now.</li>\n</ul>\n",
             "author": {
                 "name": "Amber Jain"
