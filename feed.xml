@@ -3,7 +3,7 @@
     <title>Amber Jain&#x27;s Journal</title>
     <link href="https://amberj.github.io/personal-website/feed.xml" rel="self" />
     <link href="https://amberj.github.io/personal-website" />
-    <updated>2025-07-09T18:23:06+05:30</updated>
+    <updated>2025-07-09T19:10:21+05:30</updated>
     <author>
         <name>Amber Jain</name>
     </author>
@@ -36,6 +36,7 @@
 <li>PWA: Google AI Studio (to use paid models like <code>Gemini 2.5 Pro</code> for free)</li>
 <li>Mac app: Claude Desktop</li>
 <li>Claude Code</li>
+<li><a href="https://github.com/nbonamy/witsy">Witsy</a> - Allows me to quickly make OpenRouter requests for any model and shows raw request/response in it’s <em>Debug Console</em></li>
 </ul>
 <h2 id="mcps-im-using">MCPs I’m using</h2>
 <p>MCPs:</p><ul>
