@@ -3,12 +3,51 @@
     <title>Amber Jain&#x27;s Journal</title>
     <link href="https://amberj.github.io/personal-website/feed.xml" rel="self" />
     <link href="https://amberj.github.io/personal-website" />
-    <updated>2025-07-09T17:33:01+05:30</updated>
+    <updated>2025-07-09T18:23:06+05:30</updated>
     <author>
         <name>Amber Jain</name>
     </author>
     <id>https://amberj.github.io/personal-website</id>
 
+    <entry>
+        <title>My current LLM workflow</title>
+        <author>
+            <name>Amber Jain</name>
+        </author>
+        <link href="https://amberj.github.io/personal-website/my-current-llm-workflow.html"/>
+        <id>https://amberj.github.io/personal-website/my-current-llm-workflow.html</id>
+
+        <updated>2025-07-09T18:22:23+05:30</updated>
+            <summary>
+                <![CDATA[
+                    Current paid plans Lovable Claude Pro (to be used in Claude Desktop and Claude Code) OpenRouter Apps I use PWA: Google AI Studio (to use paid models like Gemini 2.5 Pro for free) Mac app: Claude Desktop Claude Code MCPs I’m using MCPs: MCP-esque integrations:&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2 id="current-paid-plans">Current paid plans</h2>
+<ul>
+<li>Lovable</li>
+<li>Claude Pro (to be used in Claude Desktop and Claude Code)</li>
+<li>OpenRouter</li>
+</ul>
+<h2 id="apps-i-use">Apps I use</h2>
+<ul>
+<li>PWA: Google AI Studio (to use paid models like <code>Gemini 2.5 Pro</code> for free)</li>
+<li>Mac app: Claude Desktop</li>
+<li>Claude Code</li>
+</ul>
+<h2 id="mcps-im-using">MCPs I’m using</h2>
+<p>MCPs:</p><ul>
+<li>BrowserMCP.io</li>
+</ul>
+<p>MCP-esque integrations:</p><ul>
+<li>Google Drive native integration in Claude Desktop</li>
+</ul>
+
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>SSH clients on Android</title>
         <author>
