@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://amberj.github.io/personal-website/sitemap.xml

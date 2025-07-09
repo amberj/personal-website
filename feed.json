@@ -1,0 +1,27 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Journal",
+    "description": "",
+    "home_page_url": "https://amberj.github.io/personal-website",
+    "feed_url": "https://amberj.github.io/personal-website/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "Amber Jain"
+    },
+    "items": [
+        {
+            "id": "https://amberj.github.io/personal-website/test.html",
+            "url": "https://amberj.github.io/personal-website/test.html",
+            "title": "SSH clients on Android",
+            "summary": "Comparison My Requirements JuiceSSH Termius Termux PortX Allow saved snippet execution with click Yes (Paid) Yes (??) ?? No MOSH support Yes Yes (??) Sync saved servers across devices Yes (Paid) Yes (??) Price Free/License free?? Run ARM version of linux commands/apps Conclusion The development&hellip;",
+            "content_html": "<h2 id=\"comparison\">Comparison</h2>\n<table>\n<thead>\n<tr>\n<th>My Requirements</th>\n<th>JuiceSSH</th>\n<th>Termius</th>\n<th>Termux</th>\n<th>PortX</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Allow saved snippet execution with click</td>\n<td>Yes (Paid)</td>\n<td>Yes (??)</td>\n<td>??</td>\n<td>No</td>\n</tr>\n<tr>\n<td>MOSH support</td>\n<td>Yes</td>\n<td>Yes (??)</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Sync saved servers across devices</td>\n<td>Yes (Paid)</td>\n<td>Yes (??)</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Price</td>\n<td>Free/License</td>\n<td>free??</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Run ARM version of linux commands/apps</td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n</tbody></table>\n<h2 id=\"conclusion\">Conclusion</h2>\n<ul>\n<li>The development on jubes SSH has stopped now.</li>\n</ul>\n",
+            "author": {
+                "name": "Amber Jain"
+            },
+            "tags": [
+            ],
+            "date_published": "2025-07-09T17:05:16+05:30",
+            "date_modified": "2025-07-09T17:23:33+05:30"
+        }
+    ]
+}

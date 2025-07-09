@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>Journal</title>
+    <link href="https://amberj.github.io/personal-website/feed.xml" rel="self" />
+    <link href="https://amberj.github.io/personal-website" />
+    <updated>2025-07-09T17:23:33+05:30</updated>
+    <author>
+        <name>Amber Jain</name>
+    </author>
+    <id>https://amberj.github.io/personal-website</id>
+
+    <entry>
+        <title>SSH clients on Android</title>
+        <author>
+            <name>Amber Jain</name>
+        </author>
+        <link href="https://amberj.github.io/personal-website/test.html"/>
+        <id>https://amberj.github.io/personal-website/test.html</id>
+
+        <updated>2025-07-09T17:05:16+05:30</updated>
+            <summary>
+                <![CDATA[
+                    Comparison My Requirements JuiceSSH Termius Termux PortX Allow saved snippet execution with click Yes (Paid) Yes (??) ?? No MOSH support Yes Yes (??) Sync saved servers across devices Yes (Paid) Yes (??) Price Free/License free?? Run ARM version of linux commands/apps Conclusion The development&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2 id="comparison">Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>My Requirements</th>
+<th>JuiceSSH</th>
+<th>Termius</th>
+<th>Termux</th>
+<th>PortX</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Allow saved snippet execution with click</td>
+<td>Yes (Paid)</td>
+<td>Yes (??)</td>
+<td>??</td>
+<td>No</td>
+</tr>
+<tr>
+<td>MOSH support</td>
+<td>Yes</td>
+<td>Yes (??)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Sync saved servers across devices</td>
+<td>Yes (Paid)</td>
+<td>Yes (??)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Price</td>
+<td>Free/License</td>
+<td>free??</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Run ARM version of linux commands/apps</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="conclusion">Conclusion</h2>
+<ul>
+<li>The development on jubes SSH has stopped now.</li>
+</ul>
+
+            ]]>
+        </content>
+    </entry>
+</feed>
