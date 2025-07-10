@@ -3,12 +3,65 @@
     <title>Amber Jain&#x27;s Journal</title>
     <link href="https://amberj.github.io/personal-website/feed.xml" rel="self" />
     <link href="https://amberj.github.io/personal-website" />
-    <updated>2025-07-09T19:10:21+05:30</updated>
+    <updated>2025-07-10T17:21:54+05:30</updated>
     <author>
         <name>Amber Jain</name>
     </author>
     <id>https://amberj.github.io/personal-website</id>
 
+    <entry>
+        <title>LinkedIn Growth</title>
+        <author>
+            <name>Amber Jain</name>
+        </author>
+        <link href="https://amberj.github.io/personal-website/linkedin-growth.html"/>
+        <id>https://amberj.github.io/personal-website/linkedin-growth.html</id>
+
+        <updated>2025-07-10T16:47:16+05:30</updated>
+            <summary>
+                <![CDATA[
+                    Useful URLs Some of these URLs might not work on mobile browser (unless you request “Desktop site” in Chrome), but&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2 id="useful-urls">Useful URLs</h2>
+<p>Some of these URLs might not work on mobile browser (unless you request “Desktop site” in Chrome), but all of these should work on Desktop browsers:</p><ul>
+<li><p>The default linked feed shows so much irrelevant content:</p><ul>
+<li>Linkedin Ads</li>
+<li>Posts from  &gt;= 2nd degree connections</li>
+<li>Shows posts from strangers, that are commented on or liked by your first degree connections.</li>
+</ul>
+<p>If this is too noisy for you and if you want to only see posts from 1st degree connections, use this url instead:</p><ul>
+<li><a href="https://www.linkedin.com/search/results/content/?datePosted=%22past-week%22&keywords=posts&origin=FACETED_SEARCH&postedBy=%5B%22first%22%2C%22following%22%5D&sid=wFE&sortBy=%22date_posted%22">Show only “Posts”, sorted by “Latest”, from “Past week” and Posted by either 1st degree connections or people I follow</a></li>
+</ul>
+</li>
+<li><p>Recently Added Connections: <a href="https://www.linkedin.com/mynetwork/invite-connect/connections/">https://www.linkedin.com/mynetwork/invite-connect/connections/</a></p></li>
+<li><p>Sent (but not accepted??) connection requests: <a href="https://www.linkedin.com/mynetwork/invitation-manager/sent/">https://www.linkedin.com/mynetwork/invitation-manager/sent/</a></p></li>
+<li><p>Linkedin automatically follows when you send a connection request. List of people you follow but they have not accepted your connection request: <a href="https://www.linkedin.com/mynetwork/network-manager/people-follow/following/">https://www.linkedin.com/mynetwork/network-manager/people-follow/following/</a></p></li>
+<li><p>Show list of connections with recent Job Changes: <a href="https://www.linkedin.com/mynetwork/catch-up/job_changes/">https://www.linkedin.com/mynetwork/catch-up/job_changes/</a></p></li>
+<li><p>Show list of connections with recent birthdays: <a href="https://www.linkedin.com/mynetwork/catch-up/birthday/">https://www.linkedin.com/mynetwork/catch-up/birthday/</a></p></li>
+<li><p>Show list of connections with recent Work anniversaries: <a href="https://www.linkedin.com/mynetwork/catch-up/work_anniversaries/">https://www.linkedin.com/mynetwork/catch-up/work_anniversaries/</a></p></li>
+<li><p>Show list of connections with recent achievements in Education: <a href="https://www.linkedin.com/mynetwork/catch-up/education/">https://www.linkedin.com/mynetwork/catch-up/education/</a></p></li>
+</ul>
+<h2 id="tips">Tips</h2>
+<ul>
+<li>Linkedin has a built-in scheduler (both on website and mobile apps). Use it.</li>
+<li>Schedule at least 3-4 posts every week.</li>
+</ul>
+<h2 id="generate-bannersimages-using-generative-ai">Generate banners/images using Generative AI</h2>
+<p>To be done</p><h2 id="things-i-want-to-try-out">Things I want to try out</h2>
+<ul>
+<li>Pods<ul>
+<li><a href="https://lempod.com/pricing/#">https://lempod.com/pricing/#</a></li>
+<li><a href="https://www.hyperclapper.com/">https://www.hyperclapper.com/</a></li>
+</ul>
+</li>
+</ul>
+
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>My current LLM workflow</title>
         <author>

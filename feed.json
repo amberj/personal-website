@@ -10,6 +10,20 @@
     },
     "items": [
         {
+            "id": "https://amberj.github.io/personal-website/linkedin-growth.html",
+            "url": "https://amberj.github.io/personal-website/linkedin-growth.html",
+            "title": "LinkedIn Growth",
+            "summary": "Useful URLs Some of these URLs might not work on mobile browser (unless you request “Desktop site” in Chrome), but&hellip;",
+            "content_html": "<h2 id=\"useful-urls\">Useful URLs</h2>\n<p>Some of these URLs might not work on mobile browser (unless you request “Desktop site” in Chrome), but all of these should work on Desktop browsers:</p><ul>\n<li><p>The default linked feed shows so much irrelevant content:</p><ul>\n<li>Linkedin Ads</li>\n<li>Posts from  &gt;= 2nd degree connections</li>\n<li>Shows posts from strangers, that are commented on or liked by your first degree connections.</li>\n</ul>\n<p>If this is too noisy for you and if you want to only see posts from 1st degree connections, use this url instead:</p><ul>\n<li><a href=\"https://www.linkedin.com/search/results/content/?datePosted=%22past-week%22&keywords=posts&origin=FACETED_SEARCH&postedBy=%5B%22first%22%2C%22following%22%5D&sid=wFE&sortBy=%22date_posted%22\">Show only “Posts”, sorted by “Latest”, from “Past week” and Posted by either 1st degree connections or people I follow</a></li>\n</ul>\n</li>\n<li><p>Recently Added Connections: <a href=\"https://www.linkedin.com/mynetwork/invite-connect/connections/\">https://www.linkedin.com/mynetwork/invite-connect/connections/</a></p></li>\n<li><p>Sent (but not accepted??) connection requests: <a href=\"https://www.linkedin.com/mynetwork/invitation-manager/sent/\">https://www.linkedin.com/mynetwork/invitation-manager/sent/</a></p></li>\n<li><p>Linkedin automatically follows when you send a connection request. List of people you follow but they have not accepted your connection request: <a href=\"https://www.linkedin.com/mynetwork/network-manager/people-follow/following/\">https://www.linkedin.com/mynetwork/network-manager/people-follow/following/</a></p></li>\n<li><p>Show list of connections with recent Job Changes: <a href=\"https://www.linkedin.com/mynetwork/catch-up/job_changes/\">https://www.linkedin.com/mynetwork/catch-up/job_changes/</a></p></li>\n<li><p>Show list of connections with recent birthdays: <a href=\"https://www.linkedin.com/mynetwork/catch-up/birthday/\">https://www.linkedin.com/mynetwork/catch-up/birthday/</a></p></li>\n<li><p>Show list of connections with recent Work anniversaries: <a href=\"https://www.linkedin.com/mynetwork/catch-up/work_anniversaries/\">https://www.linkedin.com/mynetwork/catch-up/work_anniversaries/</a></p></li>\n<li><p>Show list of connections with recent achievements in Education: <a href=\"https://www.linkedin.com/mynetwork/catch-up/education/\">https://www.linkedin.com/mynetwork/catch-up/education/</a></p></li>\n</ul>\n<h2 id=\"tips\">Tips</h2>\n<ul>\n<li>Linkedin has a built-in scheduler (both on website and mobile apps). Use it.</li>\n<li>Schedule at least 3-4 posts every week.</li>\n</ul>\n<h2 id=\"generate-bannersimages-using-generative-ai\">Generate banners/images using Generative AI</h2>\n<p>To be done</p><h2 id=\"things-i-want-to-try-out\">Things I want to try out</h2>\n<ul>\n<li>Pods<ul>\n<li><a href=\"https://lempod.com/pricing/#\">https://lempod.com/pricing/#</a></li>\n<li><a href=\"https://www.hyperclapper.com/\">https://www.hyperclapper.com/</a></li>\n</ul>\n</li>\n</ul>\n",
+            "author": {
+                "name": "Amber Jain"
+            },
+            "tags": [
+            ],
+            "date_published": "2025-07-10T16:47:16+05:30",
+            "date_modified": "2025-07-10T17:21:54+05:30"
+        },
+        {
             "id": "https://amberj.github.io/personal-website/my-current-llm-workflow.html",
             "url": "https://amberj.github.io/personal-website/my-current-llm-workflow.html",
             "title": "My current LLM workflow",
