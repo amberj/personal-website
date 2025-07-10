@@ -3,7 +3,7 @@
     <title>Amber Jain&#x27;s Journal</title>
     <link href="https://amberj.github.io/personal-website/feed.xml" rel="self" />
     <link href="https://amberj.github.io/personal-website" />
-    <updated>2025-07-10T17:21:54+05:30</updated>
+    <updated>2025-07-10T22:44:28+05:30</updated>
     <author>
         <name>Amber Jain</name>
     </author>
@@ -59,6 +59,31 @@
 </li>
 </ul>
 
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Adding MCP servers to Claude Code</title>
+        <author>
+            <name>Amber Jain</name>
+        </author>
+        <link href="https://amberj.github.io/personal-website/adding-mcp-servers-to-claude-code.html"/>
+        <id>https://amberj.github.io/personal-website/adding-mcp-servers-to-claude-code.html</id>
+
+        <updated>2025-07-09T20:39:20+05:30</updated>
+            <summary>
+                <![CDATA[
+                    Anthropic’s Documentation: https://docs.anthropic.com/en/docs/claude-code/mcp If you have already added MCPs on Claude Desktop app, then you can use this command to&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Anthropic’s Documentation: <a href="https://docs.anthropic.com/en/docs/claude-code/mcp">https://docs.anthropic.com/en/docs/claude-code/mcp</a></p><h2 id="handy-command">Handy command:</h2>
+<p>If you have already added MCPs on Claude Desktop app, then you can use this command to import some/all of these MCPs from Claude Desktop to Claude Code: </p><p><code>claude mcp add-from-claude-desktop</code></p><h2 id="importing-mcps-one-by-one">Importing MCPs one-by-one</h2>
+<h3 id="browsermcpio-mcp">browsermcp.io MCP</h3>
+<p><code>claude mcp add browsermcp.io npx @browsermcp/mcp@latest</code></p><h3 id="sequential-thinking-mcp">Sequential Thinking MCP</h3>
+<p><code>claude mcp add sequential-thinking npx @modelcontextprotocol/server-sequential-thinking</code></p><h3 id="filesystem-mcp">Filesystem MCP</h3>
+<p><code>claude mcp add filesystem npx @modelcontextprotocol/server-filesystem &lt;FULL_PATH_TO_FOLDER&gt;</code></p>
             ]]>
         </content>
     </entry>
