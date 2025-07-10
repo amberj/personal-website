@@ -3,12 +3,49 @@
     <title>Amber Jain&#x27;s Journal</title>
     <link href="https://amberj.github.io/personal-website/feed.xml" rel="self" />
     <link href="https://amberj.github.io/personal-website" />
-    <updated>2025-07-10T22:44:28+05:30</updated>
+    <updated>2025-07-11T01:30:08+05:30</updated>
     <author>
         <name>Amber Jain</name>
     </author>
     <id>https://amberj.github.io/personal-website</id>
 
+    <entry>
+        <title>Installing Termux</title>
+        <author>
+            <name>Amber Jain</name>
+        </author>
+        <link href="https://amberj.github.io/personal-website/installing-termux.html"/>
+        <id>https://amberj.github.io/personal-website/installing-termux.html</id>
+
+        <updated>2025-07-11T01:20:57+05:30</updated>
+            <summary>
+                <![CDATA[
+                    Change &amp; update repo sources (if needed, if you ) termux-change-repo pkg update &amp;&amp; pkg upgrade pkg install termux-tools openssh&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2 id="change--update-repo-sources-if-needed-if-you-">Change &amp; update repo sources (if needed, if you )</h2>
+<p><code>termux-change-repo</code></p><p><code>pkg update &amp;&amp; pkg upgrade</code></p><h2 id="install-some-utilities">Install some utilities</h2>
+<p><code>pkg install termux-tools openssh wget python iproute2 git curl nano</code></p><h2 id="why-i-dont-install-termux-api-package">Why I don’t install <code>termux-api</code> package?</h2>
+<p>Termux API was consuming a lot of battery on my Samsung Galaxy Z Fold 5, when I had installed <a href="https://github.com/sabamdarif/termux-desktop?tab=readme-ov-file">full XFCE Linux desktop environment on Android device with Termux X11</a></p><p>This addon exposes Android device functionality as API to command line programs in Termux. For e.g.</p><ul>
+<li>Vibrate the device when something interesting happens.</li>
+<li>Access the system clipboard from shell scripts.</li>
+<li>Read and send sms messages from your terminal.</li>
+<li>Access device GPS location sensor from scripts.</li>
+</ul>
+<p>Complete list of API implementations are available at: <a href="https://wiki.termux.com/wiki/Termux:API">https://wiki.termux.com/wiki/Termux:API</a></p><p>If you need this functionality, then only install it.</p><h2 id="access-termux-files-in-android">Access termux files in Android</h2>
+<p><code>termux-setup-storage</code></p><p>Use a file manager like <a href="https://play.google.com/store/apps/details?id=me.zhanghai.android.files">Material Files</a></p><h2 id="setup">Setup</h2>
+<ul>
+<li>Claude Code and/or Gemini CLI</li>
+</ul>
+<p><code>pkg install nodejs-lts git</code></p><p><code>npm install -g @anthropic-ai/claude-code</code></p><p><code>npm install -g @google/gemini-cli</code></p><p><code>mkdir claude-code</code></p><p><code>cd claude-code/</code></p><p><code>claude</code></p><p><code>gemini</code></p><ul>
+<li>MCPs in Claude Code and/or Gemini CLI</li>
+</ul>
+
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>LinkedIn Growth</title>
         <author>
@@ -83,7 +120,9 @@
 <h3 id="browsermcpio-mcp">browsermcp.io MCP</h3>
 <p><code>claude mcp add browsermcp.io npx @browsermcp/mcp@latest</code></p><h3 id="sequential-thinking-mcp">Sequential Thinking MCP</h3>
 <p><code>claude mcp add sequential-thinking npx @modelcontextprotocol/server-sequential-thinking</code></p><h3 id="filesystem-mcp">Filesystem MCP</h3>
-<p><code>claude mcp add filesystem npx @modelcontextprotocol/server-filesystem &lt;FULL_PATH_TO_FOLDER&gt;</code></p>
+<p><code>claude mcp add filesystem npx @modelcontextprotocol/server-filesystem &lt;FULL_PATH_TO_FOLDER&gt;</code></p><h3 id="mobile-mcp-not-tested-by-me-yet">Mobile MCP (Not tested by me yet)</h3>
+<p>Install on mac to control android
+<a href="https://github.com/mobile-next/mobile-mcp">https://github.com/mobile-next/mobile-mcp</a></p><p><code>claude mcp add mobile -- npx -y @mobilenext/mobile-mcp@latest</code></p>
             ]]>
         </content>
     </entry>
