@@ -20,7 +20,7 @@
         <updated>2025-07-17T00:27:09+05:30</updated>
             <summary>
                 <![CDATA[
-                    Create an app here: https://api.slack.com/apps You can see newly created Slack app here: https://api.slack.com/apps/ On App screen, click OAuth &amp;&hellip;
+                    Create an app here: https://api.slack.com/apps You can see newly created Slack app&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -94,7 +94,7 @@ schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
         <updated>2025-07-11T01:20:57+05:30</updated>
             <summary>
                 <![CDATA[
-                    Change &amp; update repo sources (if needed, if you ) termux-change-repo pkg update &amp;&amp; pkg upgrade pkg install termux-tools openssh&hellip;
+                    Change &amp; update repo sources (if needed, if you ) termux-change-repo pkg&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -131,7 +131,7 @@ schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
         <updated>2025-07-10T16:47:16+05:30</updated>
             <summary>
                 <![CDATA[
-                    Useful URLs Some of these URLs might not work on mobile browser (unless you request “Desktop site” in Chrome), but&hellip;
+                    Useful URLs Some of these URLs might not work on mobile browser&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -202,7 +202,7 @@ schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
         <updated>2025-07-09T20:39:20+05:30</updated>
             <summary>
                 <![CDATA[
-                    Anthropic’s Documentation: https://docs.anthropic.com/en/docs/claude-code/mcp If you have already added MCPs on Claude Desktop app, then you can use this command to&hellip;
+                    Anthropic’s Documentation: https://docs.anthropic.com/en/docs/claude-code/mcp If you have already added MCPs on Claude Desktop&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -229,7 +229,7 @@ schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
         <updated>2025-07-09T18:22:23+05:30</updated>
             <summary>
                 <![CDATA[
-                    Current paid plans Lovable Claude Pro (to be used in Claude Desktop and Claude Code) OpenRouter Apps I use PWA:&hellip;
+                    Current paid plans Lovable Claude Pro (to be used in Claude Desktop&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -269,7 +269,7 @@ schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
         <updated>2025-07-09T17:05:16+05:30</updated>
             <summary>
                 <![CDATA[
-                    Comparison My Requirements JuiceSSH Termius Termux PortX Allow saved snippet execution with click Yes (Paid) Yes (??) ?? No MOSH&hellip;
+                    Comparison My Requirements JuiceSSH Termius Termux PortX Allow saved snippet execution with&hellip;
                 ]]>
             </summary>
         <content type="html">
