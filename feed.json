@@ -1,6 +1,6 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "Amber Jain&#x27;s Journal",
+    "title": "Amber&#x27;s Journal",
     "description": "",
     "home_page_url": "https://amberj.github.io/personal-website",
     "feed_url": "https://amberj.github.io/personal-website/feed.json",
@@ -15,13 +15,15 @@
             "title": "Send slack message via api using &#x60;xoxp&#x60; User token ",
             "summary": "Create an app here: https://api.slack.com/apps You can see newly created Slack app&hellip;",
             "content_html": "<ul>\n<li>Create an app here: <a href=\"https://api.slack.com/apps\">https://api.slack.com/apps</a><ul>\n<li>You can see newly created Slack app here: <a href=\"https://api.slack.com/apps/\">https://api.slack.com/apps/</a></li>\n<li>On App screen, click <strong>OAuth &amp; Permissions</strong> in the sidebar.<ul>\n<li>Under <strong>User Token Scopes</strong> section, click <strong>Add an OAuth Scope</strong></li>\n<li>Under <strong>OAuth Tokens</strong> , click <strong>Install to Productiwitty</strong>. This will generate <strong>User OAuth Token</strong> starting with <code>xoxp</code>.</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<p>Now install <code>slack_sdk</code> inside virtualenv using:</p><p><code>pip install slack_sdk</code></p><p>Then you can send messages via Slack API using following Python 3 code:</p><pre><code>#!/usr/bin/env python3\nimport datetime\nfrom slack_sdk import WebClient\n\n# ID of channel you want to post message to\n#\nchannel_id = &quot;CXXXXXXX&quot;\n\nuser_token = &quot;xoxp-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;\n\nclient = WebClient(user_token)\n\ndef send_slack_message(channel_id, msg):\n    try:\n        result = client.chat_postMessage(\n            channel=channel_id,\n            text=msg\n        )\n        print(result)\n\n    except SlackApiError as e:\n        print(f&quot;Error: {e}&quot;)\n\nsend_slack_message(channel_id, &quot;hello&quot;)\n</code></pre>\n<p>You can also schedule a message using this code:</p><pre><code>def schedule_msg(channel_id, at_hour, at_minute, msg, day):\n    scheduled_time = datetime.time(hour=at_hour, minute=at_minute)\n    schedule_timestamp = datetime.datetime.combine(day, scheduled_time).strftime(&#39;%s&#39;)\n    try:\n        result = client.chat_scheduleMessage(\n            channel=channel_id,\n            text=msg,\n            post_at=schedule_timestamp\n        )\n        print(result)\n    except Exception as e:\n        print(f&quot;EXCEPTION!!! {e}&quot;)\n\ntoday = datetime.date.today()\n\n# Schedule a message to be sent at 23:35 (11:35pm) today:\nschedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)\n</code></pre>\n",
+            "image": "https://amberj.github.io/personal-website/media/posts/13/slack-large.webp",
             "author": {
                 "name": "Amber Jain"
             },
             "tags": [
+                   "slack"
             ],
             "date_published": "2025-07-17T00:27:09+05:30",
-            "date_modified": "2025-07-17T00:27:09+05:30"
+            "date_modified": "2025-07-17T00:57:52+05:30"
         },
         {
             "id": "https://amberj.github.io/personal-website/installing-termux.html",

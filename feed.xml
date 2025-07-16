@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
-    <title>Amber Jain&#x27;s Journal</title>
+    <title>Amber&#x27;s Journal</title>
     <link href="https://amberj.github.io/personal-website/feed.xml" rel="self" />
     <link href="https://amberj.github.io/personal-website" />
-    <updated>2025-07-17T00:27:09+05:30</updated>
+    <updated>2025-07-17T00:57:52+05:30</updated>
     <author>
         <name>Amber Jain</name>
     </author>
@@ -16,15 +16,19 @@
         </author>
         <link href="https://amberj.github.io/personal-website/send-slack-message-via-api-using-xoxp-user-token.html"/>
         <id>https://amberj.github.io/personal-website/send-slack-message-via-api-using-xoxp-user-token.html</id>
+        <media:content url="https://amberj.github.io/personal-website/media/posts/13/slack-large.webp" medium="image" />
+            <category term="slack"/>
 
         <updated>2025-07-17T00:27:09+05:30</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://amberj.github.io/personal-website/media/posts/13/slack-large.webp" alt="Using Slack API with Python" />
                     Create an app here: https://api.slack.com/apps You can see newly created Slack app&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://amberj.github.io/personal-website/media/posts/13/slack-large.webp" class="type:primaryImage" alt="Using Slack API with Python" /></p>
                 <ul>
 <li>Create an app here: <a href="https://api.slack.com/apps">https://api.slack.com/apps</a><ul>
 <li>You can see newly created Slack app here: <a href="https://api.slack.com/apps/">https://api.slack.com/apps/</a></li>
