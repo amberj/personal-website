@@ -3,12 +3,86 @@
     <title>Amber Jain&#x27;s Journal</title>
     <link href="https://amberj.github.io/personal-website/feed.xml" rel="self" />
     <link href="https://amberj.github.io/personal-website" />
-    <updated>2025-07-11T01:30:08+05:30</updated>
+    <updated>2025-07-17T00:27:09+05:30</updated>
     <author>
         <name>Amber Jain</name>
     </author>
     <id>https://amberj.github.io/personal-website</id>
 
+    <entry>
+        <title>Send slack message via api using &#x60;xoxp&#x60; User token </title>
+        <author>
+            <name>Amber Jain</name>
+        </author>
+        <link href="https://amberj.github.io/personal-website/send-slack-message-via-api-using-xoxp-user-token.html"/>
+        <id>https://amberj.github.io/personal-website/send-slack-message-via-api-using-xoxp-user-token.html</id>
+
+        <updated>2025-07-17T00:27:09+05:30</updated>
+            <summary>
+                <![CDATA[
+                    Create an app here: https://api.slack.com/apps You can see newly created Slack app here: https://api.slack.com/apps/ On App screen, click OAuth &amp;&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <ul>
+<li>Create an app here: <a href="https://api.slack.com/apps">https://api.slack.com/apps</a><ul>
+<li>You can see newly created Slack app here: <a href="https://api.slack.com/apps/">https://api.slack.com/apps/</a></li>
+<li>On App screen, click <strong>OAuth &amp; Permissions</strong> in the sidebar.<ul>
+<li>Under <strong>User Token Scopes</strong> section, click <strong>Add an OAuth Scope</strong></li>
+<li>Under <strong>OAuth Tokens</strong> , click <strong>Install to Productiwitty</strong>. This will generate <strong>User OAuth Token</strong> starting with <code>xoxp</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Now install <code>slack_sdk</code> inside virtualenv using:</p><p><code>pip install slack_sdk</code></p><p>Then you can send messages via Slack API using following Python 3 code:</p><pre><code>#!/usr/bin/env python3
+import datetime
+from slack_sdk import WebClient
+
+# ID of channel you want to post message to
+#
+channel_id = &quot;CXXXXXXX&quot;
+
+user_token = &quot;xoxp-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;
+
+client = WebClient(user_token)
+
+def send_slack_message(channel_id, msg):
+    try:
+        result = client.chat_postMessage(
+            channel=channel_id,
+            text=msg
+        )
+        print(result)
+
+    except SlackApiError as e:
+        print(f&quot;Error: {e}&quot;)
+
+send_slack_message(channel_id, &quot;hello&quot;)
+</code></pre>
+<p>You can also schedule a message using this code:</p><pre><code>def schedule_msg(channel_id, at_hour, at_minute, msg, day):
+    scheduled_time = datetime.time(hour=at_hour, minute=at_minute)
+    schedule_timestamp = datetime.datetime.combine(day, scheduled_time).strftime(&#39;%s&#39;)
+    try:
+        result = client.chat_scheduleMessage(
+            channel=channel_id,
+            text=msg,
+            post_at=schedule_timestamp
+        )
+        print(result)
+    except Exception as e:
+        print(f&quot;EXCEPTION!!! {e}&quot;)
+
+today = datetime.date.today()
+
+# Schedule a message to be sent at 23:35 (11:35pm) today:
+schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
+</code></pre>
+
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Installing Termux</title>
         <author>
@@ -81,13 +155,31 @@
 <li><p>Show list of connections with recent Work anniversaries: <a href="https://www.linkedin.com/mynetwork/catch-up/work_anniversaries/">https://www.linkedin.com/mynetwork/catch-up/work_anniversaries/</a></p></li>
 <li><p>Show list of connections with recent achievements in Education: <a href="https://www.linkedin.com/mynetwork/catch-up/education/">https://www.linkedin.com/mynetwork/catch-up/education/</a></p></li>
 </ul>
+<h2 id="tools">Tools</h2>
+<h3 id="chrome-extension---follower-insights-for-linkedin">Chrome extension - Follower Insights for LinkedIn</h3>
+<p>Show the number of followers of a LinkedIn profile on a bunch of linkedin.com webpages. Chrome extension - <a href="https://chromewebstore.google.com/detail/follower-insights-for-lin/kkbaccngljoklnejedmjicfdfkhgblnd">Follower Insights for LinkedIn
+</a></p><h3 id=""></h3>
 <h2 id="tips">Tips</h2>
 <ul>
 <li>Linkedin has a built-in scheduler (both on website and mobile apps). Use it.</li>
 <li>Schedule at least 3-4 posts every week.</li>
+<li>You can send connection request to 5-8 relevant people daily, to grow your network.</li>
+<li>Remove <em><strong>Cr</strong></em> tag on ai generated image by opening it in linkedin image editor and saving it. Even if this changes in future, you could make a minor edit in editor and then Linkedin wouldn’t identify it as an AI generated image.</li>
+<li>Use any text formatter website (e.g. <a href="https://www.linkedin-makeover.com/linkedin-text-formatter/#textformatter">Linkedin Text Formatter</a>)  to format your key content (such as title) in bold etc.</li>
+<li>Ask your friends, family and acquaintances to like your posts within first 12-24 hours (whether posted from personal profile or company page). This leads to higher engagement on your post.</li>
 </ul>
 <h2 id="generate-bannersimages-using-generative-ai">Generate banners/images using Generative AI</h2>
-<p>To be done</p><h2 id="things-i-want-to-try-out">Things I want to try out</h2>
+<p>How to generate decent banner images (usually in a single attempt) using ChatGPT’s “Create image” for text content.</p><p>The following prompt does NOT gives good output:</p><blockquote>
+<p>Make a banner image for this linkedin post:𝑻𝒉𝒆 4-𝑺𝒕𝒆𝒑 𝑨𝑺𝑶 𝑳𝒐𝒐𝒑 𝑼𝒔𝒆𝒅 𝒃𝒚 𝑨𝒑𝒑 𝑺𝒕𝒐𝒓𝒆 𝑮𝒊𝒂𝒏𝒕𝒔 💡What if I told you that most top apps don’t chase keywords—they engineer cycles to pull them in? 🤔 Ever wondered how they consistently pop up in totally different keyword clusters, week after week? 📈Here’s the secret: they use a Keyword Optimization Cycle—a 4-step loop that helps them dominate visibility systematically, not sporadically 🚀</p></blockquote>
+<p>What I’m doing instead, to get good results consistently: First use this prompt:</p><blockquote>
+<p>Give a prompt to generate banner image using microsoft designer for the following linkedin post:</p><p>𝑻𝒉𝒆 4-𝑺𝒕𝒆𝒑 𝑨𝑺𝑶 𝑳𝒐𝒐𝒑 𝑼𝒔𝒆𝒅 𝒃𝒚 𝑨𝒑𝒑 𝑺𝒕𝒐𝒓𝒆 𝑮𝒊𝒂𝒏𝒕𝒔 💡What if I told you that most top apps don’t chase keywords—they engineer cycles to pull them in? 🤔 Ever wondered how they consistently pop up in totally different keyword clusters, week after week? 📈Here’s the secret: they use a Keyword Optimization Cycle—a 4-step loop that helps them dominate visibility systematically, not sporadically 🚀</p></blockquote>
+<p>Chatgpt will give a prompt like this:</p><blockquote>
+<p>A sleek, modern tech-themed banner illustrating a 4-step optimization loop for mobile apps. Use minimalistic icons or illustrations to represent each step: tracking keywords, aligning metadata, monitoring metrics, and iterating strategies. Include subtle app store elements like charts, magnifying glass, keyword tags, or mobile screens. Use a clean, professional style with a color palette of deep blue, white, and bright accents (e.g., neon green or electric purple). Add the title “The 4-Step ASO Loop Used by App Store Giants” in bold, elegant typography. Banner should feel insightful, strategic, and growth-oriented.</p></blockquote>
+<p>Add the following 2 sub-prompts to chatgpt’s generated prompt (here as an example, orange color is brand color):</p><blockquote>
+<p>(primary color should be orange)</p></blockquote>
+<p>and</p><blockquote>
+<p>Include subtle visual cues like upward-trending graphs or analytics icons to represent analytics, growth, marketing.Use a clean, tech-inspired color palette to reflect the App Store and Play Store aesthetic. The overall tone should be trustworthy, smart, professional, data-driven, growth-focused, strategic.Add a callout badge or ribbon with some highly relevant and contextual text.</p></blockquote>
+<p>The above steps consistently give a banner image with little (if any) hallucinations as well as good quality output.</p><h2 id="things-i-want-to-try-out">Things I want to try out</h2>
 <ul>
 <li>Pods<ul>
 <li><a href="https://lempod.com/pricing/#">https://lempod.com/pricing/#</a></li>

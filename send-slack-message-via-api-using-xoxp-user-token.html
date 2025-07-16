@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="en-gb"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Send slack message via api using &#x60;xoxp&#x60; User token  - Amber Jain&#x27;s Journal</title><meta name="description" content="Create an app here: https://api.slack.com/apps You can see newly created Slack app here: https://api.slack.com/apps/ On App screen, click OAuth &amp;&hellip;"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://amberj.github.io/personal-website/send-slack-message-via-api-using-xoxp-user-token.html"><link rel="alternate" type="application/atom+xml" href="https://amberj.github.io/personal-website/feed.xml" title="Amber Jain&#x27;s Journal - RSS"><link rel="alternate" type="application/json" href="https://amberj.github.io/personal-website/feed.json" title="Amber Jain&#x27;s Journal - JSON"><meta property="og:title" content="Send slack message via api using `xoxp` User token "><meta property="og:site_name" content="Amber Jain's Journal"><meta property="og:description" content="Create an app here: https://api.slack.com/apps You can see newly created Slack app here: https://api.slack.com/apps/ On App screen, click OAuth &amp;&hellip;"><meta property="og:url" content="https://amberj.github.io/personal-website/send-slack-message-via-api-using-xoxp-user-token.html"><meta property="og:type" content="article"><link rel="stylesheet" href="https://amberj.github.io/personal-website/assets/css/style.css?v=74f838951fac6f2cfe001a386a288c7d"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://amberj.github.io/personal-website/send-slack-message-via-api-using-xoxp-user-token.html"},"headline":"Send slack message via api using `xoxp` User token ","datePublished":"2025-07-17T00:27+05:30","dateModified":"2025-07-17T00:27+05:30","description":"Create an app here: https://api.slack.com/apps You can see newly created Slack app here: https://api.slack.com/apps/ On App screen, click OAuth &amp;&hellip;","author":{"@type":"Person","name":"Amber Jain","url":"https://amberj.github.io/personal-website/authors/amber-jain/"},"publisher":{"@type":"Organization","name":"Amber Jain"}}</script><noscript><style>img[loading] {
+                    opacity: 1;
+                }</style></noscript></head><body class="post-template lines"><div class="container lines lines--right"><header class="header"><a href="https://amberj.github.io/personal-website/" class="logo">Amber Jain&#x27;s Journal</a><nav class="navbar js-navbar"><button class="navbar__toggle js-toggle" aria-label="Menu">Menu</button><ul class="navbar__menu"></ul></nav></header><main class="main post"><article class="content"><header class="content__inner content__header"><h1 class="content__title">Send slack message via api using &#x60;xoxp&#x60; User token </h1><div class="content__meta"><div class="content__meta__left"><a href="https://amberj.github.io/personal-website/authors/amber-jain/" class="invert content__author" rel="author" title="Amber Jain">Amber Jain</a></div><div class="content__meta__right"><time datetime="2025-07-17T00:27" class="content__date">July 17, 2025</time><div class="content__updated">Updated on <time datetime="2025-07-17T00:27" class="content__date">July 17, 2025</time></div></div></div></header><div class="content__inner"><div class="content__entry"><ul><li>Create an app here: <a href="https://api.slack.com/apps">https://api.slack.com/apps</a><ul><li>You can see newly created Slack app here: <a href="https://api.slack.com/apps/">https://api.slack.com/apps/</a></li><li>On App screen, click <strong>OAuth &amp; Permissions</strong> in the sidebar.<ul><li>Under <strong>User Token Scopes</strong> section, click <strong>Add an OAuth Scope</strong></li><li>Under <strong>OAuth Tokens</strong> , click <strong>Install to Productiwitty</strong>. This will generate <strong>User OAuth Token</strong> starting with <code>xoxp</code>.</li></ul></li></ul></li></ul><p>Now install <code>slack_sdk</code> inside virtualenv using:</p><p><code>pip install slack_sdk</code></p><p>Then you can send messages via Slack API using following Python 3 code:</p><pre><code>#!/usr/bin/env python3
+import datetime
+from slack_sdk import WebClient
+
+# ID of channel you want to post message to
+#
+channel_id = &quot;CXXXXXXX&quot;
+
+user_token = &quot;xoxp-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;
+
+client = WebClient(user_token)
+
+def send_slack_message(channel_id, msg):
+    try:
+        result = client.chat_postMessage(
+            channel=channel_id,
+            text=msg
+        )
+        print(result)
+
+    except SlackApiError as e:
+        print(f&quot;Error: {e}&quot;)
+
+send_slack_message(channel_id, &quot;hello&quot;)
+</code></pre><p>You can also schedule a message using this code:</p><pre><code>def schedule_msg(channel_id, at_hour, at_minute, msg, day):
+    scheduled_time = datetime.time(hour=at_hour, minute=at_minute)
+    schedule_timestamp = datetime.datetime.combine(day, scheduled_time).strftime(&#39;%s&#39;)
+    try:
+        result = client.chat_scheduleMessage(
+            channel=channel_id,
+            text=msg,
+            post_at=schedule_timestamp
+        )
+        print(result)
+    except Exception as e:
+        print(f&quot;EXCEPTION!!! {e}&quot;)
+
+today = datetime.date.today()
+
+# Schedule a message to be sent at 23:35 (11:35pm) today:
+schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
+</code></pre></div><footer class="content__footer"><div class="content__tag-share"><div class="content__share"></div></div></footer></div></article></main><footer class="footer"><div class="footer__left"><div class="footer__copy">Copyright 2025 - Amber Jain</div></div><div class="footer__right"><div class="footer__social"><a href="https://x.com/amberja_in" aria-label="Twitter" class="twitter"><svg><use xlink:href="https://amberj.github.io/personal-website/assets/svg/svg-map.svg#twitter"/></svg> </a><a href="https://www.instagram.com/jain_amber/" aria-label="Instagram" class="instagram"><svg><use xlink:href="https://amberj.github.io/personal-website/assets/svg/svg-map.svg#instagram"/></svg> </a><a href="https://www.linkedin.com/in/amberjain/" aria-label="LinkedIn" class="linkedin"><svg><use xlink:href="https://amberj.github.io/personal-website/assets/svg/svg-map.svg#linkedin"/></svg></a></div></div><button onclick="backToTopFunction()" id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg><use xlink:href="https://amberj.github.io/personal-website/assets/svg/svg-map.svg#toparrow"/></svg></button></footer></div><script>window.publiiThemeMenuConfig = { mobileMenuMode: 'sidebar', animationSpeed: 300, submenuWidth: 'auto', doubleClickTime: 500, mobileMenuExpandableSubmenus: true, relatedContainerForOverlayMenuSelector: '.navbar', };</script><script defer="defer" src="https://amberj.github.io/personal-website/assets/js/scripts.min.js?v=9c5ab7a87221183f149a42b3cceb7956"></script><script>function publiiDetectLoadedImages () {
+         var images = document.querySelectorAll('img[loading]:not(.is-loaded)');
+         for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+               images[i].classList.add('is-loaded');
+               images[i].parentNode.classList.remove('is-img-loading');
+            } else {
+               images[i].addEventListener('load', function () {
+                  this.classList.add('is-loaded');
+                  this.parentNode.classList.remove('is-img-loading');
+               }, false);
+            }
+         }
+      }
+      publiiDetectLoadedImages();</script></body></html>
