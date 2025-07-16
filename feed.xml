@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberj.github.io/personal-website/feed.xml" rel="self" />
     <link href="https://amberj.github.io/personal-website" />
-    <updated>2025-07-17T00:57:52+05:30</updated>
+    <updated>2025-07-17T01:01:31+05:30</updated>
     <author>
         <name>Amber Jain</name>
     </author>
@@ -88,22 +88,26 @@ schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
         </content>
     </entry>
     <entry>
-        <title>Installing Termux</title>
+        <title>Installing &amp; setting up Termux on Android</title>
         <author>
             <name>Amber Jain</name>
         </author>
         <link href="https://amberj.github.io/personal-website/installing-termux.html"/>
         <id>https://amberj.github.io/personal-website/installing-termux.html</id>
+        <media:content url="https://amberj.github.io/personal-website/media/posts/12/1200x600wa.png" medium="image" />
+            <category term="Android"/>
 
         <updated>2025-07-11T01:20:57+05:30</updated>
             <summary>
                 <![CDATA[
-                    Change &amp; update repo sources (if needed, if you ) termux-change-repo pkg&hellip;
+                        <img src="https://amberj.github.io/personal-website/media/posts/12/1200x600wa.png" alt="" />
+                    Install Termux from F-droid or official website. Play Store version is outdated.
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <h2 id="change--update-repo-sources-if-needed-if-you-">Change &amp; update repo sources (if needed, if you )</h2>
+                    <p><img src="https://amberj.github.io/personal-website/media/posts/12/1200x600wa.png" class="type:primaryImage" alt="" /></p>
+                <p>Install Termux from F-droid or official website. Play Store version is outdated.</p><h2 id="change--update-repo-sources">Change &amp; update repo sources</h2>
 <p><code>termux-change-repo</code></p><p><code>pkg update &amp;&amp; pkg upgrade</code></p><h2 id="install-some-utilities">Install some utilities</h2>
 <p><code>pkg install termux-tools openssh wget python iproute2 git curl nano</code></p><h2 id="why-i-dont-install-termux-api-package">Why I don’t install <code>termux-api</code> package?</h2>
 <p>Termux API was consuming a lot of battery on my Samsung Galaxy Z Fold 5, when I had installed <a href="https://github.com/sabamdarif/termux-desktop?tab=readme-ov-file">full XFCE Linux desktop environment on Android device with Termux X11</a></p><p>This addon exposes Android device functionality as API to command line programs in Termux. For e.g.</p><ul>
