@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberj.github.io/personal-website/feed.xml" rel="self" />
     <link href="https://amberj.github.io/personal-website" />
-    <updated>2025-07-17T01:01:31+05:30</updated>
+    <updated>2025-07-17T01:11:49+05:30</updated>
     <author>
         <name>Amber Jain</name>
     </author>
@@ -129,21 +129,25 @@ schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
         </content>
     </entry>
     <entry>
-        <title>LinkedIn Growth</title>
+        <title>Growing your organic reach on LinkedIn</title>
         <author>
             <name>Amber Jain</name>
         </author>
         <link href="https://amberj.github.io/personal-website/linkedin-growth.html"/>
         <id>https://amberj.github.io/personal-website/linkedin-growth.html</id>
+        <media:content url="https://amberj.github.io/personal-website/media/posts/8/LinkedIn-marketing-the-complete-guide-to-boost-your-strategy-Final.svg" medium="image" />
+            <category term="Growth"/>
 
         <updated>2025-07-10T16:47:16+05:30</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://amberj.github.io/personal-website/media/posts/8/LinkedIn-marketing-the-complete-guide-to-boost-your-strategy-Final.svg" alt="Linkedin" />
                     Useful URLs Some of these URLs might not work on mobile browser&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://amberj.github.io/personal-website/media/posts/8/LinkedIn-marketing-the-complete-guide-to-boost-your-strategy-Final.svg" class="type:primaryImage" alt="Linkedin" /></p>
                 <h2 id="useful-urls">Useful URLs</h2>
 <p>Some of these URLs might not work on mobile browser (unless you request “Desktop site” in Chrome), but all of these should work on Desktop browsers:</p><ul>
 <li><p>The default linked feed shows so much irrelevant content:</p><ul>
@@ -206,15 +210,19 @@ schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
         </author>
         <link href="https://amberj.github.io/personal-website/adding-mcp-servers-to-claude-code.html"/>
         <id>https://amberj.github.io/personal-website/adding-mcp-servers-to-claude-code.html</id>
+        <media:content url="https://amberj.github.io/personal-website/media/posts/6/ec726680e57b03bc40e8c5e58a848e7cd39a15df-2881x1621.webp" medium="image" />
+            <category term="AI / LLMs"/>
 
         <updated>2025-07-09T20:39:20+05:30</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://amberj.github.io/personal-website/media/posts/6/ec726680e57b03bc40e8c5e58a848e7cd39a15df-2881x1621.webp" alt="" />
                     Anthropic’s Documentation: https://docs.anthropic.com/en/docs/claude-code/mcp If you have already added MCPs on Claude Desktop&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://amberj.github.io/personal-website/media/posts/6/ec726680e57b03bc40e8c5e58a848e7cd39a15df-2881x1621.webp" class="type:primaryImage" alt="" /></p>
                 <p>Anthropic’s Documentation: <a href="https://docs.anthropic.com/en/docs/claude-code/mcp">https://docs.anthropic.com/en/docs/claude-code/mcp</a></p><h2 id="handy-command">Handy command:</h2>
 <p>If you have already added MCPs on Claude Desktop app, then you can use this command to import some/all of these MCPs from Claude Desktop to Claude Code: </p><p><code>claude mcp add-from-claude-desktop</code></p><h2 id="importing-mcps-one-by-one">Importing MCPs one-by-one</h2>
 <h3 id="browsermcpio-mcp">browsermcp.io MCP</h3>
@@ -233,15 +241,19 @@ schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
         </author>
         <link href="https://amberj.github.io/personal-website/my-current-llm-workflow.html"/>
         <id>https://amberj.github.io/personal-website/my-current-llm-workflow.html</id>
+        <media:content url="https://amberj.github.io/personal-website/media/posts/2/Featured-6-23-1000x641.png" medium="image" />
+            <category term="AI / LLMs"/>
 
         <updated>2025-07-09T18:22:23+05:30</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://amberj.github.io/personal-website/media/posts/2/Featured-6-23-1000x641.png" alt="" />
                     Current paid plans Lovable Claude Pro (to be used in Claude Desktop&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://amberj.github.io/personal-website/media/posts/2/Featured-6-23-1000x641.png" class="type:primaryImage" alt="" /></p>
                 <h2 id="current-paid-plans">Current paid plans</h2>
 <ul>
 <li>Lovable</li>
@@ -277,12 +289,12 @@ schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
         <updated>2025-07-09T17:05:16+05:30</updated>
             <summary>
                 <![CDATA[
-                    Comparison My Requirements JuiceSSH Termius Termux PortX Allow saved snippet execution with&hellip;
+                    Blogpost status: Work in progressComparison My Requirements JuiceSSH Termius Termux PortX Allow&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <h2 id="comparison">Comparison</h2>
+                <p>Blogpost status: Work in progress</p><h2 id="comparison">Comparison</h2>
 <table>
 <thead>
 <tr>
@@ -331,7 +343,7 @@ schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
 </tbody></table>
 <h2 id="conclusion">Conclusion</h2>
 <ul>
-<li>The development on jubes SSH has stopped now.</li>
+<li>The development on JuiceSSH has stopped now.</li>
 </ul>
 
             ]]>

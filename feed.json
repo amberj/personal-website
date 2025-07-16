@@ -44,16 +44,18 @@
         {
             "id": "https://amberj.github.io/personal-website/linkedin-growth.html",
             "url": "https://amberj.github.io/personal-website/linkedin-growth.html",
-            "title": "LinkedIn Growth",
+            "title": "Growing your organic reach on LinkedIn",
             "summary": "Useful URLs Some of these URLs might not work on mobile browser&hellip;",
             "content_html": "<h2 id=\"useful-urls\">Useful URLs</h2>\n<p>Some of these URLs might not work on mobile browser (unless you request “Desktop site” in Chrome), but all of these should work on Desktop browsers:</p><ul>\n<li><p>The default linked feed shows so much irrelevant content:</p><ul>\n<li>Linkedin Ads</li>\n<li>Posts from  &gt;= 2nd degree connections</li>\n<li>Shows posts from strangers, that are commented on or liked by your first degree connections.</li>\n</ul>\n<p>If this is too noisy for you and if you want to only see posts from 1st degree connections, use this url instead:</p><ul>\n<li><a href=\"https://www.linkedin.com/search/results/content/?datePosted=%22past-week%22&keywords=posts&origin=FACETED_SEARCH&postedBy=%5B%22first%22%2C%22following%22%5D&sid=wFE&sortBy=%22date_posted%22\">Show only “Posts”, sorted by “Latest”, from “Past week” and Posted by either 1st degree connections or people I follow</a></li>\n</ul>\n</li>\n<li><p>Recently Added Connections: <a href=\"https://www.linkedin.com/mynetwork/invite-connect/connections/\">https://www.linkedin.com/mynetwork/invite-connect/connections/</a></p></li>\n<li><p>Sent (but not accepted??) connection requests: <a href=\"https://www.linkedin.com/mynetwork/invitation-manager/sent/\">https://www.linkedin.com/mynetwork/invitation-manager/sent/</a></p></li>\n<li><p>Linkedin automatically follows when you send a connection request. List of people you follow but they have not accepted your connection request: <a href=\"https://www.linkedin.com/mynetwork/network-manager/people-follow/following/\">https://www.linkedin.com/mynetwork/network-manager/people-follow/following/</a></p></li>\n<li><p>Show list of connections with recent Job Changes: <a href=\"https://www.linkedin.com/mynetwork/catch-up/job_changes/\">https://www.linkedin.com/mynetwork/catch-up/job_changes/</a></p></li>\n<li><p>Show list of connections with recent birthdays: <a href=\"https://www.linkedin.com/mynetwork/catch-up/birthday/\">https://www.linkedin.com/mynetwork/catch-up/birthday/</a></p></li>\n<li><p>Show list of connections with recent Work anniversaries: <a href=\"https://www.linkedin.com/mynetwork/catch-up/work_anniversaries/\">https://www.linkedin.com/mynetwork/catch-up/work_anniversaries/</a></p></li>\n<li><p>Show list of connections with recent achievements in Education: <a href=\"https://www.linkedin.com/mynetwork/catch-up/education/\">https://www.linkedin.com/mynetwork/catch-up/education/</a></p></li>\n</ul>\n<h2 id=\"tools\">Tools</h2>\n<h3 id=\"chrome-extension---follower-insights-for-linkedin\">Chrome extension - Follower Insights for LinkedIn</h3>\n<p>Show the number of followers of a LinkedIn profile on a bunch of linkedin.com webpages. Chrome extension - <a href=\"https://chromewebstore.google.com/detail/follower-insights-for-lin/kkbaccngljoklnejedmjicfdfkhgblnd\">Follower Insights for LinkedIn\n</a></p><h3 id=\"\"></h3>\n<h2 id=\"tips\">Tips</h2>\n<ul>\n<li>Linkedin has a built-in scheduler (both on website and mobile apps). Use it.</li>\n<li>Schedule at least 3-4 posts every week.</li>\n<li>You can send connection request to 5-8 relevant people daily, to grow your network.</li>\n<li>Remove <em><strong>Cr</strong></em> tag on ai generated image by opening it in linkedin image editor and saving it. Even if this changes in future, you could make a minor edit in editor and then Linkedin wouldn’t identify it as an AI generated image.</li>\n<li>Use any text formatter website (e.g. <a href=\"https://www.linkedin-makeover.com/linkedin-text-formatter/#textformatter\">Linkedin Text Formatter</a>)  to format your key content (such as title) in bold etc.</li>\n<li>Ask your friends, family and acquaintances to like your posts within first 12-24 hours (whether posted from personal profile or company page). This leads to higher engagement on your post.</li>\n</ul>\n<h2 id=\"generate-bannersimages-using-generative-ai\">Generate banners/images using Generative AI</h2>\n<p>How to generate decent banner images (usually in a single attempt) using ChatGPT’s “Create image” for text content.</p><p>The following prompt does NOT gives good output:</p><blockquote>\n<p>Make a banner image for this linkedin post:𝑻𝒉𝒆 4-𝑺𝒕𝒆𝒑 𝑨𝑺𝑶 𝑳𝒐𝒐𝒑 𝑼𝒔𝒆𝒅 𝒃𝒚 𝑨𝒑𝒑 𝑺𝒕𝒐𝒓𝒆 𝑮𝒊𝒂𝒏𝒕𝒔 💡What if I told you that most top apps don’t chase keywords—they engineer cycles to pull them in? 🤔 Ever wondered how they consistently pop up in totally different keyword clusters, week after week? 📈Here’s the secret: they use a Keyword Optimization Cycle—a 4-step loop that helps them dominate visibility systematically, not sporadically 🚀</p></blockquote>\n<p>What I’m doing instead, to get good results consistently: First use this prompt:</p><blockquote>\n<p>Give a prompt to generate banner image using microsoft designer for the following linkedin post:</p><p>𝑻𝒉𝒆 4-𝑺𝒕𝒆𝒑 𝑨𝑺𝑶 𝑳𝒐𝒐𝒑 𝑼𝒔𝒆𝒅 𝒃𝒚 𝑨𝒑𝒑 𝑺𝒕𝒐𝒓𝒆 𝑮𝒊𝒂𝒏𝒕𝒔 💡What if I told you that most top apps don’t chase keywords—they engineer cycles to pull them in? 🤔 Ever wondered how they consistently pop up in totally different keyword clusters, week after week? 📈Here’s the secret: they use a Keyword Optimization Cycle—a 4-step loop that helps them dominate visibility systematically, not sporadically 🚀</p></blockquote>\n<p>Chatgpt will give a prompt like this:</p><blockquote>\n<p>A sleek, modern tech-themed banner illustrating a 4-step optimization loop for mobile apps. Use minimalistic icons or illustrations to represent each step: tracking keywords, aligning metadata, monitoring metrics, and iterating strategies. Include subtle app store elements like charts, magnifying glass, keyword tags, or mobile screens. Use a clean, professional style with a color palette of deep blue, white, and bright accents (e.g., neon green or electric purple). Add the title “The 4-Step ASO Loop Used by App Store Giants” in bold, elegant typography. Banner should feel insightful, strategic, and growth-oriented.</p></blockquote>\n<p>Add the following 2 sub-prompts to chatgpt’s generated prompt (here as an example, orange color is brand color):</p><blockquote>\n<p>(primary color should be orange)</p></blockquote>\n<p>and</p><blockquote>\n<p>Include subtle visual cues like upward-trending graphs or analytics icons to represent analytics, growth, marketing.Use a clean, tech-inspired color palette to reflect the App Store and Play Store aesthetic. The overall tone should be trustworthy, smart, professional, data-driven, growth-focused, strategic.Add a callout badge or ribbon with some highly relevant and contextual text.</p></blockquote>\n<p>The above steps consistently give a banner image with little (if any) hallucinations as well as good quality output.</p><h2 id=\"things-i-want-to-try-out\">Things I want to try out</h2>\n<ul>\n<li>Pods<ul>\n<li><a href=\"https://lempod.com/pricing/#\">https://lempod.com/pricing/#</a></li>\n<li><a href=\"https://www.hyperclapper.com/\">https://www.hyperclapper.com/</a></li>\n</ul>\n</li>\n</ul>\n",
+            "image": "https://amberj.github.io/personal-website/media/posts/8/LinkedIn-marketing-the-complete-guide-to-boost-your-strategy-Final.svg",
             "author": {
                 "name": "Amber Jain"
             },
             "tags": [
+                   "Growth"
             ],
             "date_published": "2025-07-10T16:47:16+05:30",
-            "date_modified": "2025-07-11T01:57:22+05:30"
+            "date_modified": "2025-07-17T01:04:20+05:30"
         },
         {
             "id": "https://amberj.github.io/personal-website/adding-mcp-servers-to-claude-code.html",
@@ -61,13 +63,15 @@
             "title": "Adding MCP servers to Claude Code",
             "summary": "Anthropic’s Documentation: https://docs.anthropic.com/en/docs/claude-code/mcp If you have already added MCPs on Claude Desktop&hellip;",
             "content_html": "<p>Anthropic’s Documentation: <a href=\"https://docs.anthropic.com/en/docs/claude-code/mcp\">https://docs.anthropic.com/en/docs/claude-code/mcp</a></p><h2 id=\"handy-command\">Handy command:</h2>\n<p>If you have already added MCPs on Claude Desktop app, then you can use this command to import some/all of these MCPs from Claude Desktop to Claude Code: </p><p><code>claude mcp add-from-claude-desktop</code></p><h2 id=\"importing-mcps-one-by-one\">Importing MCPs one-by-one</h2>\n<h3 id=\"browsermcpio-mcp\">browsermcp.io MCP</h3>\n<p><code>claude mcp add browsermcp.io npx @browsermcp/mcp@latest</code></p><h3 id=\"sequential-thinking-mcp\">Sequential Thinking MCP</h3>\n<p><code>claude mcp add sequential-thinking npx @modelcontextprotocol/server-sequential-thinking</code></p><h3 id=\"filesystem-mcp\">Filesystem MCP</h3>\n<p><code>claude mcp add filesystem npx @modelcontextprotocol/server-filesystem &lt;FULL_PATH_TO_FOLDER&gt;</code></p><h3 id=\"mobile-mcp-not-tested-by-me-yet\">Mobile MCP (Not tested by me yet)</h3>\n<p>Install on mac to control android\n<a href=\"https://github.com/mobile-next/mobile-mcp\">https://github.com/mobile-next/mobile-mcp</a></p><p><code>claude mcp add mobile -- npx -y @mobilenext/mobile-mcp@latest</code></p>",
+            "image": "https://amberj.github.io/personal-website/media/posts/6/ec726680e57b03bc40e8c5e58a848e7cd39a15df-2881x1621.webp",
             "author": {
                 "name": "Amber Jain"
             },
             "tags": [
+                   "AI / LLMs"
             ],
             "date_published": "2025-07-09T20:39:20+05:30",
-            "date_modified": "2025-07-15T22:47:01+05:30"
+            "date_modified": "2025-07-17T01:06:10+05:30"
         },
         {
             "id": "https://amberj.github.io/personal-website/my-current-llm-workflow.html",
@@ -75,27 +79,29 @@
             "title": "My current LLM workflow",
             "summary": "Current paid plans Lovable Claude Pro (to be used in Claude Desktop&hellip;",
             "content_html": "<h2 id=\"current-paid-plans\">Current paid plans</h2>\n<ul>\n<li>Lovable</li>\n<li>Claude Pro (to be used in Claude Desktop and Claude Code)</li>\n<li>OpenRouter</li>\n</ul>\n<h2 id=\"apps-i-use\">Apps I use</h2>\n<ul>\n<li>PWA: Google AI Studio (to use paid models like <code>Gemini 2.5 Pro</code> for free)</li>\n<li>Mac app: Claude Desktop</li>\n<li>Claude Code</li>\n<li><a href=\"https://github.com/nbonamy/witsy\">Witsy</a> - Allows me to quickly make OpenRouter requests for any model and shows raw request/response in it’s <em>Debug Console</em></li>\n</ul>\n<h2 id=\"mcps-im-using\">MCPs I’m using</h2>\n<p>MCPs:</p><ul>\n<li>BrowserMCP.io</li>\n</ul>\n<p>MCP-esque integrations:</p><ul>\n<li>Google Drive native integration in Claude Desktop</li>\n</ul>\n",
+            "image": "https://amberj.github.io/personal-website/media/posts/2/Featured-6-23-1000x641.png",
             "author": {
                 "name": "Amber Jain"
             },
             "tags": [
+                   "AI / LLMs"
             ],
             "date_published": "2025-07-09T18:22:23+05:30",
-            "date_modified": "2025-07-09T19:10:21+05:30"
+            "date_modified": "2025-07-17T01:11:06+05:30"
         },
         {
             "id": "https://amberj.github.io/personal-website/ssh-clients-on-android.html",
             "url": "https://amberj.github.io/personal-website/ssh-clients-on-android.html",
             "title": "SSH clients on Android",
-            "summary": "Comparison My Requirements JuiceSSH Termius Termux PortX Allow saved snippet execution with&hellip;",
-            "content_html": "<h2 id=\"comparison\">Comparison</h2>\n<table>\n<thead>\n<tr>\n<th>My Requirements</th>\n<th>JuiceSSH</th>\n<th>Termius</th>\n<th>Termux</th>\n<th>PortX</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Allow saved snippet execution with click</td>\n<td>Yes (Paid)</td>\n<td>Yes (??)</td>\n<td>??</td>\n<td>No</td>\n</tr>\n<tr>\n<td>MOSH support</td>\n<td>Yes</td>\n<td>Yes (??)</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Sync saved servers across devices</td>\n<td>Yes (Paid)</td>\n<td>Yes (??)</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Price</td>\n<td>Free/License</td>\n<td>free??</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Run ARM version of linux commands/apps</td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n</tbody></table>\n<h2 id=\"conclusion\">Conclusion</h2>\n<ul>\n<li>The development on jubes SSH has stopped now.</li>\n</ul>\n",
+            "summary": "Blogpost status: Work in progressComparison My Requirements JuiceSSH Termius Termux PortX Allow&hellip;",
+            "content_html": "<p>Blogpost status: Work in progress</p><h2 id=\"comparison\">Comparison</h2>\n<table>\n<thead>\n<tr>\n<th>My Requirements</th>\n<th>JuiceSSH</th>\n<th>Termius</th>\n<th>Termux</th>\n<th>PortX</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Allow saved snippet execution with click</td>\n<td>Yes (Paid)</td>\n<td>Yes (??)</td>\n<td>??</td>\n<td>No</td>\n</tr>\n<tr>\n<td>MOSH support</td>\n<td>Yes</td>\n<td>Yes (??)</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Sync saved servers across devices</td>\n<td>Yes (Paid)</td>\n<td>Yes (??)</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Price</td>\n<td>Free/License</td>\n<td>free??</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>Run ARM version of linux commands/apps</td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n</tr>\n</tbody></table>\n<h2 id=\"conclusion\">Conclusion</h2>\n<ul>\n<li>The development on JuiceSSH has stopped now.</li>\n</ul>\n",
             "author": {
                 "name": "Amber Jain"
             },
             "tags": [
             ],
             "date_published": "2025-07-09T17:05:16+05:30",
-            "date_modified": "2025-07-09T17:33:01+05:30"
+            "date_modified": "2025-07-17T01:11:49+05:30"
         }
     ]
 }
