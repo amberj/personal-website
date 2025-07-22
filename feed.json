@@ -10,6 +10,22 @@
     },
     "items": [
         {
+            "id": "https://amberj.github.io/personal-website/scripting-claude-code-for-headless-and-unattended-tasks.html",
+            "url": "https://amberj.github.io/personal-website/scripting-claude-code-for-headless-and-unattended-tasks.html",
+            "title": "Scripting Claude Code for headless &amp; unattended tasks",
+            "summary": "Claude code’s today (2025-07-22 in this case) usage as json for each&hellip;",
+            "content_html": "<p>Claude code’s <code>today</code> (2025-07-22 in this case) usage as <code>json</code> for each 5 hour <code>blocks</code> of time:</p><p><code>ccusage blocks --since 20250722 --until 20250722 --json</code></p><p>Personal use case: \nClaude pro’s paid quota gets wasted during: </p><ul>\n<li>holidays</li>\n<li>night when user is sleeping</li>\n<li>or even during the day on wekdays when we sometimes don’t use it much.</li>\n</ul>\n<p>It’s quota is reset every 5 hours <a href=\"https://support.anthropic.com/en/articles/8325612-does-claude-pro-have-any-usage-limits\">https://support.anthropic.com/en/articles/8325612-does-claude-pro-have-any-usage-limits</a></p><p>Trying to write a python/bash script that could parse this json, see if quota is unused 30-60minutes before 5 hr block gets expired…. and utilize it to run some background tasks via claude cli + MCP’s (e.g. generate text posts for social media OR analyze codebase passively in background to reveal bugs).</p>",
+            "image": "https://amberj.github.io/personal-website/media/posts/15/4dface4fdc350ad704f19a8f8704cf3264c55682-2880x1620.webp",
+            "author": {
+                "name": "Amber Jain"
+            },
+            "tags": [
+                   "AI / LLMs"
+            ],
+            "date_published": "2025-07-22T20:47:17+05:30",
+            "date_modified": "2025-07-22T20:49:43+05:30"
+        },
+        {
             "id": "https://amberj.github.io/personal-website/send-slack-message-via-api-using-xoxp-user-token.html",
             "url": "https://amberj.github.io/personal-website/send-slack-message-via-api-using-xoxp-user-token.html",
             "title": "Send slack message via api using &#x60;xoxp&#x60; User token ",
@@ -87,7 +103,7 @@
                    "AI / LLMs"
             ],
             "date_published": "2025-07-09T18:22:23+05:30",
-            "date_modified": "2025-07-17T01:11:06+05:30"
+            "date_modified": "2025-07-17T01:32:33+05:30"
         },
         {
             "id": "https://amberj.github.io/personal-website/ssh-clients-on-android.html",

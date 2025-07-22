@@ -3,12 +3,42 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberj.github.io/personal-website/feed.xml" rel="self" />
     <link href="https://amberj.github.io/personal-website" />
-    <updated>2025-07-17T01:15:01+05:30</updated>
+    <updated>2025-07-22T20:49:43+05:30</updated>
     <author>
         <name>Amber Jain</name>
     </author>
     <id>https://amberj.github.io/personal-website</id>
 
+    <entry>
+        <title>Scripting Claude Code for headless &amp; unattended tasks</title>
+        <author>
+            <name>Amber Jain</name>
+        </author>
+        <link href="https://amberj.github.io/personal-website/scripting-claude-code-for-headless-and-unattended-tasks.html"/>
+        <id>https://amberj.github.io/personal-website/scripting-claude-code-for-headless-and-unattended-tasks.html</id>
+        <media:content url="https://amberj.github.io/personal-website/media/posts/15/4dface4fdc350ad704f19a8f8704cf3264c55682-2880x1620.webp" medium="image" />
+            <category term="AI / LLMs"/>
+
+        <updated>2025-07-22T20:47:17+05:30</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://amberj.github.io/personal-website/media/posts/15/4dface4fdc350ad704f19a8f8704cf3264c55682-2880x1620.webp" alt="" />
+                    Claude code’s today (2025-07-22 in this case) usage as json for each&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://amberj.github.io/personal-website/media/posts/15/4dface4fdc350ad704f19a8f8704cf3264c55682-2880x1620.webp" class="type:primaryImage" alt="" /></p>
+                <p>Claude code’s <code>today</code> (2025-07-22 in this case) usage as <code>json</code> for each 5 hour <code>blocks</code> of time:</p><p><code>ccusage blocks --since 20250722 --until 20250722 --json</code></p><p>Personal use case: 
+Claude pro’s paid quota gets wasted during: </p><ul>
+<li>holidays</li>
+<li>night when user is sleeping</li>
+<li>or even during the day on wekdays when we sometimes don’t use it much.</li>
+</ul>
+<p>It’s quota is reset every 5 hours <a href="https://support.anthropic.com/en/articles/8325612-does-claude-pro-have-any-usage-limits">https://support.anthropic.com/en/articles/8325612-does-claude-pro-have-any-usage-limits</a></p><p>Trying to write a python/bash script that could parse this json, see if quota is unused 30-60minutes before 5 hr block gets expired…. and utilize it to run some background tasks via claude cli + MCP’s (e.g. generate text posts for social media OR analyze codebase passively in background to reveal bugs).</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Send slack message via api using &#x60;xoxp&#x60; User token </title>
         <author>
