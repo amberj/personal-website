@@ -6,7 +6,7 @@
     "feed_url": "https://amberj.github.io/personal-website/feed.json",
     "user_comment": "",
     "author": {
-        "name": "Amber Jain"
+        "name": "Written by Amber Jain"
     },
     "items": [
         {
@@ -15,13 +15,16 @@
             "title": "Using old/spare Android devices to automate daily tasks using LLM",
             "summary": "TL;DR Claude Code CLI or Gemini CLI (with relevant MCP servers enabled)&hellip;",
             "content_html": "<blockquote>\n<p>TL;DR</p><p>Claude Code CLI or Gemini CLI (with relevant MCP servers enabled) running via Cronie on Termux on Android devices. Use <code>ccusage blocks --since 20250722 --until 20250722 --json</code> to check Claude Code’s quota to avoid failures.</p></blockquote>\n",
+            "image": "https://amberj.github.io/personal-website/media/posts/22/llm-mcp-on-android.png",
             "author": {
-                "name": "Amber Jain"
+                "name": "Written by Amber Jain"
             },
             "tags": [
+                   "Half Baked Explorations",
+                   "AI / LLMs"
             ],
             "date_published": "2025-07-23T16:45:37+05:30",
-            "date_modified": "2025-07-23T16:46:44+05:30"
+            "date_modified": "2025-07-23T16:54:28+05:30"
         },
         {
             "id": "https://amberj.github.io/personal-website/scripting-claude-code-for-headless-and-unattended-tasks.html",
@@ -31,14 +34,14 @@
             "content_html": "<p>Claude code’s <code>today</code> (2025-07-22 in this case) usage as <code>json</code> for each 5 hour <code>blocks</code> of time:</p><p><code>ccusage blocks --since 20250722 --until 20250722 --json</code></p><p>Personal use case: \nClaude pro’s paid quota gets wasted during: </p><ul>\n<li>holidays</li>\n<li>night when user is sleeping</li>\n<li>or even during the day on wekdays when we sometimes don’t use it much.</li>\n</ul>\n<p>It’s quota is reset every 5 hours <a href=\"https://support.anthropic.com/en/articles/8325612-does-claude-pro-have-any-usage-limits\">https://support.anthropic.com/en/articles/8325612-does-claude-pro-have-any-usage-limits</a></p><p>Trying to write a python/bash script that could parse this json, see if quota is unused 30-60minutes before 5 hr block gets expired…. and utilize it to run some background tasks via claude cli + MCP’s (e.g. generate text posts for social media OR analyze codebase passively in background to reveal bugs).</p>",
             "image": "https://amberj.github.io/personal-website/media/posts/15/4dface4fdc350ad704f19a8f8704cf3264c55682-2880x1620.webp",
             "author": {
-                "name": "Amber Jain"
+                "name": "Written by Amber Jain"
             },
             "tags": [
                    "Half Baked Explorations",
                    "AI / LLMs"
             ],
             "date_published": "2025-07-22T20:47:17+05:30",
-            "date_modified": "2025-07-23T14:23:29+05:30"
+            "date_modified": "2025-07-23T16:51:08+05:30"
         },
         {
             "id": "https://amberj.github.io/personal-website/send-slack-message-via-api-using-xoxp-user-token.html",
@@ -48,14 +51,14 @@
             "content_html": "<ul>\n<li>Create an app here: <a href=\"https://api.slack.com/apps\">https://api.slack.com/apps</a><ul>\n<li>You can see newly created Slack app here: <a href=\"https://api.slack.com/apps/\">https://api.slack.com/apps/</a></li>\n<li>On App screen, click <strong>OAuth &amp; Permissions</strong> in the sidebar.<ul>\n<li>Under <strong>User Token Scopes</strong> section, click <strong>Add an OAuth Scope</strong></li>\n<li>Under <strong>OAuth Tokens</strong> , click <strong>Install to Productiwitty</strong>. This will generate <strong>User OAuth Token</strong> starting with <code>xoxp</code>.</li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n<p>Now install <code>slack_sdk</code> inside virtualenv using:</p><p><code>pip install slack_sdk</code></p><p>Then you can send messages via Slack API using following Python 3 code:</p><pre><code>#!/usr/bin/env python3\nimport datetime\nfrom slack_sdk import WebClient\n\n# ID of channel you want to post message to\n#\nchannel_id = &quot;CXXXXXXX&quot;\n\nuser_token = &quot;xoxp-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;\n\nclient = WebClient(user_token)\n\ndef send_slack_message(channel_id, msg):\n    try:\n        result = client.chat_postMessage(\n            channel=channel_id,\n            text=msg\n        )\n        print(result)\n\n    except SlackApiError as e:\n        print(f&quot;Error: {e}&quot;)\n\nsend_slack_message(channel_id, &quot;hello&quot;)\n</code></pre>\n<p>You can also schedule a message using this code:</p><pre><code>def schedule_msg(channel_id, at_hour, at_minute, msg, day):\n    scheduled_time = datetime.time(hour=at_hour, minute=at_minute)\n    schedule_timestamp = datetime.datetime.combine(day, scheduled_time).strftime(&#39;%s&#39;)\n    try:\n        result = client.chat_scheduleMessage(\n            channel=channel_id,\n            text=msg,\n            post_at=schedule_timestamp\n        )\n        print(result)\n    except Exception as e:\n        print(f&quot;EXCEPTION!!! {e}&quot;)\n\ntoday = datetime.date.today()\n\n# Schedule a message to be sent at 23:35 (11:35pm) today:\nschedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)\n</code></pre>\n",
             "image": "https://amberj.github.io/personal-website/media/posts/13/slack-large.webp",
             "author": {
-                "name": "Amber Jain"
+                "name": "Written by Amber Jain"
             },
             "tags": [
                    "Programming",
                    "Blogpost"
             ],
             "date_published": "2025-07-17T00:27:09+05:30",
-            "date_modified": "2025-07-23T14:45:28+05:30"
+            "date_modified": "2025-07-23T16:51:25+05:30"
         },
         {
             "id": "https://amberj.github.io/personal-website/installing-termux.html",
@@ -65,14 +68,14 @@
             "content_html": "<p>Install Termux from F-droid or official website. Play Store version is outdated.</p><h2 id=\"change--update-repo-sources\">Change &amp; update repo sources</h2>\n<p><code>termux-change-repo</code></p><p><code>pkg update &amp;&amp; pkg upgrade</code></p><h2 id=\"install-some-utilities\">Install some utilities</h2>\n<p><code>pkg install termux-tools openssh wget python iproute2 git curl nano</code></p><h2 id=\"why-i-dont-install-termux-api-package\">Why I don’t install <code>termux-api</code> package?</h2>\n<p>Termux API was consuming a lot of battery on my Samsung Galaxy Z Fold 5, when I had installed <a href=\"https://github.com/sabamdarif/termux-desktop?tab=readme-ov-file\">full XFCE Linux desktop environment on Android device with Termux X11</a></p><p>This addon exposes Android device functionality as API to command line programs in Termux. For e.g.</p><ul>\n<li>Vibrate the device when something interesting happens.</li>\n<li>Access the system clipboard from shell scripts.</li>\n<li>Read and send sms messages from your terminal.</li>\n<li>Access device GPS location sensor from scripts.</li>\n</ul>\n<p>Complete list of API implementations are available at: <a href=\"https://wiki.termux.com/wiki/Termux:API\">https://wiki.termux.com/wiki/Termux:API</a></p><p>If you need this functionality, then only install it.</p><h2 id=\"access-termux-files-in-android\">Access termux files in Android</h2>\n<p><code>termux-setup-storage</code></p><p>Use a file manager like <a href=\"https://play.google.com/store/apps/details?id=me.zhanghai.android.files\">Material Files</a></p><h2 id=\"setup\">Setup</h2>\n<ul>\n<li>Claude Code and/or Gemini CLI</li>\n</ul>\n<p><code>pkg install nodejs-lts git</code></p><p><code>npm install -g @anthropic-ai/claude-code</code></p><p><code>npm install -g @google/gemini-cli</code></p><p><code>mkdir claude-code</code></p><p><code>cd claude-code/</code></p><p><code>claude</code></p><p><code>gemini</code></p><ul>\n<li>MCPs in Claude Code and/or Gemini CLI</li>\n</ul>\n",
             "image": "https://amberj.github.io/personal-website/media/posts/12/1200x600wa.png",
             "author": {
-                "name": "Amber Jain"
+                "name": "Written by Amber Jain"
             },
             "tags": [
                    "Blogpost",
                    "Android"
             ],
             "date_published": "2025-07-11T01:20:57+05:30",
-            "date_modified": "2025-07-23T14:46:27+05:30"
+            "date_modified": "2025-07-23T16:51:32+05:30"
         },
         {
             "id": "https://amberj.github.io/personal-website/linkedin-growth.html",
@@ -82,14 +85,14 @@
             "content_html": "<h2 id=\"useful-urls\">Useful URLs</h2>\n<p>Some of these URLs might not work on mobile browser (unless you request “Desktop site” in Chrome), but all of these should work on Desktop browsers:</p><ul>\n<li><p>The default linked feed shows so much irrelevant content:</p><ul>\n<li>Linkedin Ads</li>\n<li>Posts from  &gt;= 2nd degree connections</li>\n<li>Shows posts from strangers, that are commented on or liked by your first degree connections.</li>\n</ul>\n<p>If this is too noisy for you and if you want to only see posts from 1st degree connections, use this url instead:</p><ul>\n<li><a href=\"https://www.linkedin.com/search/results/content/?datePosted=%22past-week%22&keywords=posts&origin=FACETED_SEARCH&postedBy=%5B%22first%22%2C%22following%22%5D&sid=wFE&sortBy=%22date_posted%22\">Show only “Posts”, sorted by “Latest”, from “Past week” and Posted by either 1st degree connections or people I follow</a></li>\n</ul>\n</li>\n<li><p>Recently Added Connections: <a href=\"https://www.linkedin.com/mynetwork/invite-connect/connections/\">https://www.linkedin.com/mynetwork/invite-connect/connections/</a></p></li>\n<li><p>Sent (but not accepted??) connection requests: <a href=\"https://www.linkedin.com/mynetwork/invitation-manager/sent/\">https://www.linkedin.com/mynetwork/invitation-manager/sent/</a></p></li>\n<li><p>Linkedin automatically follows when you send a connection request. List of people you follow but they have not accepted your connection request: <a href=\"https://www.linkedin.com/mynetwork/network-manager/people-follow/following/\">https://www.linkedin.com/mynetwork/network-manager/people-follow/following/</a></p></li>\n<li><p>Show list of connections with recent Job Changes: <a href=\"https://www.linkedin.com/mynetwork/catch-up/job_changes/\">https://www.linkedin.com/mynetwork/catch-up/job_changes/</a></p></li>\n<li><p>Show list of connections with recent birthdays: <a href=\"https://www.linkedin.com/mynetwork/catch-up/birthday/\">https://www.linkedin.com/mynetwork/catch-up/birthday/</a></p></li>\n<li><p>Show list of connections with recent Work anniversaries: <a href=\"https://www.linkedin.com/mynetwork/catch-up/work_anniversaries/\">https://www.linkedin.com/mynetwork/catch-up/work_anniversaries/</a></p></li>\n<li><p>Show list of connections with recent achievements in Education: <a href=\"https://www.linkedin.com/mynetwork/catch-up/education/\">https://www.linkedin.com/mynetwork/catch-up/education/</a></p></li>\n</ul>\n<h2 id=\"tools\">Tools</h2>\n<h3 id=\"chrome-extension---follower-insights-for-linkedin\">Chrome extension - Follower Insights for LinkedIn</h3>\n<p>Show the number of followers of a LinkedIn profile on a bunch of linkedin.com webpages. Chrome extension - <a href=\"https://chromewebstore.google.com/detail/follower-insights-for-lin/kkbaccngljoklnejedmjicfdfkhgblnd\">Follower Insights for LinkedIn\n</a></p><h3 id=\"\"></h3>\n<h2 id=\"tips\">Tips</h2>\n<ul>\n<li>Linkedin has a built-in scheduler (both on website and mobile apps). Use it.</li>\n<li>Schedule at least 3-4 posts every week.</li>\n<li>You can send connection request to 5-8 relevant people daily, to grow your network.</li>\n<li>Remove <em><strong>Cr</strong></em> tag on ai generated image by opening it in linkedin image editor and saving it. Even if this changes in future, you could make a minor edit in editor and then Linkedin wouldn’t identify it as an AI generated image.</li>\n<li>Use any text formatter website (e.g. <a href=\"https://www.linkedin-makeover.com/linkedin-text-formatter/#textformatter\">Linkedin Text Formatter</a>)  to format your key content (such as title) in bold etc.</li>\n<li>Ask your friends, family and acquaintances to like your posts within first 12-24 hours (whether posted from personal profile or company page). This leads to higher engagement on your post.</li>\n</ul>\n<h2 id=\"generate-bannersimages-using-generative-ai\">Generate banners/images using Generative AI</h2>\n<p>How to generate decent banner images (usually in a single attempt) using ChatGPT’s “Create image” for text content.</p><p>The following prompt does NOT gives good output:</p><blockquote>\n<p>Make a banner image for this linkedin post:𝑻𝒉𝒆 4-𝑺𝒕𝒆𝒑 𝑨𝑺𝑶 𝑳𝒐𝒐𝒑 𝑼𝒔𝒆𝒅 𝒃𝒚 𝑨𝒑𝒑 𝑺𝒕𝒐𝒓𝒆 𝑮𝒊𝒂𝒏𝒕𝒔 💡What if I told you that most top apps don’t chase keywords—they engineer cycles to pull them in? 🤔 Ever wondered how they consistently pop up in totally different keyword clusters, week after week? 📈Here’s the secret: they use a Keyword Optimization Cycle—a 4-step loop that helps them dominate visibility systematically, not sporadically 🚀</p></blockquote>\n<p>What I’m doing instead, to get good results consistently: First use this prompt:</p><blockquote>\n<p>Give a prompt to generate banner image using microsoft designer for the following linkedin post:</p><p>𝑻𝒉𝒆 4-𝑺𝒕𝒆𝒑 𝑨𝑺𝑶 𝑳𝒐𝒐𝒑 𝑼𝒔𝒆𝒅 𝒃𝒚 𝑨𝒑𝒑 𝑺𝒕𝒐𝒓𝒆 𝑮𝒊𝒂𝒏𝒕𝒔 💡What if I told you that most top apps don’t chase keywords—they engineer cycles to pull them in? 🤔 Ever wondered how they consistently pop up in totally different keyword clusters, week after week? 📈Here’s the secret: they use a Keyword Optimization Cycle—a 4-step loop that helps them dominate visibility systematically, not sporadically 🚀</p></blockquote>\n<p>Chatgpt will give a prompt like this:</p><blockquote>\n<p>A sleek, modern tech-themed banner illustrating a 4-step optimization loop for mobile apps. Use minimalistic icons or illustrations to represent each step: tracking keywords, aligning metadata, monitoring metrics, and iterating strategies. Include subtle app store elements like charts, magnifying glass, keyword tags, or mobile screens. Use a clean, professional style with a color palette of deep blue, white, and bright accents (e.g., neon green or electric purple). Add the title “The 4-Step ASO Loop Used by App Store Giants” in bold, elegant typography. Banner should feel insightful, strategic, and growth-oriented.</p></blockquote>\n<p>Add the following 2 sub-prompts to chatgpt’s generated prompt (here as an example, orange color is brand color):</p><blockquote>\n<p>(primary color should be orange)</p></blockquote>\n<p>and</p><blockquote>\n<p>Include subtle visual cues like upward-trending graphs or analytics icons to represent analytics, growth, marketing.Use a clean, tech-inspired color palette to reflect the App Store and Play Store aesthetic. The overall tone should be trustworthy, smart, professional, data-driven, growth-focused, strategic.Add a callout badge or ribbon with some highly relevant and contextual text.</p></blockquote>\n<p>The above steps consistently give a banner image with little (if any) hallucinations as well as good quality output.</p><h2 id=\"things-i-want-to-try-out\">Things I want to try out</h2>\n<ul>\n<li>Pods<ul>\n<li><a href=\"https://lempod.com/pricing/#\">https://lempod.com/pricing/#</a></li>\n<li><a href=\"https://www.hyperclapper.com/\">https://www.hyperclapper.com/</a></li>\n</ul>\n</li>\n</ul>\n",
             "image": "https://amberj.github.io/personal-website/media/posts/8/LinkedIn-marketing-the-complete-guide-to-boost-your-strategy-Final.svg",
             "author": {
-                "name": "Amber Jain"
+                "name": "Written by Amber Jain"
             },
             "tags": [
                    "Growth",
                    "Blogpost"
             ],
             "date_published": "2025-07-10T16:47:16+05:30",
-            "date_modified": "2025-07-23T14:46:37+05:30"
+            "date_modified": "2025-07-23T16:51:42+05:30"
         },
         {
             "id": "https://amberj.github.io/personal-website/adding-mcp-servers-to-claude-code.html",
@@ -99,14 +102,14 @@
             "content_html": "<p>Anthropic’s Documentation: <a href=\"https://docs.anthropic.com/en/docs/claude-code/mcp\">https://docs.anthropic.com/en/docs/claude-code/mcp</a></p><h2 id=\"handy-command\">Handy command:</h2>\n<p>If you have already added MCPs on Claude Desktop app, then you can use this command to import some/all of these MCPs from Claude Desktop to Claude Code: </p><p><code>claude mcp add-from-claude-desktop</code></p><h2 id=\"importing-mcps-one-by-one\">Importing MCPs one-by-one</h2>\n<h3 id=\"browsermcpio-mcp\">browsermcp.io MCP</h3>\n<p><code>claude mcp add browsermcp.io npx @browsermcp/mcp@latest</code></p><h3 id=\"sequential-thinking-mcp\">Sequential Thinking MCP</h3>\n<p><code>claude mcp add sequential-thinking npx @modelcontextprotocol/server-sequential-thinking</code></p><h3 id=\"filesystem-mcp\">Filesystem MCP</h3>\n<p><code>claude mcp add filesystem npx @modelcontextprotocol/server-filesystem &lt;FULL_PATH_TO_FOLDER&gt;</code></p><h3 id=\"mobile-mcp-not-tested-by-me-yet\">Mobile MCP (Not tested by me yet)</h3>\n<p>Install on mac to control android\n<a href=\"https://github.com/mobile-next/mobile-mcp\">https://github.com/mobile-next/mobile-mcp</a></p><p><code>claude mcp add mobile -- npx -y @mobilenext/mobile-mcp@latest</code></p>",
             "image": "https://amberj.github.io/personal-website/media/posts/6/ec726680e57b03bc40e8c5e58a848e7cd39a15df-2881x1621.webp",
             "author": {
-                "name": "Amber Jain"
+                "name": "Written by Amber Jain"
             },
             "tags": [
                    "Half Baked Explorations",
                    "AI / LLMs"
             ],
             "date_published": "2025-07-09T20:39:20+05:30",
-            "date_modified": "2025-07-23T14:46:49+05:30"
+            "date_modified": "2025-07-23T16:51:51+05:30"
         },
         {
             "id": "https://amberj.github.io/personal-website/my-current-llm-workflow.html",
@@ -116,14 +119,14 @@
             "content_html": "<h2 id=\"current-paid-plans\">Current paid plans</h2>\n<ul>\n<li>Lovable</li>\n<li>Claude Pro (to be used in Claude Desktop and Claude Code)</li>\n<li>OpenRouter</li>\n</ul>\n<h2 id=\"apps-i-use\">Apps I use</h2>\n<ul>\n<li>PWA: Google AI Studio (to use paid models like <code>Gemini 2.5 Pro</code> for free)</li>\n<li>Mac app: Claude Desktop</li>\n<li>Claude Code</li>\n<li><a href=\"https://github.com/nbonamy/witsy\">Witsy</a> - Allows me to quickly make OpenRouter requests for any model and shows raw request/response in it’s <em>Debug Console</em></li>\n</ul>\n<h2 id=\"mcps-im-using\">MCPs I’m using</h2>\n<p>MCPs:</p><ul>\n<li>BrowserMCP.io</li>\n</ul>\n<p>MCP-esque integrations:</p><ul>\n<li>Google Drive native integration in Claude Desktop</li>\n</ul>\n",
             "image": "https://amberj.github.io/personal-website/media/posts/2/Featured-6-23-1000x641.png",
             "author": {
-                "name": "Amber Jain"
+                "name": "Written by Amber Jain"
             },
             "tags": [
                    "Half Baked Explorations",
                    "AI / LLMs"
             ],
             "date_published": "2025-07-09T18:22:23+05:30",
-            "date_modified": "2025-07-23T14:47:01+05:30"
+            "date_modified": "2025-07-23T16:51:58+05:30"
         }
     ]
 }

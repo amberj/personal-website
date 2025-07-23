@@ -3,28 +3,33 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberj.github.io/personal-website/feed.xml" rel="self" />
     <link href="https://amberj.github.io/personal-website" />
-    <updated>2025-07-23T16:46:44+05:30</updated>
+    <updated>2025-07-23T16:54:28+05:30</updated>
     <author>
-        <name>Amber Jain</name>
+        <name>Written by Amber Jain</name>
     </author>
     <id>https://amberj.github.io/personal-website</id>
 
     <entry>
         <title>Using old/spare Android devices to automate daily tasks using LLM</title>
         <author>
-            <name>Amber Jain</name>
+            <name>Written by Amber Jain</name>
         </author>
         <link href="https://amberj.github.io/personal-website/using-oldspare-android-devices-to-automate-daily-tasks-using-llm.html"/>
         <id>https://amberj.github.io/personal-website/using-oldspare-android-devices-to-automate-daily-tasks-using-llm.html</id>
+        <media:content url="https://amberj.github.io/personal-website/media/posts/22/llm-mcp-on-android.png" medium="image" />
+            <category term="Half Baked Explorations"/>
+            <category term="AI / LLMs"/>
 
         <updated>2025-07-23T16:45:37+05:30</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://amberj.github.io/personal-website/media/posts/22/llm-mcp-on-android.png" alt="Using old/spare Android devices to automate daily tasks using LLM" />
                     TL;DR Claude Code CLI or Gemini CLI (with relevant MCP servers enabled)&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://amberj.github.io/personal-website/media/posts/22/llm-mcp-on-android.png" class="type:primaryImage" alt="Using old/spare Android devices to automate daily tasks using LLM" /></p>
                 <blockquote>
 <p>TL;DR</p><p>Claude Code CLI or Gemini CLI (with relevant MCP servers enabled) running via Cronie on Termux on Android devices. Use <code>ccusage blocks --since 20250722 --until 20250722 --json</code> to check Claude Code’s quota to avoid failures.</p></blockquote>
 
@@ -34,7 +39,7 @@
     <entry>
         <title>Scripting Claude Code for headless &amp; unattended tasks</title>
         <author>
-            <name>Amber Jain</name>
+            <name>Written by Amber Jain</name>
         </author>
         <link href="https://amberj.github.io/personal-website/scripting-claude-code-for-headless-and-unattended-tasks.html"/>
         <id>https://amberj.github.io/personal-website/scripting-claude-code-for-headless-and-unattended-tasks.html</id>
@@ -65,7 +70,7 @@ Claude pro’s paid quota gets wasted during: </p><ul>
     <entry>
         <title>Send slack message via api using &#x60;xoxp&#x60; User token </title>
         <author>
-            <name>Amber Jain</name>
+            <name>Written by Amber Jain</name>
         </author>
         <link href="https://amberj.github.io/personal-website/send-slack-message-via-api-using-xoxp-user-token.html"/>
         <id>https://amberj.github.io/personal-website/send-slack-message-via-api-using-xoxp-user-token.html</id>
@@ -144,7 +149,7 @@ schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
     <entry>
         <title>Installing &amp; setting up Termux on Android</title>
         <author>
-            <name>Amber Jain</name>
+            <name>Written by Amber Jain</name>
         </author>
         <link href="https://amberj.github.io/personal-website/installing-termux.html"/>
         <id>https://amberj.github.io/personal-website/installing-termux.html</id>
@@ -186,7 +191,7 @@ schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
     <entry>
         <title>Growing your organic reach on LinkedIn</title>
         <author>
-            <name>Amber Jain</name>
+            <name>Written by Amber Jain</name>
         </author>
         <link href="https://amberj.github.io/personal-website/linkedin-growth.html"/>
         <id>https://amberj.github.io/personal-website/linkedin-growth.html</id>
@@ -262,7 +267,7 @@ schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
     <entry>
         <title>Adding MCP servers to Claude Code</title>
         <author>
-            <name>Amber Jain</name>
+            <name>Written by Amber Jain</name>
         </author>
         <link href="https://amberj.github.io/personal-website/adding-mcp-servers-to-claude-code.html"/>
         <id>https://amberj.github.io/personal-website/adding-mcp-servers-to-claude-code.html</id>
@@ -294,7 +299,7 @@ schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
     <entry>
         <title>My current LLM workflow</title>
         <author>
-            <name>Amber Jain</name>
+            <name>Written by Amber Jain</name>
         </author>
         <link href="https://amberj.github.io/personal-website/my-current-llm-workflow.html"/>
         <id>https://amberj.github.io/personal-website/my-current-llm-workflow.html</id>
