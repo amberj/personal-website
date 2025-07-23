@@ -3,12 +3,34 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberj.github.io/personal-website/feed.xml" rel="self" />
     <link href="https://amberj.github.io/personal-website" />
-    <updated>2025-07-23T14:47:01+05:30</updated>
+    <updated>2025-07-23T16:46:44+05:30</updated>
     <author>
         <name>Amber Jain</name>
     </author>
     <id>https://amberj.github.io/personal-website</id>
 
+    <entry>
+        <title>Using old/spare Android devices to automate daily tasks using LLM</title>
+        <author>
+            <name>Amber Jain</name>
+        </author>
+        <link href="https://amberj.github.io/personal-website/using-oldspare-android-devices-to-automate-daily-tasks-using-llm.html"/>
+        <id>https://amberj.github.io/personal-website/using-oldspare-android-devices-to-automate-daily-tasks-using-llm.html</id>
+
+        <updated>2025-07-23T16:45:37+05:30</updated>
+            <summary>
+                <![CDATA[
+                    TL;DR Claude Code CLI or Gemini CLI (with relevant MCP servers enabled)&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <blockquote>
+<p>TL;DR</p><p>Claude Code CLI or Gemini CLI (with relevant MCP servers enabled) running via Cronie on Termux on Android devices. Use <code>ccusage blocks --since 20250722 --until 20250722 --json</code> to check Claude Code’s quota to avoid failures.</p></blockquote>
+
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Scripting Claude Code for headless &amp; unattended tasks</title>
         <author>

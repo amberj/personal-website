@@ -10,6 +10,20 @@
     },
     "items": [
         {
+            "id": "https://amberj.github.io/personal-website/using-oldspare-android-devices-to-automate-daily-tasks-using-llm.html",
+            "url": "https://amberj.github.io/personal-website/using-oldspare-android-devices-to-automate-daily-tasks-using-llm.html",
+            "title": "Using old/spare Android devices to automate daily tasks using LLM",
+            "summary": "TL;DR Claude Code CLI or Gemini CLI (with relevant MCP servers enabled)&hellip;",
+            "content_html": "<blockquote>\n<p>TL;DR</p><p>Claude Code CLI or Gemini CLI (with relevant MCP servers enabled) running via Cronie on Termux on Android devices. Use <code>ccusage blocks --since 20250722 --until 20250722 --json</code> to check Claude Code’s quota to avoid failures.</p></blockquote>\n",
+            "author": {
+                "name": "Amber Jain"
+            },
+            "tags": [
+            ],
+            "date_published": "2025-07-23T16:45:37+05:30",
+            "date_modified": "2025-07-23T16:46:44+05:30"
+        },
+        {
             "id": "https://amberj.github.io/personal-website/scripting-claude-code-for-headless-and-unattended-tasks.html",
             "url": "https://amberj.github.io/personal-website/scripting-claude-code-for-headless-and-unattended-tasks.html",
             "title": "Scripting Claude Code for headless &amp; unattended tasks",
