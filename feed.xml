@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-07-24T22:57:28+05:30</updated>
+    <updated>2025-08-04T00:22:55+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -330,14 +330,21 @@ schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
 <h2 id="tools">Tools</h2>
 <h3 id="chrome-extension---follower-insights-for-linkedin">Chrome extension - Follower Insights for LinkedIn</h3>
 <p>Show the number of followers of a LinkedIn profile on a bunch of linkedin.com webpages. Chrome extension - <a href="https://chromewebstore.google.com/detail/follower-insights-for-lin/kkbaccngljoklnejedmjicfdfkhgblnd">Follower Insights for LinkedIn
-</a></p><h3 id=""></h3>
+</a></p><h3 id="text-formatters">Text formatters</h3>
+<ul>
+<li>For underline: <a href="https://typegrow.com/tools/linkedin-text-formatter">https://typegrow.com/tools/linkedin-text-formatter</a></li>
+<li>Use any text formatter website (e.g. <a href="https://www.linkedin-makeover.com/linkedin-text-formatter/#textformatter">Linkedin Text Formatter</a>)  to format your key content (such as title) in bold etc.</li>
+<li>Use professional smileys in your posts: <a href="https://www.linkedin.com/pulse/emojis-linkedin-full-list-including-special-george-oliveira/">Emojis for LinkedIn - Full list</a><ul>
+<li>Hold down alt+8 (option+8 on mac) to enter an asterisk symbol like this: •</li>
+</ul>
+</li>
+</ul>
 <h2 id="tips">Tips</h2>
 <ul>
 <li>Linkedin has a built-in scheduler (both on website and mobile apps). Use it.</li>
 <li>Schedule at least 3-4 posts every week.</li>
 <li>You can send connection request to 5-8 relevant people daily, to grow your network.</li>
 <li>Remove <em><strong>Cr</strong></em> tag on ai generated image by opening it in linkedin image editor and saving it. Even if this changes in future, you could make a minor edit in editor and then Linkedin wouldn’t identify it as an AI generated image.</li>
-<li>Use any text formatter website (e.g. <a href="https://www.linkedin-makeover.com/linkedin-text-formatter/#textformatter">Linkedin Text Formatter</a>)  to format your key content (such as title) in bold etc.</li>
 <li>Ask your friends, family and acquaintances to like your posts within first 12-24 hours (whether posted from personal profile or company page). This leads to higher engagement on your post.</li>
 </ul>
 <h2 id="generate-bannersimages-using-generative-ai">Generate banners/images using Generative AI</h2>
@@ -391,7 +398,15 @@ schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
 <p><code>claude mcp add sequential-thinking npx @modelcontextprotocol/server-sequential-thinking</code></p><h3 id="filesystem-mcp">Filesystem MCP</h3>
 <p><code>claude mcp add filesystem npx @modelcontextprotocol/server-filesystem &lt;FULL_PATH_TO_FOLDER&gt;</code></p><h3 id="mobile-mcp-not-tested-by-me-yet">Mobile MCP (Not tested by me yet)</h3>
 <p>Install on mac to control android
-<a href="https://github.com/mobile-next/mobile-mcp">https://github.com/mobile-next/mobile-mcp</a></p><p><code>claude mcp add mobile -- npx -y @mobilenext/mobile-mcp@latest</code></p>
+<a href="https://github.com/mobile-next/mobile-mcp">https://github.com/mobile-next/mobile-mcp</a></p><p><code>claude mcp add mobile -- npx -y @mobilenext/mobile-mcp@latest</code></p><h3 id="to-be-done">To be done</h3>
+<ul>
+<li><a href="https://github.com/BeehiveInnovations/zen-mcp-server">https://github.com/BeehiveInnovations/zen-mcp-server</a><ul>
+<li><a href="https://github.com/BeehiveInnovations/zen-mcp-server/blob/main/docs/custom_models.md">https://github.com/BeehiveInnovations/zen-mcp-server/blob/main/docs/custom_models.md</a></li>
+</ul>
+</li>
+<li></li>
+</ul>
+
             ]]>
         </content>
     </entry>
