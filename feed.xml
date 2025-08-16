@@ -3,12 +3,71 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-08-04T00:22:55+05:30</updated>
+    <updated>2025-08-17T01:02:27+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
     <id>https://amberja.in</id>
 
+    <entry>
+        <title>Setting up Google TV OS on a new TV</title>
+        <author>
+            <name>Written by Amber Jain</name>
+        </author>
+        <link href="https://amberja.in/setting-up-google-tv-os-on-a-new-tv.html"/>
+        <id>https://amberja.in/setting-up-google-tv-os-on-a-new-tv.html</id>
+        <media:content url="https://amberja.in/media/posts/28/google-tv-home-screen.webp" medium="image" />
+            <category term="Blogposts"/>
+
+        <updated>2025-08-16T21:31:26+05:30</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://amberja.in/media/posts/28/google-tv-home-screen.webp" alt="" />
+                    Apps to install If you live in India, you will want to&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://amberja.in/media/posts/28/google-tv-home-screen.webp" class="type:primaryImage" alt="" /></p>
+                <div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1j2ppipe92">Apps to install</a></li>
+<li><a href="#mcetoc_1j2ppqegkt">Performance optimization</a></li>
+</ul>
+</div>
+<h2 id="mcetoc_1j2ppipe92">Apps to install</h2>
+<p>If you live in India, you will want to install these apps:</p>
+<ol>
+<li>Netflix</li>
+<li>Prime Video</li>
+<li>Apple TV</li>
+<li>JioHotstar</li>
+<li>Youtube</li>
+<li>Youtube Music</li>
+<li>SonyLIV</li>
+<li>Zee5</li>
+</ol>
+<p>Other apps:</p>
+<ol>
+<li>Mubi</li>
+</ol>
+<h2 id="mcetoc_1j2ppqegkt">Performance optimization</h2>
+<ol>
+<li>In Android settings, find build number, and press OK on your remote few times to enable Developer Options</li>
+<li>Open Developer Options
+<ol>
+<li>Set Window animation Scale to 0.5x</li>
+<li>Set Transition animation scale to 0.5x</li>
+<li>Set Animator duration scale to 0.5x</li>
+</ol>
+</li>
+<li>Enable "Don't keep activities"</li>
+<li>Set "Background process limit" to "No background processes" (or "At most 1 process" if you face any issues).</li>
+</ol>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Using leftover/spare quota of Gemini CLI or Claude Code&#x27;s CLI to automate daily tasks</title>
         <author>
