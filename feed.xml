@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-08-26T15:57:19+05:30</updated>
+    <updated>2025-08-26T15:59:33+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -24,13 +24,15 @@
             <summary>
                 <![CDATA[
                         <img src="https://amberja.in/media/posts/30/free-ssl-and-free-domain.png" alt="Free SSL Certificate &amp; Free Domain Name" />
-                    Back when I was a broke college student, hosting my projects online&hellip;
+                    <p class="p1">Back when I was a broke college student, hosting my projects online always felt like a compromise. I didn’t have the budget for custom domains or SSL certificates, so I had to rely on whatever came bundled with shared hosting providers — usually some clunky subdomain paired with a self-signed SSL certificate, definitely didn’t feel professional. Fast forward a decade, and things have changed for the better. Today, it’s actually possible to get both a <span class="s1"><strong>free SSL certificate</strong></span> &amp; a <span class="s1"><strong>free domain name</strong></span>. In this post, I’m putting relevant links to the same — resources I wish had existed back when I was just starting out.</p>
+
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                     <p><img src="https://amberja.in/media/posts/30/free-ssl-and-free-domain.png" class="type:primaryImage" alt="Free SSL Certificate &amp; Free Domain Name" /></p>
                 <p class="p1">Back when I was a broke college student, hosting my projects online always felt like a compromise. I didn’t have the budget for custom domains or SSL certificates, so I had to rely on whatever came bundled with shared hosting providers — usually some clunky subdomain paired with a self-signed SSL certificate, definitely didn’t feel professional. Fast forward a decade, and things have changed for the better. Today, it’s actually possible to get both a <span class="s1"><strong>free SSL certificate</strong></span> &amp; a <span class="s1"><strong>free domain name</strong></span>. In this post, I’m putting relevant links to the same — resources I wish had existed back when I was just starting out.</p>
+
 <h2>Free SSL certificate</h2>
 <ul>
 <li><a href="https://letsencrypt.org/docs/" target="_blank" rel="noopener noreferrer">LetsEncrypt</a></li>
