@@ -10,6 +10,23 @@
     },
     "items": [
         {
+            "id": "https://amberja.in/new-laptop-restore-publii-website-hosted-on-github-pages-from-backup.html",
+            "url": "https://amberja.in/new-laptop-restore-publii-website-hosted-on-github-pages-from-backup.html",
+            "title": "New laptop? Restore Publii website hosted on Github Pages from backup",
+            "summary": "Mandatory steps to restore from backup Install Publii app on your laptop.",
+            "content_html": "<h2 id=\"mandatory-steps-to-restore-from-backup\">Mandatory steps to restore from backup</h2>\n<ul>\n<li><p>Install Publii app on your laptop.</p></li>\n<li><p>Open Publii and choose “Install from Backup”</p><ul>\n<li>Choose latest backup file from <code>Onedrive_i.a.j-gmail.com/publii-gh-pages-websites/backups</code></li>\n</ul>\n</li>\n<li><p>Once the site backup loads in Publii, click on “Provide access data” in bottom left corner.</p><ul>\n<li><p>Select “Github Pages”</p></li>\n<li><p>The configuration below is for my site, please change it to match the config of your website:</p><pre><code>Website URL: `amberja.in`\nUsername/Organization: `amberj`\nRepository: `personal-website`\nBranch: `main`\n          Token: Token `Publii GitHub Page v2.0` from `Dropbox/logins.txt`\nClick &quot;Test connection&quot;.\n</code></pre>\n</li>\n</ul>\n</li>\n<li><p>Themes: Click on 3 dots icon in top-right corner, then click “Themes” and add “Mono” theme: <a href=\"https://marketplace.getpublii.com/themes/mono/\">https://marketplace.getpublii.com/themes/mono/</a></p></li>\n<li><p>Now make some minor edit to any post or page. Then click “Sync your website” to see if sync is working (from local to Github pages) and double-check the same by verifying that the minor edit is reflected on Github Pages website.</p></li>\n</ul>\n<h2 id=\"additional-options\">Additional options</h2>\n<p>To be done:</p><ul>\n<li>Plugins</li>\n<li>Setup backup</li>\n<li>GA</li>\n<li>GSC</li>\n<li>Comments</li>\n</ul>\n",
+            "image": "https://amberja.in/media/posts/38/Publii_Logo.png",
+            "author": {
+                "name": "Written by Amber Jain"
+            },
+            "tags": [
+                   "Tech &amp; Programming",
+                   "My Personal Setup"
+            ],
+            "date_published": "2025-10-31T15:06:18+05:30",
+            "date_modified": "2025-10-31T20:23:10+05:30"
+        },
+        {
             "id": "https://amberja.in/free-ssl-certificate-and-free-domain-name.html",
             "url": "https://amberja.in/free-ssl-certificate-and-free-domain-name.html",
             "title": "Free SSL Certificate &amp; Free Domain Name",
@@ -37,10 +54,11 @@
                 "name": "Written by Amber Jain"
             },
             "tags": [
-                   "Blogposts"
+                   "Tech &amp; Programming",
+                   "My Personal Setup"
             ],
             "date_published": "2025-08-16T21:31:26+05:30",
-            "date_modified": "2025-08-17T01:02:27+05:30"
+            "date_modified": "2025-10-31T15:23:59+05:30"
         },
         {
             "id": "https://amberja.in/using-leftoverspare-quota-of-gemini-cli-or-claude-codes-cli-to-automate-daily-tasks.html",
