@@ -19,9 +19,12 @@
                 "name": "Written by Amber Jain"
             },
             "tags": [
+                   "Tech &amp; Programming",
+                   "Blogposts",
+                   "AI / LLMs"
             ],
             "date_published": "2025-11-03T04:13:40+05:30",
-            "date_modified": "2025-11-03T04:13:40+05:30"
+            "date_modified": "2025-11-03T04:14:37+05:30"
         },
         {
             "id": "https://amberja.in/support-shiftreturn-in-claude-code-on-mac.html",
@@ -34,10 +37,11 @@
             },
             "tags": [
                    "Tech &amp; Programming",
-                   "My Personal Setup"
+                   "My Personal Setup",
+                   "AI / LLMs"
             ],
             "date_published": "2025-11-03T01:13:54+05:30",
-            "date_modified": "2025-11-03T01:14:16+05:30"
+            "date_modified": "2025-11-03T04:14:46+05:30"
         },
         {
             "id": "https://amberja.in/new-laptop-restore-publii-website-hosted-on-github-pages-from-backup.html",

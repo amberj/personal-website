@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-11-03T04:13:40+05:30</updated>
+    <updated>2025-11-03T04:14:46+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -16,6 +16,9 @@
         </author>
         <link href="https://amberja.in/install-zen-mcp-server-in-claude-code-using-openrouter.html"/>
         <id>https://amberja.in/install-zen-mcp-server-in-claude-code-using-openrouter.html</id>
+            <category term="Tech &amp; Programming"/>
+            <category term="Blogposts"/>
+            <category term="AI / LLMs"/>
 
         <updated>2025-11-03T04:13:40+05:30</updated>
             <summary>
@@ -107,6 +110,7 @@
         <id>https://amberja.in/support-shiftreturn-in-claude-code-on-mac.html</id>
             <category term="Tech &amp; Programming"/>
             <category term="My Personal Setup"/>
+            <category term="AI / LLMs"/>
 
         <updated>2025-11-03T01:13:54+05:30</updated>
             <summary>
