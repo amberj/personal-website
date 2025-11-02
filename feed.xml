@@ -3,12 +3,37 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-10-31T20:23:10+05:30</updated>
+    <updated>2025-11-03T01:14:16+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
     <id>https://amberja.in</id>
 
+    <entry>
+        <title>Support Shift+Return in Claude Code on Mac</title>
+        <author>
+            <name>Written by Amber Jain</name>
+        </author>
+        <link href="https://amberja.in/support-shiftreturn-in-claude-code-on-mac.html"/>
+        <id>https://amberja.in/support-shiftreturn-in-claude-code-on-mac.html</id>
+            <category term="Tech &amp; Programming"/>
+            <category term="My Personal Setup"/>
+
+        <updated>2025-11-03T01:13:54+05:30</updated>
+            <summary>
+                <![CDATA[
+                    Claude Code supports Option+Return (i.e. Option+Enter key) to enter a newline while&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Claude Code supports Option+Return (i.e. Option+Enter key) to enter a newline while typing a prompt.</p>
+<p>If you use <a href="https://iterm2.com/index.html" target="_blank" rel="noopener noreferrer">iTerm2</a>, you can change it to Shift+Return (or Shift+Enter) key using the following keyboard shortcuts config in iTerm2:</p>
+<figure class="post__image"><img loading="lazy"  src="https://amberja.in/media/posts/39/claude-code-shift-enter-mac.png" alt="iTerm2 key shortcuts" width="2402" height="1194" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://amberja.in/media/posts/39/responsive/claude-code-shift-enter-mac-xs.png 320w ,https://amberja.in/media/posts/39/responsive/claude-code-shift-enter-mac-sm.png 480w ,https://amberja.in/media/posts/39/responsive/claude-code-shift-enter-mac-md.png 768w ,https://amberja.in/media/posts/39/responsive/claude-code-shift-enter-mac-xl.png 1024w"></figure>
+<p>All credits to <a href="https://github.com/warpdotdev/Warp/issues/6401#issuecomment-3243707383" target="_blank" rel="noopener noreferrer">Github user cposture for sharing this</a>.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>New laptop? Restore Publii website hosted on Github Pages from backup</title>
         <author>
@@ -549,58 +574,14 @@ schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
 <p><code>claude mcp add sequential-thinking npx @modelcontextprotocol/server-sequential-thinking</code></p><h3 id="filesystem-mcp">Filesystem MCP</h3>
 <p><code>claude mcp add filesystem npx @modelcontextprotocol/server-filesystem &lt;FULL_PATH_TO_FOLDER&gt;</code></p><h3 id="mobile-mcp-not-tested-by-me-yet">Mobile MCP (Not tested by me yet)</h3>
 <p>Install on mac to control android
-<a href="https://github.com/mobile-next/mobile-mcp">https://github.com/mobile-next/mobile-mcp</a></p><p><code>claude mcp add mobile -- npx -y @mobilenext/mobile-mcp@latest</code></p><h3 id="to-be-done">To be done</h3>
+<a href="https://github.com/mobile-next/mobile-mcp">https://github.com/mobile-next/mobile-mcp</a></p><p><code>claude mcp add mobile -- npx -y @mobilenext/mobile-mcp@latest</code></p><h3 id="zen-mcp-server">Zen MCP Server</h3>
+<h3 id="to-be-done">To be done</h3>
 <ul>
 <li><a href="https://github.com/BeehiveInnovations/zen-mcp-server">https://github.com/BeehiveInnovations/zen-mcp-server</a><ul>
 <li><a href="https://github.com/BeehiveInnovations/zen-mcp-server/blob/main/docs/custom_models.md">https://github.com/BeehiveInnovations/zen-mcp-server/blob/main/docs/custom_models.md</a></li>
 </ul>
 </li>
 <li></li>
-</ul>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>My current LLM workflow</title>
-        <author>
-            <name>Written by Amber Jain</name>
-        </author>
-        <link href="https://amberja.in/my-current-llm-workflow.html"/>
-        <id>https://amberja.in/my-current-llm-workflow.html</id>
-        <media:content url="https://amberja.in/media/posts/2/Featured-6-23-1000x641.png" medium="image" />
-            <category term="Half Baked Explorations"/>
-            <category term="AI / LLMs"/>
-
-        <updated>2025-07-09T18:22:23+05:30</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://amberja.in/media/posts/2/Featured-6-23-1000x641.png" alt="" />
-                    Current paid plans Lovable Claude Pro (to be used in Claude Desktop&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <p><img src="https://amberja.in/media/posts/2/Featured-6-23-1000x641.png" class="type:primaryImage" alt="" /></p>
-                <h2 id="current-paid-plans">Current paid plans</h2>
-<ul>
-<li>Lovable</li>
-<li>Claude Pro (to be used in Claude Desktop and Claude Code)</li>
-<li>OpenRouter</li>
-</ul>
-<h2 id="apps-i-use">Apps I use</h2>
-<ul>
-<li>PWA: Google AI Studio (to use paid models like <code>Gemini 2.5 Pro</code> for free)</li>
-<li>Mac app: Claude Desktop</li>
-<li>Claude Code</li>
-<li><a href="https://github.com/nbonamy/witsy">Witsy</a> - Allows me to quickly make OpenRouter requests for any model and shows raw request/response in it’s <em>Debug Console</em></li>
-</ul>
-<h2 id="mcps-im-using">MCPs I’m using</h2>
-<p>MCPs:</p><ul>
-<li>BrowserMCP.io</li>
-</ul>
-<p>MCP-esque integrations:</p><ul>
-<li>Google Drive native integration in Claude Desktop</li>
 </ul>
 
             ]]>
