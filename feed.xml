@@ -3,12 +3,101 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-11-03T01:14:16+05:30</updated>
+    <updated>2025-11-03T04:13:40+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
     <id>https://amberja.in</id>
 
+    <entry>
+        <title>Install Zen MCP Server in Claude Code using OpenRouter</title>
+        <author>
+            <name>Written by Amber Jain</name>
+        </author>
+        <link href="https://amberja.in/install-zen-mcp-server-in-claude-code-using-openrouter.html"/>
+        <id>https://amberja.in/install-zen-mcp-server-in-claude-code-using-openrouter.html</id>
+
+        <updated>2025-11-03T04:13:40+05:30</updated>
+            <summary>
+                <![CDATA[
+                    About Zen MCP Server https://github.com/BeehiveInnovations/zen-mcp-server { "mcpServers": { "zen": { "command": "sh",&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1j937fs7g2o">About Zen MCP Server</a></li>
+<li><a href="#mcetoc_1j932m16dm">Install Zen MCP Server in Claude Code</a>
+<ul>
+<li><a href="#mcetoc_1j9373o3k12">Install manually</a></li>
+<li><a href="#mcetoc_1j937fs7g2p">Install unattended (Work in progress)</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1j9373o3k13">Run prompt to verify</a></li>
+</ul>
+</div>
+<h2 id="mcetoc_1j937fs7g2o">About Zen MCP Server</h2>
+<p><a href="https://github.com/BeehiveInnovations/zen-mcp-server">https://github.com/BeehiveInnovations/zen-mcp-server</a> </p>
+<h2 id="mcetoc_1j932m16dm">Install Zen MCP Server in Claude Code</h2>
+<h3 id="mcetoc_1j9373o3k12">Install manually</h3>
+<ol>
+<li>Add to Claude Desktop using: Claude Desktop &gt; Settings &gt; Developer &gt; Edit Config</li>
+<li>Open claude_desktop_config.json in your IDE.</li>
+<li>Add this JSON code by modifying &lt;INSERT_OPENROUTER_KEY_HERE&gt; (modify the json if there are already MCP servers added):
+<pre class="language-json"><code>{
+  "mcpServers": {
+    "zen": {
+      "command": "sh",
+      "args": [
+        "-c",
+        "exec $(which uvx || echo uvx) --from git+https://github.com/BeehiveInnovations/zen-mcp-server.git zen-mcp-server"
+      ],
+      "env": {
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin:~/.local/bin",
+        "OPENROUTER_API_KEY": "INSERT_OPENROUTER_KEY_HERE"
+      }
+    }
+  }
+}</code></pre>
+</li>
+<li>Restart Claude Desktop. It should now detect ZenMCP server.</li>
+<li>From Terminal, run this command and follow the steps:<br>
+<pre class="language-bash"><code>claude mcp add-from-claude-desktop</code></pre>
+</li>
+<li>Run 'claude' on Terminal and run '/mcp' to make sure that Zen MCP is detected correctly inside Claude Code.</li>
+</ol>
+<h3 id="mcetoc_1j937fs7g2p">Install unattended (Work in progress)</h3>
+<p>To be done: These didn't work, maybe I will fix it in future (maybe!)</p>
+<ol>
+<li><a href="https://claudelog.com/claude-code-mcps/zen-mcp-server/">https://claudelog.com/claude-code-mcps/zen-mcp-server/</a></li>
+<li>Adding JSON via CLI:<br>
+<pre class="language-bash"><code>claude mcp add-json zen-mcp '&lt;INSERT_JSON_HERE&gt;'</code></pre>
+<p> </p>
+</li>
+<li>See also: <a href="https://docs.claude.com/en/docs/claude-code/mcp">https://docs.claude.com/en/docs/claude-code/mcp</a></li>
+</ol>
+<h2 id="mcetoc_1j9373o3k13">Run prompt to verify</h2>
+<p>Here is a sample prompt:</p>
+<blockquote>
+<p>"Plan our microservices migration, get consensus from pro and sonnet4.5 on the approach"</p>
+</blockquote>
+<p>As of Nov 2025:</p>
+<blockquote>
+<p>"pro" refers to "google/gemini-2.5-pro"</p>
+<p>and</p>
+<p>"sonnet4.5" refers to "anthropic/claude-sonnet-4.5". </p>
+</blockquote>
+<p>When the prompt finishes running, check <a href="https://openrouter.ai/activity" target="_blank" rel="noopener noreferrer">Openrouter Activity</a> screen, which should show API calls to "pro" and "sonnet4.5" models being charged to your account balance.</p>
+<h2>Miscellaneous</h2>
+<ul>
+<li><a href="https://github.com/BeehiveInnovations/zen-mcp-server/blob/main/docs/custom_models.md#openrouter-models-cloud" target="_blank" rel="noopener noreferrer">Aliases in Zen MCP for popular models via Openrouter</a> </li>
+</ul>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Support Shift+Return in Claude Code on Mac</title>
         <author>
@@ -541,47 +630,6 @@ schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
 <li><a href="https://www.hyperclapper.com/">https://www.hyperclapper.com/</a></li>
 </ul>
 </li>
-</ul>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Adding MCP servers to Claude Code</title>
-        <author>
-            <name>Written by Amber Jain</name>
-        </author>
-        <link href="https://amberja.in/adding-mcp-servers-to-claude-code.html"/>
-        <id>https://amberja.in/adding-mcp-servers-to-claude-code.html</id>
-        <media:content url="https://amberja.in/media/posts/6/ec726680e57b03bc40e8c5e58a848e7cd39a15df-2881x1621.webp" medium="image" />
-            <category term="Half Baked Explorations"/>
-            <category term="AI / LLMs"/>
-
-        <updated>2025-07-09T20:39:20+05:30</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://amberja.in/media/posts/6/ec726680e57b03bc40e8c5e58a848e7cd39a15df-2881x1621.webp" alt="" />
-                    Anthropic’s Documentation: https://docs.anthropic.com/en/docs/claude-code/mcp If you have already added MCPs on Claude Desktop&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <p><img src="https://amberja.in/media/posts/6/ec726680e57b03bc40e8c5e58a848e7cd39a15df-2881x1621.webp" class="type:primaryImage" alt="" /></p>
-                <p>Anthropic’s Documentation: <a href="https://docs.anthropic.com/en/docs/claude-code/mcp">https://docs.anthropic.com/en/docs/claude-code/mcp</a></p><h2 id="handy-command">Handy command:</h2>
-<p>If you have already added MCPs on Claude Desktop app, then you can use this command to import some/all of these MCPs from Claude Desktop to Claude Code: </p><p><code>claude mcp add-from-claude-desktop</code></p><h2 id="importing-mcps-one-by-one">Importing MCPs one-by-one</h2>
-<h3 id="browsermcpio-mcp">browsermcp.io MCP</h3>
-<p><code>claude mcp add browsermcp.io npx @browsermcp/mcp@latest</code></p><h3 id="sequential-thinking-mcp">Sequential Thinking MCP</h3>
-<p><code>claude mcp add sequential-thinking npx @modelcontextprotocol/server-sequential-thinking</code></p><h3 id="filesystem-mcp">Filesystem MCP</h3>
-<p><code>claude mcp add filesystem npx @modelcontextprotocol/server-filesystem &lt;FULL_PATH_TO_FOLDER&gt;</code></p><h3 id="mobile-mcp-not-tested-by-me-yet">Mobile MCP (Not tested by me yet)</h3>
-<p>Install on mac to control android
-<a href="https://github.com/mobile-next/mobile-mcp">https://github.com/mobile-next/mobile-mcp</a></p><p><code>claude mcp add mobile -- npx -y @mobilenext/mobile-mcp@latest</code></p><h3 id="zen-mcp-server">Zen MCP Server</h3>
-<h3 id="to-be-done">To be done</h3>
-<ul>
-<li><a href="https://github.com/BeehiveInnovations/zen-mcp-server">https://github.com/BeehiveInnovations/zen-mcp-server</a><ul>
-<li><a href="https://github.com/BeehiveInnovations/zen-mcp-server/blob/main/docs/custom_models.md">https://github.com/BeehiveInnovations/zen-mcp-server/blob/main/docs/custom_models.md</a></li>
-</ul>
-</li>
-<li></li>
 </ul>
 
             ]]>
