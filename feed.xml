@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-11-03T04:14:46+05:30</updated>
+    <updated>2025-11-03T14:04:50+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -16,6 +16,7 @@
         </author>
         <link href="https://amberja.in/install-zen-mcp-server-in-claude-code-using-openrouter.html"/>
         <id>https://amberja.in/install-zen-mcp-server-in-claude-code-using-openrouter.html</id>
+        <media:content url="https://amberja.in/media/posts/40/zen-mcp-server.png" medium="image" />
             <category term="Tech &amp; Programming"/>
             <category term="Blogposts"/>
             <category term="AI / LLMs"/>
@@ -23,11 +24,13 @@
         <updated>2025-11-03T04:13:40+05:30</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://amberja.in/media/posts/40/zen-mcp-server.png" alt="Zen MCP Server" />
                     About Zen MCP Server https://github.com/BeehiveInnovations/zen-mcp-server { "mcpServers": { "zen": { "command": "sh",&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://amberja.in/media/posts/40/zen-mcp-server.png" class="type:primaryImage" alt="Zen MCP Server" /></p>
                 <div class="post__toc">
 <h3>Table of Contents</h3>
 <ul>
