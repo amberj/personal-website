@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-11-03T14:04:50+05:30</updated>
+    <updated>2025-11-03T14:07:55+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -111,6 +111,7 @@
         </author>
         <link href="https://amberja.in/support-shiftreturn-in-claude-code-on-mac.html"/>
         <id>https://amberja.in/support-shiftreturn-in-claude-code-on-mac.html</id>
+        <media:content url="https://amberja.in/media/posts/39/shift-return-mac.png" medium="image" />
             <category term="Tech &amp; Programming"/>
             <category term="My Personal Setup"/>
             <category term="AI / LLMs"/>
@@ -118,11 +119,13 @@
         <updated>2025-11-03T01:13:54+05:30</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://amberja.in/media/posts/39/shift-return-mac.png" alt="" />
                     Claude Code supports Option+Return (i.e. Option+Enter key) to enter a newline while&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://amberja.in/media/posts/39/shift-return-mac.png" class="type:primaryImage" alt="" /></p>
                 <p>Claude Code supports Option+Return (i.e. Option+Enter key) to enter a newline while typing a prompt.</p>
 <p>If you use <a href="https://iterm2.com/index.html" target="_blank" rel="noopener noreferrer">iTerm2</a>, you can change it to Shift+Return (or Shift+Enter) key using the following keyboard shortcuts config in iTerm2:</p>
 <figure class="post__image"><img loading="lazy"  src="https://amberja.in/media/posts/39/claude-code-shift-enter-mac.png" alt="iTerm2 key shortcuts" width="2402" height="1194" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://amberja.in/media/posts/39/responsive/claude-code-shift-enter-mac-xs.png 320w ,https://amberja.in/media/posts/39/responsive/claude-code-shift-enter-mac-sm.png 480w ,https://amberja.in/media/posts/39/responsive/claude-code-shift-enter-mac-md.png 768w ,https://amberja.in/media/posts/39/responsive/claude-code-shift-enter-mac-xl.png 1024w"></figure>
