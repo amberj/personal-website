@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-11-07T14:38:48+05:30</updated>
+    <updated>2025-11-10T14:41:38+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -113,6 +113,7 @@
         <id>https://amberja.in/beyond-the-hype-essential-reads-on-ai-and-llms.html</id>
         <media:content url="https://amberja.in/media/posts/41/must-read.webp" medium="image" />
             <category term="Linkmarks"/>
+            <category term="Blogposts"/>
             <category term="AI / LLMs"/>
 
         <updated>2025-11-05T13:30:26+05:30</updated>
@@ -167,6 +168,13 @@
 <li>Authors that write extensively about "Coding with AI", explore their archives:
 <ul>
 <li><a href="https://martinfowler.com/articles/exploring-gen-ai.html">https://martinfowler.com/articles/exploring-gen-ai.html</a></li>
+<li><a href="https://simonwillison.net/tags/llms/">https://simonwillison.net/tags/llms/</a></li>
+<li> </li>
+</ul>
+</li>
+<li>Detailed first person accounts of people making entire coding projects using AI:
+<ul>
+<li> </li>
 </ul>
 </li>
 <li>Tips for a better Cursor flow
