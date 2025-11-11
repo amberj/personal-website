@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-11-11T16:45:47+05:30</updated>
+    <updated>2025-11-11T16:49:06+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -16,6 +16,8 @@
         </author>
         <link href="https://amberja.in/the-great-token-efficiency-debate-minified-json-yaml-toon-or-csv.html"/>
         <id>https://amberja.in/the-great-token-efficiency-debate-minified-json-yaml-toon-or-csv.html</id>
+            <category term="Blogposts"/>
+            <category term="AI / LLMs"/>
 
         <updated>2025-11-11T16:30:08+05:30</updated>
             <summary>
