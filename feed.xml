@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-11-11T16:49:06+05:30</updated>
+    <updated>2025-11-11T17:06:14+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -16,17 +16,20 @@
         </author>
         <link href="https://amberja.in/the-great-token-efficiency-debate-minified-json-yaml-toon-or-csv.html"/>
         <id>https://amberja.in/the-great-token-efficiency-debate-minified-json-yaml-toon-or-csv.html</id>
+        <media:content url="https://amberja.in/media/posts/46/toon-yaml-json-csv.png" medium="image" />
             <category term="Blogposts"/>
             <category term="AI / LLMs"/>
 
         <updated>2025-11-11T16:30:08+05:30</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://amberja.in/media/posts/46/toon-yaml-json-csv.png" alt="The Great Token Efficiency Debate: Minified JSON, YAML, TOON or CSV?" />
                     TOON format for less token usage My colleagues Ajay Joshi &amp; Deepak Shah were&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://amberja.in/media/posts/46/toon-yaml-json-csv.png" class="type:primaryImage" alt="The Great Token Efficiency Debate: Minified JSON, YAML, TOON or CSV?" /></p>
                 <div class="post__toc">
 <h3>Table of Contents</h3>
 <ul>
