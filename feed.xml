@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-11-11T16:30:08+05:30</updated>
+    <updated>2025-11-11T16:45:47+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -454,8 +454,22 @@ Click &quot;Test connection&quot;.
 </li>
 </ul>
 </li>
-<li><p>Themes: Click on 3 dots icon in top-right corner, then click “Themes” and add “Mono” theme: <a href="https://marketplace.getpublii.com/themes/mono/">https://marketplace.getpublii.com/themes/mono/</a></p></li>
+<li><p>Themes: Click on 3 dots icon in top-right corner, then click “Themes” and add “Mono” theme: <a href="https://marketplace.getpublii.com/themes/mono/">Mono</a>
+  - Note to self: The theme file is kept in <code>Onedrive_i.a.j-gmail.com/publii-gh-pages-websites/themes/</code> </p></li>
 <li><p>Now make some minor edit to any post or page. Then click “Sync your website” to see if sync is working (from local to Github pages) and double-check the same by verifying that the minor edit is reflected on Github Pages website.</p></li>
+</ul>
+<h2 id="change-location-of-sites-folder-and-backups-folder">Change location of Sites folder and Backups Folder</h2>
+<ul>
+<li>Note down the location of folder where Publii was installed by default (usually <code>~/Documents/</code> on Mac).</li>
+<li>Open <code>Onedrive_i.a.j-gmail.com/publii-gh-pages-websites/</code> and create a new folder with appropriate name to uniquely identify this installation. Create subfolders inside this folder with name <code>sites</code> and <code>backups</code></li>
+<li>Click on three dots in top right corner of Publii’s main screen and click on “App Settings”. </li>
+<li>Scroll down to “Files location” section/block.</li>
+<li>Change “Sites location” here to the Onedrive folder (Don’t select the checkbox that appears when you change the location).</li>
+<li>Change “Backup location” here to the Onedrive folder.</li>
+<li>Click “Save Settings” at the bottom. This should move Publii Sites from old folder to new location on Onedrive.</li>
+<li>As a last step, COPY (don’t move) original Publii folder (where it was installed by default) and back it up as well (just in case something goes wrong).
+  * If you start getting errors about config files missing, then make sure that original Publii folder is still kept in original folder.</li>
+<li>Also goto Publii &gt; three dots in top right corner &gt; Themes and make sure that Mono theme is visible as thumbnail. If not, delete and add it again.</li>
 </ul>
 <h2 id="additional-options">Additional options</h2>
 <p>To be done:</p><ul>
