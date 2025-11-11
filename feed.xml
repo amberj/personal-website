@@ -3,12 +3,85 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-11-10T14:41:38+05:30</updated>
+    <updated>2025-11-11T16:30:08+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
     <id>https://amberja.in</id>
 
+    <entry>
+        <title>The Great Token Efficiency Debate: Minified JSON, YAML, TOON or CSV?</title>
+        <author>
+            <name>Written by Amber Jain</name>
+        </author>
+        <link href="https://amberja.in/the-great-token-efficiency-debate-minified-json-yaml-toon-or-csv.html"/>
+        <id>https://amberja.in/the-great-token-efficiency-debate-minified-json-yaml-toon-or-csv.html</id>
+
+        <updated>2025-11-11T16:30:08+05:30</updated>
+            <summary>
+                <![CDATA[
+                    TOON format for less token usage My colleagues Ajay Joshi &amp; Deepak Shah were&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1j9p91js92e">Introduction</a></li>
+<li><a href="#mcetoc_1j9p91js92f">Alternative approach #1</a></li>
+<li><a href="#mcetoc_1j9p91js92g">Alternative approach #2</a></li>
+</ul>
+</div>
+<h2 id="mcetoc_1j9p91js92e">TOON format for less token usage</h2>
+<p>My colleagues <span class="" role="presentation">Ajay Joshi</span> &amp; <span class="" role="presentation">Deepak Shah</span> were discussing <a target="_blank" class="c-link" data-stringify-link="https://jsontoon.com/" data-sk="tooltip_parent" href="https://jsontoon.com/" rel="noopener noreferrer">https://jsontoon.com/</a> which converts JSON to TOON format which is supposedly a more compact format with less token usage on LLMs.</p>
+<blockquote>
+<p>TOON: Token-Oriented Object Notation is a compact, human-readable serialization format designed for passing structured data to Large Language Models with significantly reduced token usage. It's intended for <i data-stringify-type="italic">LLM input</i> as a lossless, drop-in representation of JSON data. Website: <a target="_blank" class="c-link" data-stringify-link="https://github.com/toon-format/toon" data-sk="tooltip_parent" href="https://github.com/toon-format/toon" rel="noopener noreferrer">https://github.com/toon-format/toon</a></p>
+</blockquote>
+<div> </div>
+<div class="p-rich_text_section">The example on <a target="_blank" class="c-link" data-stringify-link="https://jsontoon.com/" data-sk="tooltip_parent" href="https://jsontoon.com/" rel="noopener noreferrer">https://jsontoon.com/</a> website compares TOON to "pretty json" (but not to minified json):</div>
+<div> </div>
+<div><figure class="post__image"><img loading="lazy"  src="https://amberja.in/media/posts/46/SCR-20251111-mgrr-2.png" alt="JSON to TOON" width="1020" height="956" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://amberja.in/media/posts/46/responsive/SCR-20251111-mgrr-2-xs.png 320w ,https://amberja.in/media/posts/46/responsive/SCR-20251111-mgrr-2-sm.png 480w ,https://amberja.in/media/posts/46/responsive/SCR-20251111-mgrr-2-md.png 768w ,https://amberja.in/media/posts/46/responsive/SCR-20251111-mgrr-2-xl.png 1024w"></figure></div>
+<div> </div>
+<div> </div>
+<div>But I was curious to compare: if toon format is consistently using lesser tokens than "minified json". So I searched reddit:</div>
+<h2 id="mcetoc_1j9p91js92f">Alternative approach #1</h2>
+<div> </div>
+<div>First I found another idea that <a target="_blank" class="c-link" data-stringify-link="https://www.reddit.com/r/PromptEngineering/comments/1m7bs7y/been_using_this_trick_to_compress_jsons_and_save/" data-sk="tooltip_parent" href="https://www.reddit.com/r/PromptEngineering/comments/1m7bs7y/been_using_this_trick_to_compress_jsons_and_save/" rel="noopener noreferrer">someone has shared</a>:</div>
+<div>Here the OP is compressing json</div>
+<blockquote>
+<div><code class="c-mrkdwn__code" data-stringify-type="code">{ "main_character": { "name": "Miles Piper", "traits": "middle-aged, wiry, musician" }, "setting": { "city": "Nooga", "season": "Spring" } }</code></div>
+</blockquote>
+<div> </div>
+<div>to</div>
+<blockquote>
+<div><code class="c-mrkdwn__code" data-stringify-type="code">{"mc":{"n":"MilesPiper","t":"mid-aged,wiry,musician"},"set":{"c":"Nooga","s":"Spring"}}</code></div>
+</blockquote>
+<div> </div>
+<div>Disclaimer for this approach: Make sure your original JSONs have enough self‑contained context. When you shorten keys, like if main_character = mc, you’re removing semantic hints [for LLM model]. To keep things clear for the LLM, your original JSON should include enough surrounding info or a parent scope so it’s obvious what domain you’re in.</div>
+<div> </div>
+<div>I think that we can solve this with a <code>Taxanomy.md</code> added in system prompt which simply has key value pairs e.g. <code class="c-mrkdwn__code" data-stringify-type="code">mc:main_character;n=name;t=traits....</code><br>
+<h2 id="mcetoc_1j9p91js92g">Alternative approach #2</h2>
+<p> </p>
+<div class="p-rich_text_section">Next, TOON's github readme then pointed me to this website: <a target="_blank" class="c-link" data-stringify-link="https://www.curiouslychase.com/playground/format-tokenization-exploration" data-sk="tooltip_parent" href="https://www.curiouslychase.com/playground/format-tokenization-exploration" rel="noopener noreferrer">Format Tokenization Playground</a><br aria-hidden="true"><br aria-hidden="true"></div>
+<div><figure class="post__image"><img loading="lazy"  src="https://amberja.in/media/posts/46/SCR-20251111-mgrr-3.png" alt="Tokenization Playground for different formats (JSON, TOON, CSV etc)" width="1447" height="944" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://amberja.in/media/posts/46/responsive/SCR-20251111-mgrr-3-xs.png 320w ,https://amberja.in/media/posts/46/responsive/SCR-20251111-mgrr-3-sm.png 480w ,https://amberja.in/media/posts/46/responsive/SCR-20251111-mgrr-3-md.png 768w ,https://amberja.in/media/posts/46/responsive/SCR-20251111-mgrr-3-xl.png 1024w"></figure></div>
+<br>
+<ul class="p-rich_text_list p-rich_text_list__bullet p-rich_text_list--nested" data-stringify-type="unordered-list" data-list-tree="true" data-indent="0" data-border="0">
+<li data-stringify-indent="0" data-stringify-border="0">When a CSV lossless representation of data exists, CSV is always most token efficient</li>
+<li data-stringify-indent="0" data-stringify-border="0">If a CSV lossless representation doesn't exists, minified json is always most token efficient.</li>
+</ul>
+<div> </div>
+<div class="p-rich_text_section">So with a cursory read / limited understanding of this table seems to suggest that CSV/minifiedJSON seems better, but then TOON's readme has benchmarks section (that looks at both token usage as well as accuracy) and paints a different story: <a target="_blank" class="c-link" data-stringify-link="https://github.com/toon-format/toon?tab=readme-ov-file#benchmarks" data-sk="tooltip_parent" href="https://github.com/toon-format/toon?tab=readme-ov-file#benchmarks" rel="noopener noreferrer">https://github.com/toon-format/toon?tab=readme-ov-file#benchmarks</a></div>
+<div> </div>
+<div><hr></div>
+<div> </div>
+<div>This isn't the end of it. I intend to dive deeper into this, but got a busy week ahead. I will update this post if and when I get time to explore more about this topic.</div>
+<div> </div>
+<div><em>Until next time...</em></div>
+</div>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>My Summary of &quot;Code Execution with MCP&quot; blogpost by Anthropic team</title>
         <author>
@@ -648,85 +721,6 @@ Claude pro’s paid quota gets wasted during: </p><ul>
 <li>or even during the day on wekdays when we sometimes don’t use it much.</li>
 </ul>
 <p>It’s quota is reset every 5 hours <a href="https://support.anthropic.com/en/articles/8325612-does-claude-pro-have-any-usage-limits">https://support.anthropic.com/en/articles/8325612-does-claude-pro-have-any-usage-limits</a></p><p>Trying to write a python/bash script that could parse this json, see if quota is unused 30-60minutes before 5 hr block gets expired…. and utilize it to run some background tasks via claude cli + MCP’s (e.g. generate text posts for social media OR analyze codebase passively in background to reveal bugs).</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Send slack message via api using &#x60;xoxp&#x60; User token </title>
-        <author>
-            <name>Written by Amber Jain</name>
-        </author>
-        <link href="https://amberja.in/send-slack-message-via-api-using-xoxp-user-token.html"/>
-        <id>https://amberja.in/send-slack-message-via-api-using-xoxp-user-token.html</id>
-        <media:content url="https://amberja.in/media/posts/13/slack-large.webp" medium="image" />
-            <category term="Tech &amp; Programming"/>
-            <category term="Blogposts"/>
-
-        <updated>2025-07-17T00:27:09+05:30</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://amberja.in/media/posts/13/slack-large.webp" alt="Using Slack API with Python" />
-                    Create an app here: https://api.slack.com/apps You can see newly created Slack app&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <p><img src="https://amberja.in/media/posts/13/slack-large.webp" class="type:primaryImage" alt="Using Slack API with Python" /></p>
-                <ul>
-<li>Create an app here: <a href="https://api.slack.com/apps">https://api.slack.com/apps</a><ul>
-<li>You can see newly created Slack app here: <a href="https://api.slack.com/apps/">https://api.slack.com/apps/</a></li>
-<li>On App screen, click <strong>OAuth &amp; Permissions</strong> in the sidebar.<ul>
-<li>Under <strong>User Token Scopes</strong> section, click <strong>Add an OAuth Scope</strong></li>
-<li>Under <strong>OAuth Tokens</strong> , click <strong>Install to Productiwitty</strong>. This will generate <strong>User OAuth Token</strong> starting with <code>xoxp</code>.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Now install <code>slack_sdk</code> inside virtualenv using:</p><p><code>pip install slack_sdk</code></p><p>Then you can send messages via Slack API using following Python 3 code:</p><pre><code>#!/usr/bin/env python3
-import datetime
-from slack_sdk import WebClient
-
-# ID of channel you want to post message to
-#
-channel_id = &quot;CXXXXXXX&quot;
-
-user_token = &quot;xoxp-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;
-
-client = WebClient(user_token)
-
-def send_slack_message(channel_id, msg):
-    try:
-        result = client.chat_postMessage(
-            channel=channel_id,
-            text=msg
-        )
-        print(result)
-
-    except SlackApiError as e:
-        print(f&quot;Error: {e}&quot;)
-
-send_slack_message(channel_id, &quot;hello&quot;)
-</code></pre>
-<p>You can also schedule a message using this code:</p><pre><code>def schedule_msg(channel_id, at_hour, at_minute, msg, day):
-    scheduled_time = datetime.time(hour=at_hour, minute=at_minute)
-    schedule_timestamp = datetime.datetime.combine(day, scheduled_time).strftime(&#39;%s&#39;)
-    try:
-        result = client.chat_scheduleMessage(
-            channel=channel_id,
-            text=msg,
-            post_at=schedule_timestamp
-        )
-        print(result)
-    except Exception as e:
-        print(f&quot;EXCEPTION!!! {e}&quot;)
-
-today = datetime.date.today()
-
-# Schedule a message to be sent at 23:35 (11:35pm) today:
-schedule_msg(channel_id, 23, 35, &quot;bye&quot;, today)
-</code></pre>
-
             ]]>
         </content>
     </entry>
