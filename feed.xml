@@ -3,12 +3,112 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-11-11T17:06:14+05:30</updated>
+    <updated>2025-11-24T15:56:14+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
     <id>https://amberja.in</id>
 
+    <entry>
+        <title>Basic Pipenv workflow</title>
+        <author>
+            <name>Written by Amber Jain</name>
+        </author>
+        <link href="https://amberja.in/basic-pipenv-workflow.html"/>
+        <id>https://amberja.in/basic-pipenv-workflow.html</id>
+        <media:content url="https://amberja.in/media/posts/51/pipenv.webp" medium="image" />
+            <category term="Tech &amp; Programming"/>
+            <category term="Blogposts"/>
+
+        <updated>2025-11-24T15:41:55+05:30</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://amberja.in/media/posts/51/pipenv.webp" alt="" />
+                    Basic pipenv commands for quick recall: brew install pipenv Navigate to your&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://amberja.in/media/posts/51/pipenv.webp" class="type:primaryImage" alt="" /></p>
+                <p>Basic pipenv commands for quick recall:</p><h2 id="use-pipenv-on-day-to-day-basis">Use Pipenv on day-to-day basis</h2>
+<ul>
+<li>To enter virtual env made by pipenv, use: <code>pipenv shell</code>.</li>
+<li>To exit virtual env, use <code>exit</code> command. Don’t use <code>deactivate</code>.</li>
+<li>To see location of virtual env added by pipenv: <code>pipenv --venv</code></li>
+<li>If you make changes to the Pipfile, you might need to regenerate the Pipfile.lock and reinstall the dependencies. Command to generate Pipfile.lock is: <code>pipenv lock</code></li>
+</ul>
+<h2 id="install-pipenv-on-mac">Install Pipenv on Mac</h2>
+<p><code>brew install pipenv</code></p><h2 id="migrate-requirementstxt-to-pipenv">Migrate requirements.txt to Pipenv</h2>
+<ol>
+<li><p>Navigate to your project directory and initialize a Pipfile: <code>pipenv install</code></p><ul>
+<li>This should automatically find requirements.txt file in pwd and convert it into Pipfile. In case it doesn’t, you can run: <code>pipenv install -r requirements.txt</code></li>
+</ul>
+</li>
+<li><p>If certain dependencies are only required during development (e.g., pytest or black), you can reinstall them under dev-packages section of Pipenv using: <code>pipenv install &lt;package_name&gt; --dev</code></p></li>
+<li><p>Once everything is working fine, you can safely move the old requirements.txt file outside the folder, but still keep it as a backup somewhere.</p></li>
+</ol>
+<h2 id=""></h2>
+<h2 id="setup-existing-pipenv-project-on-new-laptop">Setup existing Pipenv project on new laptop</h2>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Managing a Library of prompts with variables - using Cloud Storage, Espanso Forms and Symlinks</title>
+        <author>
+            <name>Written by Amber Jain</name>
+        </author>
+        <link href="https://amberja.in/managing-a-library-of-prompts-with-variables-using-cloud-storage-espanso-forms-and-symlinks.html"/>
+        <id>https://amberja.in/managing-a-library-of-prompts-with-variables-using-cloud-storage-espanso-forms-and-symlinks.html</id>
+
+        <updated>2025-11-19T01:37:36+05:30</updated>
+            <summary>
+                <![CDATA[
+                    Install and sync Espanso config on a new Mac Download and install&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1jac9ksm82">Install and sync Espanso config on a new Mac</a></li>
+</ul>
+</div>
+<h2 id="mcetoc_1jac9ksm82">Install and sync Espanso config on a new Mac</h2>
+<ol>
+<li>Download and install Espanso: <a href="https://espanso.org/install/">https://espanso.org/install/</a></li>
+<li>Type <code>:espanso</code> in a text field of any app to make sure that espanso is running.</li>
+<li>Sync your espanso folder from cloud storage to locally on your Mac.
+<ul>
+<li>In my case, the location is (this location is written in a way that it's only supposed to make sense to me): <code>Dropbox_mejain1989@gmail/espanso/</code></li>
+</ul>
+</li>
+<li>Run this command in Terminal: <code>espanso path config</code>. <br>Keep the path handy except the last <code>/espanso/</code> part at the end. For e.g.
+<ul>
+<li>If command printed <code>/Users/nancy/Library/Application Support/espanso</code>, then just remember <code>/Users/nancy/Library/Application Support/</code>.</li>
+</ul>
+</li>
+<li>Stop espanso running in background: <code>espanso stop</code></li>
+<li>Delete default <code>espanso/</code> folder created during installation (which is located at <code>/Users/nancy/Library/Application Support/</code> as printed in Step-4).</li>
+<li>Now create a symbolic link at Espanso's default location pointing to folder kept in Cloud Storage.
+<ul>
+<li>In my case the command looks like this: <code>ln -s "/Users/nancy/Insync/me.jain1989@gmail.com/Dropbox/espanso/" "/Users/nancy/Library/Application Support</code><br><code>/"</code></li>
+</ul>
+</li>
+<li>Now restart espanso and try a shortcut stored in your espanso on Dropbox.
+<ul>
+<li>In my case, I try this with <code>:dropbox</code> which only works if above setup if working correctly.</li>
+</ul>
+</li>
+</ol>
+<h1>Espanso Forms</h1>
+<p>Using Espanso Forms feature to take dynamic input for variables inserted in prompts.</p>
+<p>To be done.</p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>The Great Token Efficiency Debate: Minified JSON, YAML, TOON or CSV?</title>
         <author>
@@ -211,12 +311,21 @@
 <li><a href="https://www.reddit.com/r/ClaudeAI/comments/1muoes4/deep_dive_i_dug_and_dug_and_finally_found_out_how/" target="_blank" rel="noopener noreferrer">How Context7 MCP works under the hood?</a></li>
 <li><a href="https://www.anthropic.com/engineering/claude-code-best-practices" target="_blank" rel="noopener noreferrer">Claude Code: Best practices for agentic coding</a>: While this is written for Claude Code by Anthropic team, you can adopt these practices in just about any IDE by tinkering.</li>
 <li><a href="https://drive.google.com/file/d/1AbaBYbEa_EbPelsT40-vj64L-2IwUJHy/view" target="_blank" rel="noopener noreferrer">Prompt Engineering</a>: Guide by Google. Teaches about prompting techniques such as Chain of Thought (CoT), Tree of Thought (ToT), Step back prompting etc.</li>
+<li><a href="https://hvpandya.com/vibe-coding" target="_blank" rel="noopener noreferrer">Vibe Prototyping &amp; Cursor</a>: Three of my biggest learnings are the sections on:
+<ul>
+<li>Structure of <code>taxonomy.md</code></li>
+<li>Context rot</li>
+<li>Using AI as a product &amp; design sparring (/brainstorming/soundboarding) partner</li>
+</ul>
+</li>
 <li>To understand theory underlying LLMs:
 <ul>
 <li><a href="https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/" target="_blank" rel="noopener noreferrer">What Is ChatGPT Doing … and Why Does It Work?</a> written by Stephen Wolfram (of Wolfram|Alpha and Mathematica fame)</li>
 <li><a href="https://ig.ft.com/generative-ai/" target="_blank" rel="noopener noreferrer">Generative AI exists because of the transformer</a> published on ft.com</li>
 </ul>
 </li>
+<li><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener noreferrer">Effective context engineering for AI agents</a></li>
+<li> </li>
 </ul>
 <h2>Things I'm yet to explore:</h2>
 <ul>
@@ -233,6 +342,7 @@
 <li><a href="https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html">https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html</a></li>
 </ul>
 </li>
+<li>Embeddings model: Chroma vs Milvus lite etc</li>
 <li>Architect mode
 <ul>
 <li><a href="https://forum.cursor.com/t/architect-mode-in-cursor/45395/2">https://forum.cursor.com/t/architect-mode-in-cursor/45395/2</a></li>
@@ -583,163 +693,6 @@ Click &quot;Test connection&quot;.
 <li>Enable "Don't keep activities"</li>
 <li>Set "Background process limit" to "No background processes" (or "At most 1 process" if you face any issues).</li>
 </ol>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Using leftover/spare quota of Gemini CLI or Claude Code&#x27;s CLI to automate daily tasks</title>
-        <author>
-            <name>Written by Amber Jain</name>
-        </author>
-        <link href="https://amberja.in/using-leftoverspare-quota-of-gemini-cli-or-claude-codes-cli-to-automate-daily-tasks.html"/>
-        <id>https://amberja.in/using-leftoverspare-quota-of-gemini-cli-or-claude-codes-cli-to-automate-daily-tasks.html</id>
-        <media:content url="https://amberja.in/media/posts/26/llm-mcp-on-android.png" medium="image" />
-            <category term="Half Baked Explorations"/>
-            <category term="AI / LLMs"/>
-
-        <updated>2025-07-24T22:47:26+05:30</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://amberja.in/media/posts/26/llm-mcp-on-android.png" alt="" />
-                    Many developers and power users have leftover quota from their Claude Pro&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <p><img src="https://amberja.in/media/posts/26/llm-mcp-on-android.png" class="type:primaryImage" alt="" /></p>
-                <div>
-<div class="post__toc">
-<h3>Table of Contents</h3>
-<ul>
-<li><a href="#mcetoc_1j0un49t05">TL;DR</a></li>
-<li><a href="#mcetoc_1j0unc78k74">Detailed description of the flow:</a>
-<ul>
-<li><a href="#mcetoc_1j0unc78k75">The Opportunity</a></li>
-<li><a href="#mcetoc_1j0unc78k76">Checking Your Available Quota</a>
-<ul>
-<li><a href="#mcetoc_1j0unc78k77">For Claude Code:</a></li>
-<li><a href="#mcetoc_1j0unc78k78">For Gemini CLI:</a></li>
-</ul>
-</li>
-<li><a href="#mcetoc_1j0unc78k79">Building Your Automation Pipeline</a>
-<ul>
-<li><a href="#mcetoc_1j0unc78k7a">Core Architecture</a></li>
-<li><a href="#mcetoc_1j0unc78k7b">Scheduling with Cron</a></li>
-<li><a href="#mcetoc_1j0unc78k7c">Enhanced Capabilities with MCP Servers</a></li>
-<li><a href="#mcetoc_1j0unc78k7d">Cross-Platform Configuration</a></li>
-<li><a href="#mcetoc_1j0unfnv487">Practical Implementation</a></li>
-<li><a href="#mcetoc_1j0unc78k7f">Advanced Techniques</a></li>
-</ul>
-</li>
-<li><a href="#mcetoc_1j0unfnv488">Getting Started</a></li>
-<li><a href="#mcetoc_1j0unc78k7h">Conclusion</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-<div> </div>
-<div>Many developers and power users have leftover quota from their Claude Pro subscription or free tier access to Gemini CLI. Instead of letting this computational power go to waste, you can harness it to automate routine tasks and create intelligent workflows that run seamlessly across all your devices.</div>
-<div> </div>
-<div>This is product spec for the same. I wrote it as a starting point for Claude Code.</div>
-<h2 id="mcetoc_1j0un49t05">TL;DR</h2>
-<ul>
-<li>Use Claude Code (with Claude Pro plan, to utilize it's leftover quota in every block of 5 hours) or Gemini CLI (which is free as of July 2025).</li>
-<li>Build a script, so that it can be used on on Mac, Windows and Linux. This will also allow it's usage on Android via <a href="https://amberja.in/installing-termux.html" target="_blank" rel="noopener noreferrer">Termux</a> to run this system on old/spare Android smartphne for virtually no extra cost.</li>
-<li>Use Cron for timely execution.</li>
-<li>Check leftover/spare quota using:
-<ul>
-<li>For Claude Code with Claude Pro plan: Use something like this: `ccusage blocks --since 20250722 --until 20250722 --json`</li>
-<li>For Gemini CLI: As of July 2025, it's free. I am guessing that Google has enough cash surplus to keep it free long enough either until their models are market leaders (or until they take a significant market share from their competitors).</li>
-</ul>
-</li>
-<li>Maybe use thinking model, sequential thinking or deep research mode to come up with topics. Or maybe, upload a book as pdf or markdown.</li>
-<li>Agent mode (i.e. run multiple prompts in a pipeline).</li>
-<li>Use Python or bash to create a pipeline.</li>
-<li>Send all relevant output to a slack channel, to be reviewed later.</li>
-<li>Use relevant MCP servers (if you intend to run this on a spare Android device, make sure to use MCP servers that work correctly on Android).
-<ul>
-<li>Zen MCP with Openrouter to use different models for different tasks that the models excel at.</li>
-<li>Markdown mcp to convert books (maybe ask ai to parse both pdf and markdown of same chapter to make sure everything is understood correctly)</li>
-<li>Sequential thinking / Deep Research</li>
-<li>Filesystem MCP to store generated files</li>
-<li>Send native mac notification when a long running prompt is finished https://github.com/devizor/macOS-Notification-MCP</li>
-</ul>
-</li>
-<li>Generate output in markdown for easy consumption by next step of agent as well as human reading.</li>
-<li>Allow globally recognized configurations such as `.env` or `settings.json`.</li>
-</ul>
-<h2 id="mcetoc_1j0unc78k74">Detailed description of the flow:</h2>
-<h3 id="mcetoc_1j0unc78k75">The Opportunity</h3>
-<div> </div>
-<div>Claude Code comes bundled with Claude Pro plans and provides generous quota that resets every 5 hours. Meanwhile, Gemini CLI remains completely free as of July 2025. Both tools offer powerful automation capabilities that most users barely scratch the surface of.</div>
-<div> </div>
-<div>One key insight is building cross-platform scripts that work identically on Mac, Windows, Linux, and even Android via Termux. This approach lets you repurpose old Android devices as dedicated automation servers at virtually no additional cost.</div>
-<h3 id="mcetoc_1j0unc78k76">Checking Your Available Quota</h3>
-<div>Before diving into automation, establish quota monitoring:</div>
-<h4 id="mcetoc_1j0unc78k77">For Claude Code:</h4>
-<div>Use something similar like this:</div>
-<div>`ccusage blocks --since 20250722 --until 20250722 --json`</div>
-<h4 id="mcetoc_1j0unc78k78">For Gemini CLI:</h4>
-<div>Currently free with no quota restrictions. Google's substantial bank balance suggest this will remain viable for the foreseeable future, at least until they capture significant market share, or they launch models which become clear industry leaders in multi-modality usecases.</div>
-<h3 id="mcetoc_1j0unc78k79">Building Your Automation Pipeline</h3>
-<h4 id="mcetoc_1j0unc78k7a">Core Architecture</h4>
-<div>Create a Python or bash pipeline that chains multiple AI prompts together in agent mode. Each step feeds its output to the next, creating sophisticated workflows that rival expensive enterprise solutions.</div>
-<h4 id="mcetoc_1j0unc78k7b">Scheduling with Cron</h4>
-<div>Set up regular execution using cron jobs. This ensures your automation runs consistently without manual intervention, whether you're checking market trends, summarizing news, or processing documents.</div>
-<h4 id="mcetoc_1j0unc78k7c">Enhanced Capabilities with MCP Servers</h4>
-<div>Model Context Protocol servers dramatically expand what's possible:</div>
-<ul>
-<li>Zen MCP with OpenRouter: Route different tasks to models that excel at specific functions</li>
-<li>Markdown MCP: Convert and process books, ensuring accuracy by cross-referencing PDF and markdown versions</li>
-<li>Sequential Thinking/Deep Research: Engage advanced reasoning modes for complex analysis</li>
-<li>Filesystem MCP: Organize and store generated content systematically</li>
-<li>macOS Notification MCP: Get alerts when long-running processes complete</li>
-</ul>
-<h4 id="mcetoc_1j0unc78k7d">Cross-Platform Configuration</h4>
-<div>Use standard configuration patterns like .env files or settings.json to maintain consistency across devices. This ensures that if a user has configured settings like OPENROUTER_KEY in one of the globally de facto configuration files (for some other program), then our program will automatically pick the relevant settings.</div>
-<h4 id="mcetoc_1j0unfnv487">Practical Implementation</h4>
-<div>* Structure your output in markdown format for maximum compatibility. This makes content easily consumable by both subsequent AI processing steps. It also makes human review process much easier. </div>
-<div>* Route all results to a designated Slack channel for centralized monitoring and review.</div>
-<div>* For Android deployment via Termux, verify that your chosen MCP servers function correctly on Android environment. Some servers may have architecture-specific dependencies that require alternatives.</div>
-<h4 id="mcetoc_1j0unc78k7f">Advanced Techniques</h4>
-<div>* Consider uploading entire books as PDFs or markdown files to generate comprehensive analysis and insights. Or, use sequential thinking, 'thinking' LLM models or deep research modes to explore complex topics that would be time-consuming to research manually.</div>
-<div>* The agent mode approach allows for sophisticated multi-step reasoning where each phase builds upon previous results, creating outputs that far exceed what single prompts could achieve.</div>
-<h3 id="mcetoc_1j0unfnv488">Getting Started</h3>
-<div>Begin with simple tasks like daily news summarization or weather reporting. Once your pipeline proves reliable, expand into more complex workflows like market analysis, document processing, or research synthesis.</div>
-<h3 id="mcetoc_1j0unc78k7h">Conclusion</h3>
-<div>The combination of free/leftover quota, cross-platform compatibility, and MCP server integration creates surprisingly powerful automation capabilities. What starts as a way to utilize spare resources often evolves into an indispensable part of daily workflows.</div>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Scripting Claude Code for headless &amp; unattended tasks</title>
-        <author>
-            <name>Written by Amber Jain</name>
-        </author>
-        <link href="https://amberja.in/scripting-claude-code-for-headless-and-unattended-tasks.html"/>
-        <id>https://amberja.in/scripting-claude-code-for-headless-and-unattended-tasks.html</id>
-        <media:content url="https://amberja.in/media/posts/15/4dface4fdc350ad704f19a8f8704cf3264c55682-2880x1620.webp" medium="image" />
-            <category term="Half Baked Explorations"/>
-            <category term="AI / LLMs"/>
-
-        <updated>2025-07-22T20:47:17+05:30</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://amberja.in/media/posts/15/4dface4fdc350ad704f19a8f8704cf3264c55682-2880x1620.webp" alt="" />
-                    Claude code’s today (2025-07-22 in this case) usage as json for each&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <p><img src="https://amberja.in/media/posts/15/4dface4fdc350ad704f19a8f8704cf3264c55682-2880x1620.webp" class="type:primaryImage" alt="" /></p>
-                <p>Claude code’s <code>today</code> (2025-07-22 in this case) usage as <code>json</code> for each 5 hour <code>blocks</code> of time:</p><p><code>ccusage blocks --since 20250722 --until 20250722 --json</code></p><p>Personal use case: 
-Claude pro’s paid quota gets wasted during: </p><ul>
-<li>holidays</li>
-<li>night when user is sleeping</li>
-<li>or even during the day on wekdays when we sometimes don’t use it much.</li>
-</ul>
-<p>It’s quota is reset every 5 hours <a href="https://support.anthropic.com/en/articles/8325612-does-claude-pro-have-any-usage-limits">https://support.anthropic.com/en/articles/8325612-does-claude-pro-have-any-usage-limits</a></p><p>Trying to write a python/bash script that could parse this json, see if quota is unused 30-60minutes before 5 hr block gets expired…. and utilize it to run some background tasks via claude cli + MCP’s (e.g. generate text posts for social media OR analyze codebase passively in background to reveal bugs).</p>
             ]]>
         </content>
     </entry>

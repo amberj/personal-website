@@ -13,8 +13,16 @@
 </image:image>
 </url>
 <url>
+<loc>https://amberja.in/basic-pipenv-workflow.html</loc>
+<lastmod>2025-11-24T15:56:14+05:30</lastmod>
+<image:image>
+<image:loc>https://amberja.in/media/posts/51/pipenv.webp</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
+</url>
+<url>
 <loc>https://amberja.in/beyond-the-hype-essential-reads-on-ai-and-llms.html</loc>
-<lastmod>2025-11-10T14:41:38+05:30</lastmod>
+<lastmod>2025-11-18T23:59:58+05:30</lastmod>
 <image:image>
 <image:loc>https://amberja.in/media/posts/41/must-read.webp</image:loc>
 <image:title><![CDATA[Interesting read]]></image:title>
@@ -51,6 +59,10 @@
 <image:loc>https://amberja.in/media/posts/8/LinkedIn-marketing-the-complete-guide-to-boost-your-strategy-Final.svg</image:loc>
 <image:title><![CDATA[Linkedin]]></image:title>
 </image:image>
+</url>
+<url>
+<loc>https://amberja.in/managing-a-library-of-prompts-with-variables-using-cloud-storage-espanso-forms-and-symlinks.html</loc>
+<lastmod>2025-11-20T12:30:36+05:30</lastmod>
 </url>
 <url>
 <loc>https://amberja.in/my-current-llm-workflow.html</loc>
