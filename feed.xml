@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-11-24T16:33:10+05:30</updated>
+    <updated>2025-11-24T16:38:18+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -54,8 +54,11 @@
 <li><p>If certain dependencies are only required during development (e.g., pytest or black), you can reinstall them under dev-packages section of Pipenv using: <code>pipenv install &lt;package_name&gt; --dev</code></p></li>
 <li><p>Once everything is working fine, you can safely move the old requirements.txt file outside the folder, but still keep it as a backup somewhere.</p></li>
 </ol>
-<h2 id=""></h2>
-<h2 id="setup-existing-pipenv-project-on-new-laptop">Setup existing Pipenv project on new laptop</h2>
+<h2 id="setup-existing-project-with-existing-pipenv-on-new-laptop-with-fresh-virtualenv">Setup existing project with existing Pipenv on new laptop with fresh virtualenv</h2>
+<ul>
+<li>Install pipenv, then <code>cd</code> to the project directory which contains Pipenv file.</li>
+<li>This command will create a new virtual environment as well as install dependencies listed in Pipfile.lock: <code>pipenv install</code></li>
+</ul>
 
             ]]>
         </content>
