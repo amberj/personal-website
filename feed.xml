@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-11-24T15:56:14+05:30</updated>
+    <updated>2025-11-24T16:33:10+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -24,18 +24,25 @@
             <summary>
                 <![CDATA[
                         <img src="https://amberja.in/media/posts/51/pipenv.webp" alt="" />
-                    Basic pipenv commands for quick recall: brew install pipenv Navigate to your&hellip;
+                    Basic pipenv commands for quick recall: To enter virtual env made by&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                     <p><img src="https://amberja.in/media/posts/51/pipenv.webp" class="type:primaryImage" alt="" /></p>
-                <p>Basic pipenv commands for quick recall:</p><h2 id="use-pipenv-on-day-to-day-basis">Use Pipenv on day-to-day basis</h2>
+                <p>Basic pipenv commands for quick recall:</p><h2 id="pipenv-commands-needed-on-a-daily-basis">Pipenv commands needed on a daily basis</h2>
 <ul>
-<li>To enter virtual env made by pipenv, use: <code>pipenv shell</code>.</li>
-<li>To exit virtual env, use <code>exit</code> command. Don’t use <code>deactivate</code>.</li>
-<li>To see location of virtual env added by pipenv: <code>pipenv --venv</code></li>
-<li>If you make changes to the Pipfile, you might need to regenerate the Pipfile.lock and reinstall the dependencies. Command to generate Pipfile.lock is: <code>pipenv lock</code></li>
+<li><p>To enter virtual env made by pipenv, use: <code>pipenv shell</code>.</p></li>
+<li><p>To exit virtual env, use <code>exit</code> command. Don’t use <code>deactivate</code>.</p></li>
+<li><p>Use <code>pipenv</code> instead of <code>pip</code> to install/uninstall packages:</p><ul>
+<li>You can install a package as project dependency for deployment/execution (under packages section of Pipfile using): <code>pipenv install flask</code></li>
+<li>You can install a package as project dependency for development (under dev-packages section of Pipfile using): <code>pipenv install --dev pytest</code></li>
+<li>To uninstall run this command (which also removes references to python package both from Pipfile and Pipfile.lock): <code>pipenv uninstall django</code></li>
+</ul>
+</li>
+<li><p>The Pipfile.lock is intended to specify, based on the packages present in Pipfile, which specific version of those should be used, avoiding the risks of automatically upgrading packages that depend upon each other and breaking your project dependency tree. This command will lookup your virtual environment folder to generate the Pipfile.lock file for you automatically, based on the currently installed versions: <code>pipenv lock</code> </p></li>
+<li><p>Delete a virtual env created by pipenv: <code>pipenv --rm</code></p></li>
+<li><p>To see location of virtual env added by pipenv: <code>pipenv --venv</code></p></li>
 </ul>
 <h2 id="install-pipenv-on-mac">Install Pipenv on Mac</h2>
 <p><code>brew install pipenv</code></p><h2 id="migrate-requirementstxt-to-pipenv">Migrate requirements.txt to Pipenv</h2>
