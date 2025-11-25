@@ -3,12 +3,45 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-11-24T16:38:18+05:30</updated>
+    <updated>2025-11-25T17:17:40+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
     <id>https://amberja.in</id>
 
+    <entry>
+        <title>Use Openrouter.ai inside different AI clients</title>
+        <author>
+            <name>Written by Amber Jain</name>
+        </author>
+        <link href="https://amberja.in/use-openrouterai-inside-different-apps.html"/>
+        <id>https://amberja.in/use-openrouterai-inside-different-apps.html</id>
+        <media:content url="https://amberja.in/media/posts/52/openrouter-logo.svg" medium="image" />
+            <category term="Linkmarks"/>
+            <category term="AI / LLMs"/>
+
+        <updated>2025-11-25T02:33:41+05:30</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://amberja.in/media/posts/52/openrouter-logo.svg" alt="" />
+                    Tried and Tested personally. It works! Use Openrouter inside Cursor: Tried personally&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://amberja.in/media/posts/52/openrouter-logo.svg" class="type:primaryImage" alt="" /></p>
+                <h2>Tried and Tested personally. It works!</h2>
+<ul>
+<li><a href="https://openrouter.ai/announcements/use-openrouter-models-in-cursor-try-it-with-moonshot-ais-kimi-k2" target="_blank" rel="noopener noreferrer">Use Openrouter inside Cursor</a>: Tried personally and it works.</li>
+<li><a href="https://code.visualstudio.com/docs/copilot/customization/language-models#_add-a-model-from-a-built-in-provider" target="_blank" rel="noopener noreferrer">Use Openrouter inside VS Code</a>: Tried personally and it works.</li>
+</ul>
+<h2>Seems feasible but haven't tried it yet</h2>
+<ul>
+<li>Use Openrouter inside Claude Code: Haven't tried personally - <a href="https://ishan.rs/posts/claude-code-with-openrouter" target="_blank" rel="noopener noreferrer">Link 1</a></li>
+</ul>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Basic Pipenv workflow</title>
         <author>
@@ -643,66 +676,6 @@ Click &quot;Test connection&quot;.
 <ul>
 <li>DigitalPlat FreeDomain: <a href="https://www.opensourceprojects.dev/post/1959600649026302372" target="_blank" rel="noopener noreferrer">Tutorial</a>, <a href="https://github.com/DigitalPlatDev/FreeDomain" target="_blank" rel="noopener noreferrer">Github repo</a> and <a href="https://dash.domain.digitalplat.org/auth/login?next=%2F" target="_blank" rel="noopener noreferrer">DigitalPlat Domain Dashboard</a></li>
 </ul>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Setting up Google TV OS on a new TV</title>
-        <author>
-            <name>Written by Amber Jain</name>
-        </author>
-        <link href="https://amberja.in/setting-up-google-tv-os-on-a-new-tv.html"/>
-        <id>https://amberja.in/setting-up-google-tv-os-on-a-new-tv.html</id>
-        <media:content url="https://amberja.in/media/posts/28/google-tv-home-screen.webp" medium="image" />
-            <category term="Tech &amp; Programming"/>
-            <category term="My Personal Setup"/>
-
-        <updated>2025-08-16T21:31:26+05:30</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://amberja.in/media/posts/28/google-tv-home-screen.webp" alt="" />
-                    Apps to install If you live in India, you will want to&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <p><img src="https://amberja.in/media/posts/28/google-tv-home-screen.webp" class="type:primaryImage" alt="" /></p>
-                <div class="post__toc">
-<h3>Table of Contents</h3>
-<ul>
-<li><a href="#mcetoc_1j2ppipe92">Apps to install</a></li>
-<li><a href="#mcetoc_1j2ppqegkt">Performance optimization</a></li>
-</ul>
-</div>
-<h2 id="mcetoc_1j2ppipe92">Apps to install</h2>
-<p>If you live in India, you will want to install these apps:</p>
-<ol>
-<li>Netflix</li>
-<li>Prime Video</li>
-<li>Apple TV</li>
-<li>JioHotstar</li>
-<li>Youtube</li>
-<li>Youtube Music</li>
-<li>SonyLIV</li>
-<li>Zee5</li>
-</ol>
-<p>Other apps:</p>
-<ol>
-<li>Mubi</li>
-</ol>
-<h2 id="mcetoc_1j2ppqegkt">Performance optimization</h2>
-<ol>
-<li>In Android settings, find build number, and press OK on your remote few times to enable Developer Options</li>
-<li>Open Developer Options
-<ol>
-<li>Set Window animation Scale to 0.5x</li>
-<li>Set Transition animation scale to 0.5x</li>
-<li>Set Animator duration scale to 0.5x</li>
-</ol>
-</li>
-<li>Enable "Don't keep activities"</li>
-<li>Set "Background process limit" to "No background processes" (or "At most 1 process" if you face any issues).</li>
-</ol>
             ]]>
         </content>
     </entry>
