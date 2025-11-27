@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-11-25T17:17:40+05:30</updated>
+    <updated>2025-11-28T00:27:37+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -628,6 +628,11 @@ Click &quot;Test connection&quot;.
 <li>As a last step, COPY (don’t move) original Publii folder (where it was installed by default) and back it up as well (just in case something goes wrong).
   * If you start getting errors about config files missing, then make sure that original Publii folder is still kept in original folder.</li>
 <li>Also goto Publii &gt; three dots in top right corner &gt; Themes and make sure that Mono theme is visible as thumbnail. If not, delete and add it again.</li>
+</ul>
+<h2 id="plugins">Plugins</h2>
+<ul>
+<li><a href="https://marketplace.getpublii.com/plugins/google-analytics/">Google Analytics</a></li>
+<li><a href="https://marketplace.getpublii.com/plugins/reading-time/">Reading time</a></li>
 </ul>
 <h2 id="additional-options">Additional options</h2>
 <p>To be done:</p><ul>
