@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-11-29T14:47:56+05:30</updated>
+    <updated>2025-11-29T14:51:40+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -52,6 +52,7 @@
 <li><a href="#mcetoc_1jb7bto7p25">Social Follow Buttons</a></li>
 <li><a href="#mcetoc_1jb7bto7p26">Social Share Buttons on Content</a></li>
 <li><a href="#mcetoc_1jb7bto7p27">RSS or JSON Feed Link</a></li>
+<li><a href="#mcetoc_1jb7elbogb4">Microsoft Clarity</a></li>
 </ul>
 </li>
 <li><a href="#mcetoc_1jb7dgd2r6a">Other things you can consider adding to your website</a>
@@ -177,6 +178,9 @@
 <li class="whitespace-normal break-words">Add a visible RSS icon linking to your header, sidebar or footer (so that it is visible on all pages of your website).</li>
 </ul>
 <p class="font-claude-response-body whitespace-normal break-words"><strong>Why it still matters:</strong> RSS gives readers an option to be automatically notified whenever you publish new content, builds a loyal audience independent of algorithm changes, and enables content syndication.</p>
+<hr>
+<h3 id="mcetoc_1jb7elbogb4">Microsoft Clarity</h3>
+<p><em><a href="https://clarity.microsoft.com/" target="_blank" rel="noopener noreferrer">Clarity</a></em> is a free user behavior analytics tool from Microsoft that helps you understand how users are interacting with your website through session recordings and heatmaps.</p>
 <hr>
 <h2 id="mcetoc_1jb7dgd2r6a">Other things you can consider adding to your website</h2>
 <h3 id="mcetoc_1jb7ebrppb1">Relatively easier to setup</h3>
