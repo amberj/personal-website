@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-11-29T14:41:30+05:30</updated>
+    <updated>2025-11-29T14:46:22+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -16,12 +16,14 @@
         </author>
         <link href="https://amberja.in/website-launch-checklist-2.html"/>
         <id>https://amberja.in/website-launch-checklist-2.html</id>
+        <media:content url="https://amberja.in/media/posts/56/website-launch.webp" medium="image" />
             <category term="Tech &amp; Programming"/>
             <category term="Growth / Marketing"/>
 
         <updated>2025-11-29T14:08:58+05:30</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://amberja.in/media/posts/56/website-launch.webp" alt="" />
                     <div class="post__toc">
 <h3>Table of Contents</h3>
 <ul>
@@ -39,9 +41,12 @@
 <li><a href="#mcetoc_1jb7bto7p27">RSS or JSON Feed Link</a></li>
 </ul>
 </li>
-<li><a href="#mcetoc_1jb7dgd2r6a">Other things you can consider adding to your website</a></li>
-<li><a href="#mcetoc_1jb7bto7p28">Implementation Priority</a></li>
-<li><a href="#mcetoc_1jb7bto7p29">Platform-Specific Notes</a></li>
+<li><a href="#mcetoc_1jb7dgd2r6a">Other things you can consider adding to your website</a>
+<ul>
+<li><a href="#mcetoc_1jb7ebrppb1">Relatively easier to setup:</a></li>
+<li><a href="#mcetoc_1jb7ebrppb2">Advanced, takes more time, skills and effort to setup:</a></li>
+</ul>
+</li>
 <li><a href="#mcetoc_1jb7bto7p2a">Final Thoughts</a></li>
 </ul>
 </div>
@@ -53,6 +58,7 @@
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://amberja.in/media/posts/56/website-launch.webp" class="type:primaryImage" alt="" /></p>
                 <div class="post__toc">
 <h3>Table of Contents</h3>
 <ul>
@@ -70,9 +76,12 @@
 <li><a href="#mcetoc_1jb7bto7p27">RSS or JSON Feed Link</a></li>
 </ul>
 </li>
-<li><a href="#mcetoc_1jb7dgd2r6a">Other things you can consider adding to your website</a></li>
-<li><a href="#mcetoc_1jb7bto7p28">Implementation Priority</a></li>
-<li><a href="#mcetoc_1jb7bto7p29">Platform-Specific Notes</a></li>
+<li><a href="#mcetoc_1jb7dgd2r6a">Other things you can consider adding to your website</a>
+<ul>
+<li><a href="#mcetoc_1jb7ebrppb1">Relatively easier to setup:</a></li>
+<li><a href="#mcetoc_1jb7ebrppb2">Advanced, takes more time, skills and effort to setup:</a></li>
+</ul>
+</li>
 <li><a href="#mcetoc_1jb7bto7p2a">Final Thoughts</a></li>
 </ul>
 </div>
@@ -196,7 +205,7 @@
 <p class="font-claude-response-body whitespace-normal break-words"><strong>Why it still matters:</strong> RSS gives readers an option to be automatically notified whenever you publish new content, builds a loyal audience independent of algorithm changes, and enables content syndication.</p>
 <hr>
 <h2 id="mcetoc_1jb7dgd2r6a">Other things you can consider adding to your website</h2>
-<h3>Relatively easier to setup:</h3>
+<h3 id="mcetoc_1jb7ebrppb1">Relatively easier to setup</h3>
 <ul>
 <li>Add a <strong>SSL certificate</strong>. See also: <a href="https://amberja.in/free-ssl-certificate-and-free-domain-name.html" target="_blank" rel="noopener noreferrer">Free SSL Certificate &amp; Free Domain Name</a></li>
 <li><strong>Search</strong> box</li>
@@ -218,7 +227,7 @@
 </li>
 <li> </li>
 </ul>
-<h3>Advanced, takes more time, skills and effort to setup:</h3>
+<h3 id="mcetoc_1jb7ebrppb2">Advanced, takes more time, skills and effort to setup</h3>
 <ul>
 <li class="whitespace-normal break-words"><strong>Site speed </strong>optimization - Image compression, caching, minification (see also: <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Famberja.in%2F" target="_blank" rel="noopener noreferrer">Google PageSpeed Insights</a>)</li>
 <li class="whitespace-normal break-words"><strong>Mobile responsiveness </strong>check - Test on actual devices</li>
