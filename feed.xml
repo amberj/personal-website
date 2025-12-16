@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-12-16T14:42:02+05:30</updated>
+    <updated>2025-12-16T14:44:07+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -16,15 +16,21 @@
         </author>
         <link href="https://amberja.in/install-librechat-on-mac.html"/>
         <id>https://amberja.in/install-librechat-on-mac.html</id>
+        <media:content url="https://amberja.in/media/posts/59/librechat.jpeg" medium="image" />
+            <category term="Tech &amp; Programming"/>
+            <category term="Blogposts"/>
+            <category term="AI / LLMs"/>
 
         <updated>2025-12-16T14:42:02+05:30</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://amberja.in/media/posts/59/librechat.jpeg" alt="" />
                     Install and Setup Install Docker Desktop for Mac Install Librechat inside Docker&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://amberja.in/media/posts/59/librechat.jpeg" class="type:primaryImage" alt="" /></p>
                 <h2>Install and Setup</h2>
 <ul>
 <li><a href="https://docs.docker.com/desktop/setup/install/mac-install/" target="_blank" rel="noopener noreferrer">Install Docker Desktop for Mac</a></li>
