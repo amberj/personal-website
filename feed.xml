@@ -3,12 +3,48 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-11-29T15:01:51+05:30</updated>
+    <updated>2025-12-16T14:42:02+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
     <id>https://amberja.in</id>
 
+    <entry>
+        <title>Install Librechat on Mac</title>
+        <author>
+            <name>Written by Amber Jain</name>
+        </author>
+        <link href="https://amberja.in/install-librechat-on-mac.html"/>
+        <id>https://amberja.in/install-librechat-on-mac.html</id>
+
+        <updated>2025-12-16T14:42:02+05:30</updated>
+            <summary>
+                <![CDATA[
+                    Install and Setup Install Docker Desktop for Mac Install Librechat inside Docker&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h2>Install and Setup</h2>
+<ul>
+<li><a href="https://docs.docker.com/desktop/setup/install/mac-install/" target="_blank" rel="noopener noreferrer">Install Docker Desktop for Mac</a></li>
+<li><a href="https://www.librechat.ai/docs/local/docker#installation-steps" target="_blank" rel="noopener noreferrer">Install Librechat inside Docker</a></li>
+<li>Visit <a href="http://localhost:3080/">http://localhost:3080/</a> to access Librechat.</li>
+<li><a href="https://www.librechat.ai/docs/quick_start/custom_endpoints" target="_blank" rel="noopener noreferrer">Enable Openrouter</a> inside Librechat.
+<ul>
+<li>The <strong><code class="nextra-code" dir="ltr">librechat.yaml</code></strong> file should be placed in the root of the project where the .env file is located. Also use an <a href="https://www.librechat.ai/docs/configuration/librechat_yaml/setup#docker-setup" target="_blank" rel="noopener noreferrer">override file with Docker</a>.</li>
+<li>Restarting container didnt work for me, so I destroyed the container (using Docker Desktop GUI app on Mac) and recreated it again.</li>
+</ul>
+</li>
+</ul>
+<h2>Optional</h2>
+<ul>
+<li>To enable "web search", you need to add three API keys: <a href="https://www.librechat.ai/docs/features/web_search" target="_blank" rel="noopener noreferrer">Read more</a></li>
+<li>To enable memory features, you need to add the <code class="nextra-code" dir="ltr">memory</code> configuration to your <code class="nextra-code" dir="ltr">librechat.yaml</code> file. Read more <a href="https://www.librechat.ai/docs/features/memory#configuration" target="_blank" rel="noopener noreferrer">here</a>.</li>
+</ul>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Small Business Website Basics: What to Add Before Telling Anyone Your URL</title>
         <author>
@@ -779,83 +815,6 @@
 <p>If you use <a href="https://iterm2.com/index.html" target="_blank" rel="noopener noreferrer">iTerm2</a>, you can change it to Shift+Return (or Shift+Enter) key using the following keyboard shortcuts config in iTerm2:</p>
 <figure class="post__image"><img loading="lazy"  src="https://amberja.in/media/posts/39/claude-code-shift-enter-mac.png" alt="iTerm2 key shortcuts" width="2402" height="1194" sizes="(min-width: 760px) 660px, calc(93.18vw - 30px)" srcset="https://amberja.in/media/posts/39/responsive/claude-code-shift-enter-mac-xs.png 320w ,https://amberja.in/media/posts/39/responsive/claude-code-shift-enter-mac-sm.png 480w ,https://amberja.in/media/posts/39/responsive/claude-code-shift-enter-mac-md.png 768w ,https://amberja.in/media/posts/39/responsive/claude-code-shift-enter-mac-xl.png 1024w"></figure>
 <p>All credits to <a href="https://github.com/warpdotdev/Warp/issues/6401#issuecomment-3243707383" target="_blank" rel="noopener noreferrer">Github user cposture for sharing this</a>.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>New laptop? Restore Publii website hosted on Github Pages from backup</title>
-        <author>
-            <name>Written by Amber Jain</name>
-        </author>
-        <link href="https://amberja.in/new-laptop-restore-publii-website-hosted-on-github-pages-from-backup.html"/>
-        <id>https://amberja.in/new-laptop-restore-publii-website-hosted-on-github-pages-from-backup.html</id>
-        <media:content url="https://amberja.in/media/posts/38/Publii_Logo.png" medium="image" />
-            <category term="Tech &amp; Programming"/>
-            <category term="My Personal Setup"/>
-
-        <updated>2025-10-31T15:06:18+05:30</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://amberja.in/media/posts/38/Publii_Logo.png" alt="Publii logo" />
-                    Mandatory steps to restore from backup Install Publii app on your laptop.
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <p><img src="https://amberja.in/media/posts/38/Publii_Logo.png" class="type:primaryImage" alt="Publii logo" /></p>
-                <h2 id="mandatory-steps-to-restore-from-backup">Mandatory steps to restore from backup</h2>
-<ul>
-<li><p>Install Publii app on your laptop.</p></li>
-<li><p>Open Publii and choose “Install from Backup”</p><ul>
-<li>Choose latest backup file from <code>Onedrive_i.a.j-gmail.com/publii-gh-pages-websites/backups</code></li>
-</ul>
-</li>
-<li><p>Once the site backup loads in Publii, click on “Provide access data” in bottom left corner.</p><ul>
-<li><p>Select “Github Pages”</p></li>
-<li><p>The configuration below is for my site, please change it to match the config of your website:</p><pre><code>Website URL: `amberja.in`
-Username/Organization: `amberj`
-Repository: `personal-website`
-Branch: `main`
-          Token: Token `Publii GitHub Page v2.0` from `Dropbox/logins.txt`
-Click &quot;Test connection&quot;.
-</code></pre>
-</li>
-</ul>
-</li>
-<li><p>Themes: Click on 3 dots icon in top-right corner, then click “Themes” and add “Mono” theme: <a href="https://marketplace.getpublii.com/themes/mono/">Mono</a>
-  - Note to self: The theme file is kept in <code>Onedrive_i.a.j-gmail.com/publii-gh-pages-websites/themes/</code> 
-  - The theme uses icon pack plugin <a href="https://marketplace.getpublii.com/plugins/feather-icons/">Feather Icons</a>, but I decided not to use icons in navigation bar. You can insert code like <code><svg class="fi fi-bell" width="24px" height="24px" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><use href="https://amberja.in/media/plugins/featherIcons/feather-sprite.svg#bell" /></svg></code> anywhere to insert an icon.</p></li>
-<li><p>Now make some minor edit to any post or page. Then click “Sync your website” to see if sync is working (from local to Github pages) and double-check the same by verifying that the minor edit is reflected on Github Pages website.</p></li>
-</ul>
-<h2 id="change-location-of-sites-folder-and-backups-folder">Change location of Sites folder and Backups Folder</h2>
-<ul>
-<li>Note down the location of folder where Publii was installed by default (usually <code>~/Documents/</code> on Mac).</li>
-<li>Open <code>Onedrive_i.a.j-gmail.com/publii-gh-pages-websites/</code> and create a new folder with appropriate name to uniquely identify this installation. Create subfolders inside this folder with name <code>sites</code> and <code>backups</code></li>
-<li>Click on three dots in top right corner of Publii’s main screen and click on “App Settings”. </li>
-<li>Scroll down to “Files location” section/block.</li>
-<li>Change “Sites location” here to the Onedrive folder (Don’t select the checkbox that appears when you change the location).</li>
-<li>Change “Backup location” here to the Onedrive folder.</li>
-<li>Click “Save Settings” at the bottom. This should move Publii Sites from old folder to new location on Onedrive.</li>
-<li>As a last step, COPY (don’t move) original Publii folder (where it was installed by default) and back it up as well (just in case something goes wrong).
-  * If you start getting errors about config files missing, then make sure that original Publii folder is still kept in original folder.</li>
-<li>Also goto Publii &gt; three dots in top right corner &gt; Themes and make sure that Mono theme is visible as thumbnail. If not, delete and add it again.</li>
-</ul>
-<h2 id="plugins">Plugins</h2>
-<ul>
-<li><a href="https://marketplace.getpublii.com/plugins/google-analytics/">Google Analytics</a></li>
-<li><a href="https://marketplace.getpublii.com/plugins/reading-time/">Reading time</a></li>
-</ul>
-<h2 id="additional-options">Additional options</h2>
-<p>To be done:</p><ul>
-<li>Plugins</li>
-<li>Setup backup</li>
-<li>GA</li>
-<li>GSC</li>
-<li>Comments</li>
-<li><a href="https://marketplace.getpublii.com/plugins/llms-txt-generator/">https://marketplace.getpublii.com/plugins/llms-txt-generator/</a></li>
-<li></li>
-</ul>
-
             ]]>
         </content>
     </entry>
