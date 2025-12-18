@@ -12,7 +12,7 @@
         {
             "id": "https://amberja.in/install-librechat-on-mac.html",
             "url": "https://amberja.in/install-librechat-on-mac.html",
-            "title": "Install Librechat on Mac",
+            "title": "Install Librechat on Mac ready",
             "summary": "Install and Setup Install Docker Desktop for Mac Install Librechat inside Docker&hellip;",
             "content_html": "<h2>Install and Setup</h2>\n<ul>\n<li><a href=\"https://docs.docker.com/desktop/setup/install/mac-install/\" target=\"_blank\" rel=\"noopener noreferrer\">Install Docker Desktop for Mac</a></li>\n<li><a href=\"https://www.librechat.ai/docs/local/docker#installation-steps\" target=\"_blank\" rel=\"noopener noreferrer\">Install Librechat inside Docker</a></li>\n<li>Visit <a href=\"http://localhost:3080/\">http://localhost:3080/</a> to access Librechat.</li>\n<li><a href=\"https://www.librechat.ai/docs/quick_start/custom_endpoints\" target=\"_blank\" rel=\"noopener noreferrer\">Enable Openrouter</a> inside Librechat.\n<ul>\n<li>The <strong><code class=\"nextra-code\" dir=\"ltr\">librechat.yaml</code></strong> file should be placed in the root of the project where the .env file is located. Also use an <a href=\"https://www.librechat.ai/docs/configuration/librechat_yaml/setup#docker-setup\" target=\"_blank\" rel=\"noopener noreferrer\">override file with Docker</a>.</li>\n<li>Restarting container didnt work for me, so I destroyed the container (using Docker Desktop GUI app on Mac) and recreated it again.</li>\n</ul>\n</li>\n</ul>\n<h2>Optional</h2>\n<ul>\n<li>To enable \"web search\", you need to add three API keys: <a href=\"https://www.librechat.ai/docs/features/web_search\" target=\"_blank\" rel=\"noopener noreferrer\">Read more</a></li>\n<li>To enable memory features, you need to add the <code class=\"nextra-code\" dir=\"ltr\">memory</code> configuration to your <code class=\"nextra-code\" dir=\"ltr\">librechat.yaml</code> file. Read more <a href=\"https://www.librechat.ai/docs/features/memory#configuration\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>.</li>\n</ul>",
             "image": "https://amberja.in/media/posts/59/librechat.jpeg",
@@ -25,7 +25,7 @@
                    "AI / LLMs"
             ],
             "date_published": "2025-12-16T14:42:02+05:30",
-            "date_modified": "2025-12-16T14:44:07+05:30"
+            "date_modified": "2025-12-18T19:31:19+05:30"
         },
         {
             "id": "https://amberja.in/new-website-basic-setup-checklist.html",
