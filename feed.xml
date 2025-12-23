@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-12-23T14:16:19+05:30</updated>
+    <updated>2025-12-23T15:53:04+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -36,7 +36,11 @@
 <ul>
 <li><a href="https://docs.docker.com/desktop/setup/install/mac-install/" target="_blank" rel="noopener noreferrer">Install Docker Desktop for Mac</a></li>
 <li><a href="https://www.librechat.ai/docs/local/docker#installation-steps" target="_blank" rel="noopener noreferrer">Install Librechat inside Docker</a></li>
-<li>Visit <a href="http://localhost:3080/">http://localhost:3080/</a> to access Librechat.</li>
+<li>Visit <a href="http://localhost:3080/">http://localhost:3080/</a> to access Librechat.
+<ul>
+<li>As far as I remember, by default the server is running on <code>0.0.0.0:3080</code>. So you can access this from any browser (from any other laptop or mobile), by finding the device LAN IP using <code>ifconfig</code> command, and then opening <code>192.x.x.x:3080</code> from other devices connected to same wifi.</li>
+</ul>
+</li>
 <li><a href="https://www.librechat.ai/docs/quick_start/custom_endpoints" target="_blank" rel="noopener noreferrer">Enable Openrouter</a> inside Librechat.
 <ul>
 <li>The <strong><code class="nextra-code" dir="ltr">librechat.yaml</code></strong> file should be placed in the root of the project where the .env file is located. Also use an <a href="https://www.librechat.ai/docs/configuration/librechat_yaml/setup#docker-setup" target="_blank" rel="noopener noreferrer">override file with Docker</a>.</li>
@@ -48,6 +52,16 @@
 <ul>
 <li>To enable "web search", you need to add three API keys: <a href="https://www.librechat.ai/docs/features/web_search" target="_blank" rel="noopener noreferrer">Read more</a></li>
 <li>To enable memory features, you need to add the <code class="nextra-code" dir="ltr">memory</code> configuration to your <code class="nextra-code" dir="ltr">librechat.yaml</code> file. Read more <a href="https://www.librechat.ai/docs/features/memory#configuration" target="_blank" rel="noopener noreferrer">here</a>.</li>
+</ul>
+<h2>To be done</h2>
+<p>I have not tried these things yet, but would set these up some day soon:</p>
+<ul>
+<li>Setup MCP (e.g. <a href="https://clickhouse.com/docs/use-cases/AI/MCP/librechat" target="_blank" rel="noopener noreferrer">this tutorial</a>)
+<ul>
+<li>Add Pal MCP (Zen MCP), along with saved prompts, so that you don't need to use openrouter.</li>
+</ul>
+</li>
+<li> </li>
 </ul>
             ]]>
         </content>
