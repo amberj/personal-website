@@ -41,16 +41,8 @@
 </image:image>
 </url>
 <url>
-<loc>https://amberja.in/install-librechat-on-mac.html</loc>
-<lastmod>2025-12-23T15:53:04+05:30</lastmod>
-<image:image>
-<image:loc>https://amberja.in/media/posts/59/librechat.jpeg</image:loc>
-<image:title><![CDATA[]]></image:title>
-</image:image>
-</url>
-<url>
 <loc>https://amberja.in/install-zen-mcp-server-in-claude-code-using-openrouter.html</loc>
-<lastmod>2025-11-03T14:04:50+05:30</lastmod>
+<lastmod>2025-12-23T18:33:33+05:30</lastmod>
 <image:image>
 <image:loc>https://amberja.in/media/posts/40/zen-mcp-server.png</image:loc>
 <image:title><![CDATA[Zen MCP Server]]></image:title>
@@ -75,6 +67,10 @@
 <url>
 <loc>https://amberja.in/managing-a-library-of-prompts-with-variables-using-cloud-storage-espanso-forms-and-symlinks.html</loc>
 <lastmod>2025-11-20T12:30:36+05:30</lastmod>
+</url>
+<url>
+<loc>https://amberja.in/mongodb-wiredtiger-corruption-a-cautionary-tale-of-adding-mcp-servers-to-librechat.html</loc>
+<lastmod>2025-12-30T23:27:38+05:30</lastmod>
 </url>
 <url>
 <loc>https://amberja.in/my-current-llm-workflow.html</loc>
