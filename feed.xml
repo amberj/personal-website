@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-12-30T23:27:38+05:30</updated>
+    <updated>2025-12-30T23:31:14+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -16,10 +16,15 @@
         </author>
         <link href="https://amberja.in/mongodb-wiredtiger-corruption-a-cautionary-tale-of-adding-mcp-servers-to-librechat.html"/>
         <id>https://amberja.in/mongodb-wiredtiger-corruption-a-cautionary-tale-of-adding-mcp-servers-to-librechat.html</id>
+        <media:content url="https://amberja.in/media/posts/66/9aff2fb2-librechat.jpg" medium="image" />
+            <category term="Tech &amp; Programming"/>
+            <category term="Blogposts"/>
+            <category term="AI / LLMs"/>
 
         <updated>2025-12-30T22:25:42+05:30</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://amberja.in/media/posts/66/9aff2fb2-librechat.jpg" alt="" />
                     <p class="font-claude-response-body break-words whitespace-normal leading-[1.7] msg msg--highlight "><em>How a simple MCP config change crashed my entire LibreChat setup - twice</em></p>
 <p>Sometimes the most frustrating bugs are the ones that punch you in the face twice before you learn to duck. I ran into a somewhat mysterious issue while trying to integrate the Pal MCP server (formerly known as Zen MCP server) into my local LibreChat install on my Macbook. What should have been a straightforward configuration change ended up corrupting MongoDB and taking down my entire local LLM infrastructure. Twice. </p>
 
@@ -27,6 +32,7 @@
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://amberja.in/media/posts/66/9aff2fb2-librechat.jpg" class="type:primaryImage" alt="" /></p>
                 <p class="font-claude-response-body break-words whitespace-normal leading-[1.7] msg msg--highlight "><em>How a simple MCP config change crashed my entire LibreChat setup - twice</em></p>
 <p>Sometimes the most frustrating bugs are the ones that punch you in the face twice before you learn to duck. I ran into a somewhat mysterious issue while trying to integrate the Pal MCP server (formerly known as Zen MCP server) into my local LibreChat install on my Macbook. What should have been a straightforward configuration change ended up corrupting MongoDB and taking down my entire local LLM infrastructure. Twice. </p>
 
