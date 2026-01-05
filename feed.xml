@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2026-01-05T13:47:53+05:30</updated>
+    <updated>2026-01-05T13:49:00+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -277,7 +277,7 @@ mcpServers:
       - pal-mcp-server
     env:
       OPENROUTER_API_KEY: "&lt;INSERT_OPENROUTER_KEY_HERE&gt;"</code></pre>
-<p>The snippet for <span style="font-size: inherit;"><code>maxRecursionLimit</code> and <code>recursionLimit</code> </span><span style="font-size: inherit;">is to fix if you get this error (<a href="https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/agents" target="_blank" rel="noopener noreferrer">Click here for more info</a>):</span></p>
+<p>The snippet for <span style="font-size: inherit;"><code>maxRecursionLimit</code> and <code>recursionLimit</code> </span><span style="font-size: inherit;">is to fix if you get this error (Click <a href="https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/agents" target="_blank" rel="noopener noreferrer">here</a> and <a href="https://www.librechat.ai/docs/features/agents#max-agent-steps" target="_blank" rel="noopener noreferrer">here</a> for more info):</span></p>
 <p class="msg msg--warning">Something went wrong. Here's the specific error message we encountered: An error occurred while processing the request: Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the "recursionLimit" config key. Troubleshooting URL: https://langchain-ai.github.io/langgraphjs/troubleshooting/errors/GRAPH_RECURSION_LIMIT/ </p>
 <p> </p>
 <p>And this is my docker-compose.override.yml :</p>
