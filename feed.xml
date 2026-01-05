@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2025-12-31T00:10:11+05:30</updated>
+    <updated>2026-01-05T13:46:13+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -239,9 +239,55 @@ docker system prune -a --volumes</code></pre>
 </blockquote>
 <h3 id="mcetoc_1jdo6bmlq22d" class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Pal MCP's Council of LLMs</strong></h3>
 <p>For complex decisions, I want multiple models with different perspectives to analyze the problem. Pal MCP makes this possible by orchestrating multi-model consensus.</p>
-<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">I might update this post if I figure out how to safely add Pal MCP to LibreChat without corrupting everything. If you've successfully integrated these two tools, I'd love to hear how you did it.</p>
-<p>Have you experienced similar issues with LibreChat, MCP servers, or MongoDB in Docker?  Reach out - I'm curious if this is a known issue or if I'm just uniquely unlucky.</p>
-<p>I might (or might not) update this blog post if and when I figure out how to configure Pal MCP inside LibreChat. For now, they run separately; Pal MCP in Claude code, and my MongoDB sleeps peacefully.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">I have updated this post with instructions to safely add Pal MCP to LibreChat without corrupting everything. <span style="text-decoration: line-through;">If you've successfully integrated these two tools, I'd love to hear how you did it.</span></p>
+<p><span style="text-decoration: line-through;">Have you experienced similar issues with LibreChat, MCP servers, or MongoDB in Docker?  Reach out - I'm curious if this is a known issue or if I'm just uniquely unlucky.</span></p>
+<p><span style="text-decoration: line-through;">I might (or might not) update this blog post if and when I figure out how to configure Pal MCP inside LibreChat. For now, they run separately; Pal MCP in Claude code, and my MongoDB sleeps peacefully.</span></p>
+<h2>How to get Pal MCP working in librachat:</h2>
+<p>This is how my bare minimal <code>librechat.yaml</code> looks like (feel free to remove parts that you dont need). Make sure to replace <code>&lt;INSERT_OPENROUTER_KEY_HERE&gt;</code> with your Openrouter API key:</p>
+<pre class="language-yaml"><code>version: 1.2.8
+cache: true
+endpoints:
+  agents:
+    recursionLimit: 100        # increase default agent steps to 50
+    maxRecursionLimit: 500    # allow up to 100 if adjusting via UI
+  custom:
+    - name: "OpenRouter"
+      apiKey: "&lt;INSERT_OPENROUTER_KEY_HERE&gt;"
+      baseURL: "https://openrouter.ai/api/v1"
+      models:
+        default: ["gpt-3.5-turbo"]
+        fetch: true
+      titleConvo: true
+      titleModel: "current_model"
+      summarize: false
+      summaryModel: "current_model"
+      forcePrompt: false
+      modelDisplayLabel: "OpenRouter"
+mcpServers:
+  memory:
+    command: npx
+    args:
+      - -y
+      - "@modelcontextprotocol/server-memory"
+  pal:
+    command: uvx
+    args:
+      - --from
+      - git+https://github.com/BeehiveInnovations/pal-mcp-server.git
+      - pal-mcp-server
+    env:
+      OPENROUTER_API_KEY: "&lt;INSERT_OPENROUTER_KEY_HERE&gt;"</code></pre>
+<p>The snippet for <span style="font-size: inherit;"><code>maxRecursionLimit</code> and <code>recursionLimit</code> </span><span style="font-size: inherit;">is to fix if you get this error:</span></p>
+<p class="msg msg--warning">Something went wrong. Here's the specific error message we encountered: An error occurred while processing the request: Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the "recursionLimit" config key. Troubleshooting URL: https://langchain-ai.github.io/langgraphjs/troubleshooting/errors/GRAPH_RECURSION_LIMIT/ </p>
+<p> </p>
+<p>And this is my docker-compose.override.yml :</p>
+<pre class="language-yaml"><code>services:
+  api:
+    volumes:
+      - type: bind
+        source: ./librechat.yaml
+        target: /app/librechat.yaml
+    command: sh -c "apk add --no-cache git &amp;&amp; pip install --break-system-packages uv &amp;&amp; npm run backend"</code></pre>
 </div>
             ]]>
         </content>
