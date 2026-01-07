@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2026-01-07T16:21:55+05:30</updated>
+    <updated>2026-01-07T16:30:57+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -370,7 +370,7 @@
         </content>
     </entry>
     <entry>
-        <title>MongoDB / WiredTiger Corruption: A Cautionary Tale of Adding MCP Servers to LibreChat</title>
+        <title>MongoDB / WiredTiger Corruption / Error: A Cautionary Tale of Adding MCP Servers to LibreChat</title>
         <author>
             <name>Written by Amber Jain</name>
         </author>
