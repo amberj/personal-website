@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2026-01-20T17:38:05+05:30</updated>
+    <updated>2026-01-20T17:38:56+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -84,7 +84,7 @@
 <li><a href="#mcetoc_1jfdkcehfas">Ryan Dahl - Creator of Node.js</a></li>
 </ul>
 </div>
-<p>What caused this? I was thinking that it was due to Opus 4.5, and Simon Willison (co-creators of Django web framework) confirmed my suspicion in his post titled "<a href="https://simonwillison.net/2026/Jan/4/inflection/" target="_blank" rel="noopener noreferrer">The November 2025 inflection point</a>":</p>
+<p>What caused this? I thought that maybe this was due to Opus 4.5, and Simon Willison (co-creators of Django web framework) confirmed my suspicion in his post titled "<a href="https://simonwillison.net/2026/Jan/4/inflection/" target="_blank" rel="noopener noreferrer">The November 2025 inflection point</a>":</p>
 <blockquote>
 <div class="note">
 <p>It genuinely feels to me like GPT-5.2 and Opus 4.5 in November represent an inflection point - one of those moments where the models get incrementally better in a way that tips across an invisible capability line where suddenly a whole bunch of much harder coding problems open up.</p>
