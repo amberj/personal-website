@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2026-01-20T23:20:24+05:30</updated>
+    <updated>2026-01-20T23:44:19+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -25,14 +25,13 @@
             <summary>
                 <![CDATA[
                         <img src="https://amberja.in/media/posts/81/claude-code-on-android-over-ssh.png" alt="" />
-                    How to Control Your Mac from an Android Phone Using SSH and&hellip;
+                    Ever wanted to run Claude Code while you’re away from your desk?&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                     <p><img src="https://amberja.in/media/posts/81/claude-code-on-android-over-ssh.png" class="type:primaryImage" alt="" /></p>
-                <h1 id="how-to-control-your-mac-from-an-android-phone-using-ssh-and-tailscale">How to Control Your Mac from an Android Phone Using SSH and Tailscale</h1>
-<p>Ever wanted to run Claude Code while you’re away from your desk? With the right setup, you can turn your Android phone into a powerful remote terminal. This guide walks you through setting up seamless SSH access from your Android device to your Mac using DaRemote Android SSH client, Tailscale, tmux, zsh and a few helpful configurations.</p><h3 id="dont-use-mosh-use-ssh-instead">Don’t use <code>mosh</code>, use <code>ssh</code> instead</h3>
+                <p>Ever wanted to run Claude Code while you’re away from your desk? With the right setup, you can turn your Android phone into a powerful remote terminal. This guide walks you through setting up seamless SSH access from your Android device to your Mac using DaRemote Android SSH client, Tailscale, tmux, zsh and a few helpful configurations.</p><h3 id="dont-use-mosh-use-ssh-instead">Don’t use <code>mosh</code>, use <code>ssh</code> instead</h3>
 <p>While <a href="https://docs.blink.sh/integrations/tailscale+mosh">this page suggests that mosh works with tailscale+mac</a>, I could not get it to work with Mac’s firewall (tried both with <code>pf</code> and Firewall in System Settings). I tried both Opus4.5 and Gemini 3 Pro, and while they suggested dozens of config changes, nothing worked.</p><p>Moreover, this <a href="https://news.ycombinator.com/item?id=45053040">hackernews discussion</a> suggests that with tailscale, the benefits that mosh had over ssh don’t matter. </p><p>While tools like <code>mosh</code> promise better mobile connectivity, real-world experience shows that with Tailscale’s connection management, plain SSH works beautifully. Tailscale already handles the connection persistence that mosh was designed to solve.</p><p>So my suggestion is to just use SSH first and see if the additional pain of setting up mosh would be worth it or not.</p><h2 id="part-1-setting-up-your-mac">Part 1: Setting Up Your Mac</h2>
 <h3 id="install-the-essential-tools">Install the Essential Tools</h3>
 <p>Start by installing these core utilities on your Mac:</p><ul>
