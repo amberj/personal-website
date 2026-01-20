@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2026-01-20T21:10:48+05:30</updated>
+    <updated>2026-01-20T23:20:24+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -18,6 +18,7 @@
         <id>https://amberja.in/how-to-control-your-macs-claude-code-from-an-android-phone-using-ssh-and-tailscale.html</id>
         <media:content url="https://amberja.in/media/posts/81/claude-code-on-android-over-ssh.png" medium="image" />
             <category term="Tech &amp; Programming"/>
+            <category term="Blogposts"/>
             <category term="AI / LLMs"/>
 
         <updated>2026-01-20T20:52:14+05:30</updated>
@@ -110,17 +111,18 @@ PROMPT=&#39;%1~ %# &#39;
         <link href="https://amberja.in/summarization-in-claude-code-to-reduce-prompt-injection-risk.html"/>
         <id>https://amberja.in/summarization-in-claude-code-to-reduce-prompt-injection-risk.html</id>
             <category term="Tech &amp; Programming"/>
+            <category term="Found in the Wild"/>
             <category term="AI / LLMs"/>
 
         <updated>2026-01-20T17:32:30+05:30</updated>
             <summary>
                 <![CDATA[
-                    Boris Cherny, co-creator of Claude Code posted on X: Summarization is one&hellip;
+                    Boris Cherny, creator of Claude Code posted on X: Summarization is one&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>Boris Cherny, co-creator of Claude Code posted on X:</p>
+                <p>Boris Cherny, creator of Claude Code <a href="https://x.com/bcherny/status/1989025306980860226" target="_blank" rel="noopener noreferrer">posted on X</a>:</p>
 <div class="css-175oi2r">
 <div class="css-175oi2r r-1s2bzr4">
 <blockquote>
@@ -153,6 +155,7 @@ PROMPT=&#39;%1~ %# &#39;
         <media:content url="https://amberja.in/media/posts/77/ai-coding-widespread-acceptance.png" medium="image" />
             <category term="Tech &amp; Programming"/>
             <category term="Exhibit A"/>
+            <category term="Blogposts"/>
             <category term="AI / LLMs"/>
 
         <updated>2026-01-19T20:34:00+05:30</updated>

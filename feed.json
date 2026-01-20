@@ -21,26 +21,28 @@
             },
             "tags": [
                    "Tech &amp; Programming",
+                   "Blogposts",
                    "AI / LLMs"
             ],
             "date_published": "2026-01-20T20:52:14+05:30",
-            "date_modified": "2026-01-20T21:10:48+05:30"
+            "date_modified": "2026-01-20T23:01:14+05:30"
         },
         {
             "id": "https://amberja.in/summarization-in-claude-code-to-reduce-prompt-injection-risk.html",
             "url": "https://amberja.in/summarization-in-claude-code-to-reduce-prompt-injection-risk.html",
             "title": "Summarization in Claude Code to reduce Prompt Injection risk",
-            "summary": "Boris Cherny, co-creator of Claude Code posted on X: Summarization is one&hellip;",
-            "content_html": "<p>Boris Cherny, co-creator of Claude Code posted on X:</p>\n<div class=\"css-175oi2r\">\n<div class=\"css-175oi2r r-1s2bzr4\">\n<blockquote>\n<div id=\"id__ljlk1ojfzwq\" class=\"css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-16dba41 r-bnwqim r-135wba7\" dir=\"auto\" lang=\"en\" data-testid=\"tweetText\"><span class=\"css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3\">Summarization is one thing we do to reduce prompt injection risk. Are you running into specific issues with it?</span></div>\n</blockquote>\n</div>\n</div>\n<div class=\"css-175oi2r\"> </div>\n<div>Interesting!</div>\n<div class=\"css-175oi2r\"> </div>\n<div class=\"css-175oi2r r-12kyg2d\">\n<div class=\"css-175oi2r r-k4xj1c r-18u37iz r-1wtj0ep\">\n<div class=\"css-175oi2r r-1wbh5a2 r-1a11zyx\">\n<div class=\"css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2 r-1471scf\">\n<div class=\"css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41\" dir=\"ltr\"> </div>\n</div>\n</div>\n</div>\n</div>",
+            "summary": "Boris Cherny, creator of Claude Code posted on X: Summarization is one&hellip;",
+            "content_html": "<p>Boris Cherny, creator of Claude Code <a href=\"https://x.com/bcherny/status/1989025306980860226\" target=\"_blank\" rel=\"noopener noreferrer\">posted on X</a>:</p>\n<div class=\"css-175oi2r\">\n<div class=\"css-175oi2r r-1s2bzr4\">\n<blockquote>\n<div id=\"id__ljlk1ojfzwq\" class=\"css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-16dba41 r-bnwqim r-135wba7\" dir=\"auto\" lang=\"en\" data-testid=\"tweetText\"><span class=\"css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3\">Summarization is one thing we do to reduce prompt injection risk. Are you running into specific issues with it?</span></div>\n</blockquote>\n</div>\n</div>\n<div class=\"css-175oi2r\"> </div>\n<div>Interesting!</div>\n<div class=\"css-175oi2r\"> </div>\n<div class=\"css-175oi2r r-12kyg2d\">\n<div class=\"css-175oi2r r-k4xj1c r-18u37iz r-1wtj0ep\">\n<div class=\"css-175oi2r r-1wbh5a2 r-1a11zyx\">\n<div class=\"css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2 r-1471scf\">\n<div class=\"css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41\" dir=\"ltr\"> </div>\n</div>\n</div>\n</div>\n</div>",
             "author": {
                 "name": "Written by Amber Jain"
             },
             "tags": [
                    "Tech &amp; Programming",
+                   "Found in the Wild",
                    "AI / LLMs"
             ],
             "date_published": "2026-01-20T17:32:30+05:30",
-            "date_modified": "2026-01-20T17:32:47+05:30"
+            "date_modified": "2026-01-20T23:20:24+05:30"
         },
         {
             "id": "https://amberja.in/the-inflection-point-why-renowned-programmers-changed-their-minds-on-ai-coding.html",
@@ -55,10 +57,11 @@
             "tags": [
                    "Tech &amp; Programming",
                    "Exhibit A",
+                   "Blogposts",
                    "AI / LLMs"
             ],
             "date_published": "2026-01-19T20:34:00+05:30",
-            "date_modified": "2026-01-20T17:46:40+05:30"
+            "date_modified": "2026-01-20T23:08:56+05:30"
         },
         {
             "id": "https://amberja.in/sectoral-and-thematic-funds-when-to-consider-2026.html",
