@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2026-01-20T17:39:28+05:30</updated>
+    <updated>2026-01-20T17:46:40+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -57,6 +57,7 @@
         </author>
         <link href="https://amberja.in/the-inflection-point-why-renowned-programmers-changed-their-minds-on-ai-coding.html"/>
         <id>https://amberja.in/the-inflection-point-why-renowned-programmers-changed-their-minds-on-ai-coding.html</id>
+        <media:content url="https://amberja.in/media/posts/77/ai-coding-widespread-acceptance.png" medium="image" />
             <category term="Tech &amp; Programming"/>
             <category term="Exhibit A"/>
             <category term="AI / LLMs"/>
@@ -64,12 +65,14 @@
         <updated>2026-01-19T20:34:00+05:30</updated>
             <summary>
                 <![CDATA[
+                        <img src="https://amberja.in/media/posts/77/ai-coding-widespread-acceptance.png" alt="" />
                     <p>As I write this today in mid of January 2026, I can't shake off this feeling. Something flipped in last few weeks. Hackernews/reddit are filled with links to posts from purist, respected programmers (that I have personally looked up to since 2007 when I started studying programming) suddenly singing praises of LLM coding. Some of these had previously written off "(Vibe/Agentic) Coding with AI" as something that was good for hobby/mini projects, code reviews or first draft.</p>
 
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://amberja.in/media/posts/77/ai-coding-widespread-acceptance.png" class="type:primaryImage" alt="" /></p>
                 <p>As I write this today in mid of January 2026, I can't shake off this feeling. Something flipped in last few weeks. Hackernews/reddit are filled with links to posts from purist, respected programmers (that I have personally looked up to since 2007 when I started studying programming) suddenly singing praises of LLM coding. Some of these had previously written off "(Vibe/Agentic) Coding with AI" as something that was good for hobby/mini projects, code reviews or first draft.</p>
 
 <div class="post__toc">
