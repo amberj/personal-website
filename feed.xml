@@ -3,12 +3,105 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2026-01-20T17:46:40+05:30</updated>
+    <updated>2026-01-20T21:10:48+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
     <id>https://amberja.in</id>
 
+    <entry>
+        <title>How to Control Your Mac&#x27;s Claude Code from an Android Phone Using SSH and Tailscale</title>
+        <author>
+            <name>Written by Amber Jain</name>
+        </author>
+        <link href="https://amberja.in/how-to-control-your-macs-claude-code-from-an-android-phone-using-ssh-and-tailscale.html"/>
+        <id>https://amberja.in/how-to-control-your-macs-claude-code-from-an-android-phone-using-ssh-and-tailscale.html</id>
+        <media:content url="https://amberja.in/media/posts/81/claude-code-on-android-over-ssh.png" medium="image" />
+            <category term="Tech &amp; Programming"/>
+            <category term="AI / LLMs"/>
+
+        <updated>2026-01-20T20:52:14+05:30</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://amberja.in/media/posts/81/claude-code-on-android-over-ssh.png" alt="" />
+                    How to Control Your Mac from an Android Phone Using SSH and&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="https://amberja.in/media/posts/81/claude-code-on-android-over-ssh.png" class="type:primaryImage" alt="" /></p>
+                <h1 id="how-to-control-your-mac-from-an-android-phone-using-ssh-and-tailscale">How to Control Your Mac from an Android Phone Using SSH and Tailscale</h1>
+<p>Ever wanted to run Claude Code while you’re away from your desk? With the right setup, you can turn your Android phone into a powerful remote terminal. This guide walks you through setting up seamless SSH access from your Android device to your Mac using DaRemote Android SSH client, Tailscale, tmux, zsh and a few helpful configurations.</p><h3 id="dont-use-mosh-use-ssh-instead">Don’t use <code>mosh</code>, use <code>ssh</code> instead</h3>
+<p>While <a href="https://docs.blink.sh/integrations/tailscale+mosh">this page suggests that mosh works with tailscale+mac</a>, I could not get it to work with Mac’s firewall (tried both with <code>pf</code> and Firewall in System Settings). I tried both Opus4.5 and Gemini 3 Pro, and while they suggested dozens of config changes, nothing worked.</p><p>Moreover, this <a href="https://news.ycombinator.com/item?id=45053040">hackernews discussion</a> suggests that with tailscale, the benefits that mosh had over ssh don’t matter. </p><p>While tools like <code>mosh</code> promise better mobile connectivity, real-world experience shows that with Tailscale’s connection management, plain SSH works beautifully. Tailscale already handles the connection persistence that mosh was designed to solve.</p><p>So my suggestion is to just use SSH first and see if the additional pain of setting up mosh would be worth it or not.</p><h2 id="part-1-setting-up-your-mac">Part 1: Setting Up Your Mac</h2>
+<h3 id="install-the-essential-tools">Install the Essential Tools</h3>
+<p>Start by installing these core utilities on your Mac:</p><ul>
+<li><strong>tmux</strong> – A terminal multiplexer that keeps your sessions alive</li>
+<li><strong>Tailscale</strong> – A zero-config VPN that makes remote access simple. Signup with your Google account and you can use free plan for personal usage.<ul>
+<li>Configure Tailscale to run on login</li>
+</ul>
+</li>
+<li><strong>Amphetamine</strong> – Prevents your Mac from sleeping<ul>
+<li>Modify Amphetamine’s config so that when it is enabled, mac never sleeps indefinitely.</li>
+</ul>
+</li>
+</ul>
+<h3 id="enable-remote-access-through-system-settings">Enable remote access through System Settings</h3>
+<h3 id="configure-automatic-tmux-sessions">Configure Automatic tmux Sessions</h3>
+<p>When you SSH into your Mac, you want to immediately land in a persistent tmux session (I have named it as <code>ai</code>). Add this to your <code>~/.zshrc</code>:</p><pre><code># This automatically launches tmux whenever you SSH in (but not when you&#39;re already in tmux or using a local terminal).
+
+if [[ -n &quot;$SSH_CONNECTION&quot; ]] &amp;&amp; [[ -z &quot;$TMUX&quot; ]]; then
+    tmux attach -t ai 2&gt;/dev/null || tmux new -s ai
+fi
+</code></pre>
+<p>This ensures every SSH connection automatically attaches to a session named <code>ai</code> (and creating if it doesn’t exists, say if Mac got restarted), so that you can directly start working on existing claude code instances.</p><h3 id="clean-up-the-tmux-status-bar">Clean Up the tmux Status Bar</h3>
+<p>The default tmux status bar displays information that’s unnecessary on a small-width phone screen:</p><p><code>[1] 0:zsh*                               &quot;Some-MacBook-Pro.local&quot; 18:12 20-Jan-26</code></p><p>To hide the hostname and timestamp, run these 2 commands:</p><pre><code>echo &#39;# Hide hostname and date time stamp from tmux status bar:&#39; &gt;&gt; ~/.tmux.conf
+</code></pre>
+<pre><code>echo &#39;set -g status-right &quot;&quot;&#39; &gt;&gt; ~/.tmux.conf
+</code></pre>
+<h3 id="sync-your-working-directory-to-the-cloud">Sync Your Working Directory to the Cloud</h3>
+<p>Put your Claude Code working directory on a cloud storage service like Google Drive, OneDrive, or Dropbox. This lets you access files generated by Claude Code directly from your Android phone without needing to transfer them manually.</p><h3 id="set-a-default-working-directory-for-tmux">Set a Default Working Directory for tmux</h3>
+<p>If you use a specific folder for your Claude Code work (especially one synced to cloud storage, as mentioned in previous step), configure tmux to always open there. Add this to <code>~/.tmux.conf</code>:</p><pre><code># Set default directory for new windows and panes:
+bind c new-window -c &quot;/path/to/folder&quot;
+bind &#39;&quot;&#39; split-window -c &quot;/path/to/folder&quot;
+bind % split-window -h -c &quot;/path/to/folder&quot;
+set-hook -g session-created &#39;send-keys &quot;cd /path/to/folder&quot; Enter&#39;
+</code></pre>
+<p>Replace <code>/path/to/folder</code> with your actual working directory. After updating the config, reload it using:</p><pre><code>tmux source-file ~/.tmux.conf
+</code></pre>
+<h3 id="shorten-your-shell-prompt">Shorten Your Shell Prompt</h3>
+<p>Mobile screens have limited width. The default zsh prompt wastes valuable space:</p><p><code>user@hostname ~ %</code></p><p>Shorten it by adding this to <code>~/.zshrc</code>:</p><pre><code># Show shell prompt as cwd %
+PROMPT=&#39;%1~ %# &#39;
+</code></pre>
+<p>Exit and restart your terminal for the change to take effect.</p><hr>
+<h2 id="part-2-setting-up-your-android-phone">Part 2: Setting Up Your Android Phone</h2>
+<h3 id="install-the-required-apps">Install the Required Apps</h3>
+<p>You’ll need two apps on your Android device:</p><ul>
+<li><strong>DaRemote</strong> – A capable SSH client</li>
+<li><strong>Tailscale</strong> – The same VPN service, connecting your phone to your Mac</li>
+</ul>
+<h3 id="configure-daremote">Configure DaRemote</h3>
+<p>Add your Mac’s Tailscale address as a server in DaRemote. You can find your Mac’s Tailscale IP in the Tailscale app or admin console.</p><h3 id="disable-battery-optimization">Disable Battery Optimization</h3>
+<p>Android aggressively manages background apps to save battery, which can kill your SSH connection when you switch apps. Disable battery optimization for both Tailscale and DaRemote apps. This keeps your SSH sessions alive in the background for instant resumption.</p><h3 id="set-up-file-syncing-with-foldersync">Set Up File Syncing with FolderSync</h3>
+<p>If you’ve synced your Claude Code working directory to a cloud service, install the FolderSync app (free version will suffice). Configure it to automatically sync your chosen cloud folder to your Android device every 5 minutes (this is the minimum duration available on free plan).</p><p>This way, when you want to review Claude Code’s output on the go, the files are already downloaded and waiting. </p><p>You can also dictate your prompt in a text file, put it in synced folder and then prompt claude code to act upon instruction written in the file. 2-way, input and output.</p><h3 id="optional-helpful-companion-apps">Optional: Helpful Companion Apps</h3>
+<p>Consider installing these apps to view Claude Code’s output on your phone (which will be synced automatically by Foldersync app):</p><ul>
+<li>A Markdown editor or viewer</li>
+<li>A PDF viewer</li>
+<li>HTML files (Chrome??)</li>
+<li>Some gallery app for viewing SVG files</li>
+<li>Any other format that you generate.</li>
+</ul>
+<h2 id="troubleshooting-missing-claude-api-key-error">Troubleshooting: “Missing Claude API key” Error</h2>
+<p>If you encounter the <code>Missing API key · Run /login</code> error in Claude Code over SSH:</p><ol>
+<li>In Claude Code, run <code>/logout</code> first</li>
+<li>In another terminal, run <code>security unlock-keychain</code> and enter your Mac password when prompted</li>
+<li>Back in Claude Code, run <code>/login</code> and follow the authentication steps</li>
+<li>Exit Claude Code and reopen it to confirm the error is resolved</li>
+</ol>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>This setup transforms your Android phone into a genuine remote development terminal. The combination of Tailscale’s reliable connectivity, tmux’s session persistence, and thoughtful configuration tweaks creates a surprisingly smooth mobile coding experience for me.</p><p>Whether you’re debugging an issue from a coffee shop, reviewing Claude Code output during your commute, or just checking on a long-running process, having remote access to your Claude Code opens up new possibilities for staying productive on the move.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Summarization in Claude Code to reduce Prompt Injection risk</title>
         <author>
@@ -1181,60 +1274,6 @@
 </ul>
 <p class="mb-2 whitespace-pre-wrap msg msg--warning"><strong>Disclaimer:</strong> Mutual fund investments are subject to market risks. Read all scheme-related documents carefully before investing. Past performance is not indicative of future results. The content above is for educational and informational purposes only and should not be construed as investment advice.</p>
 <p class="mb-2 whitespace-pre-wrap"> </p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>VS Code Setup on MacOS</title>
-        <author>
-            <name>Written by Amber Jain</name>
-        </author>
-        <link href="https://amberja.in/vs-code-setup.html"/>
-        <id>https://amberja.in/vs-code-setup.html</id>
-        <media:content url="https://amberja.in/media/posts/67/visual-studio-code-banner-image.jpg" medium="image" />
-            <category term="Tech &amp; Programming"/>
-            <category term="Blogposts"/>
-            <category term="AI / LLMs"/>
-
-        <updated>2025-12-30T23:48:52+05:30</updated>
-            <summary>
-                <![CDATA[
-                        <img src="https://amberja.in/media/posts/67/visual-studio-code-banner-image.jpg" alt="VS Code" />
-                    I'm not a fulltime programmer, but given that I started my career&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <p><img src="https://amberja.in/media/posts/67/visual-studio-code-banner-image.jpg" class="type:primaryImage" alt="VS Code" /></p>
-                <p>I'm not a fulltime programmer, but given that I started my career as a Backend &amp; Devops Engineer, I do code on hobbyist projects. Especially with LLMs, I'm trying to code more, and I have my reasons to use VS Code instead of Cursor or Claude Code (more on this someday!)</p>
-<p>Here is how I setup my VS code. I'm sure that most (if not all) of these settings could be configured in a config file, but I simply didnt had time to get around to it yet. So I do these steps manually at the moment:</p>
-<ul>
-<li>Disable Minimap scrollbar using:
-<ul>
-<li>View &gt; Appearance &gt; Deselect "Minimap" </li>
-</ul>
-</li>
-<li>Always enable Word Wrap: 
-<ul>
-<li data-hveid="CAMQAQ" data-processed="true"><span class="T286Pc" data-sfc-cp="" data-processed="true"><strong class="Yjhzub" data-processed="true">Code</strong> &gt; <strong class="Yjhzub" data-processed="true">Settings</strong>, or use the shortcut <code class="o8j0Mc" dir="ltr" data-processed="true">Cmd + ,</code>.</span></li>
-<li data-hveid="CAMQAg" data-processed="true"><span class="T286Pc" data-sfc-cp="" data-processed="true">In the search bar at the top, type "word wrap".</span></li>
-<li data-hveid="CAMQAw" data-processed="true"><span class="T286Pc" data-sfc-cp="" data-processed="true">Under the <strong class="Yjhzub" data-processed="true">Editor: Word Wrap</strong> dropdown menu, select <strong class="Yjhzub" data-processed="true">on</strong>.</span><span class="uJ19be notranslate" data-wiz-uids="cep5Rc_12,cep5Rc_13,cep5Rc_14" data-processed="true"><span class="vKEkVd" data-animation-atomic="" data-wiz-attrbind="class=cep5Rc_12/TKHnVd;" data-processed="true"> </span></span></li>
-</ul>
-</li>
-<li>Show "Open files" in sidebar:
-<ul>
-<li>Go to <code class="o8j0Mc" dir="ltr" data-processed="true">View</code> &gt; <code class="o8j0Mc" dir="ltr" data-processed="true">Appearance</code> &gt; <code class="o8j0Mc" dir="ltr" data-processed="true">Primary Side Bar</code></li>
-<li>On Primary sidebar, choose "Explorer".</li>
-<li>Click three dots next to panel heading "Explorer". Select "Open editors"</li>
-</ul>
-</li>
-<li>Choose 
-<ul>
-<li>Code &gt; Settings &gt; Themes &gt;  Color theme &gt; Choose "Monokai".</li>
-</ul>
-</li>
-</ul>
-<p> </p>
             ]]>
         </content>
     </entry>
