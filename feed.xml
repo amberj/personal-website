@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2026-02-20T00:01:09+05:30</updated>
+    <updated>2026-03-16T14:25:10+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -21,7 +21,7 @@
             <category term="AI / LLMs"/>
 
         <updated>2026-02-20T00:00:16+05:30</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                     Install Coder Desktop. Approve any system permissions, login, and enable "Coder Connect"&hellip;
                 ]]>
@@ -37,6 +37,7 @@
 </ul>
 </li>
 </ol>
+<p>That's it!</p>
             ]]>
         </content>
     </entry>
@@ -51,7 +52,7 @@
             <category term="AI / LLMs"/>
 
         <updated>2026-02-11T00:12:28+05:30</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                     AI introduced a new rhythm in which workers managed several active threads&hellip;
                 ]]>
@@ -79,7 +80,7 @@
             <category term="AI / LLMs"/>
 
         <updated>2026-02-10T19:27:59+05:30</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                     Funny and relatable, at least for me: Source: X.com
                 ]]>
@@ -105,7 +106,7 @@
             <category term="AI / LLMs"/>
 
         <updated>2026-02-10T18:47:49+05:30</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://amberja.in/media/posts/83/local-llms.png" alt="Local LLMs" />
                     <p>How much RAM do you need to run a 30 billion parameter model? Why are there multiple versions of the same model at different file sizes? What does "8-bit quantization" actually mean, and how does it affect performance and/or precision? If you're running language models locally or planning to, understanding the relationship between parameters, weights, quantization, and memory is essential.</p>
@@ -149,7 +150,7 @@
             <category term="AI / LLMs"/>
 
         <updated>2026-01-20T20:52:14+05:30</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://amberja.in/media/posts/81/claude-code-on-android-over-ssh.png" alt="" />
                     Ever wanted to run Claude Code while you’re away from your desk?&hellip;
@@ -241,7 +242,7 @@ PROMPT=&#39;%1~ %# &#39;
             <category term="AI / LLMs"/>
 
         <updated>2026-01-20T17:32:30+05:30</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                     Boris Cherny, creator of Claude Code posted on X: Summarization is one&hellip;
                 ]]>
@@ -285,7 +286,7 @@ PROMPT=&#39;%1~ %# &#39;
             <category term="AI / LLMs"/>
 
         <updated>2026-01-19T20:34:00+05:30</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://amberja.in/media/posts/77/ai-coding-widespread-acceptance.png" alt="" />
                     <p>As I write this today in mid of January 2026, I can't shake off this feeling. Something flipped in last few weeks. Hackernews/reddit are filled with links to posts from purist, respected programmers (that I have personally looked up to since 2007 when I started studying programming) suddenly singing praises of LLM coding. Some of these had previously written off "(Vibe/Agentic) Coding with AI" as something that was good for hobby/mini projects, code reviews or first draft.</p>
@@ -389,7 +390,7 @@ PROMPT=&#39;%1~ %# &#39;
             <category term="What&#x27;s What in Finance"/>
 
         <updated>2026-01-11T17:11:00+05:30</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://amberja.in/media/posts/75/2026-india-sectoral-vs-thematic-funds-2026.png" alt="" />
                     <p class="mb-2 whitespace-pre-wrap">In 2026, many Indian investors look for focused ways to participate in visible trends such as manufacturing upgrades, energy transition, or domestic consumption. Sectoral and thematic mutual funds can offer that focused exposure within the mutual fund structure, with professional research, daily NAV disclosure, and portfolio transparency.</p>
@@ -575,7 +576,7 @@ PROMPT=&#39;%1~ %# &#39;
             <category term="What&#x27;s What in Finance"/>
 
         <updated>2026-01-10T17:09:00+05:30</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://amberja.in/media/posts/74/india-sectoral-vs-thematic-funds-2026.png" alt="" />
                     <p>Sectoral and thematic funds sit at an interesting crossroads in Indian equities. They offer exposure to specific growth narratives while potentially accelerating portfolio diversification through a focused lens. In this guide, we explore what makes sectoral and thematic funds distinct, how to evaluate them, and when they can fit into a thoughtful, risk-aware investment plan.</p>
@@ -723,7 +724,7 @@ PROMPT=&#39;%1~ %# &#39;
             <category term="What&#x27;s What in Finance"/>
 
         <updated>2026-01-07T17:08:59+05:30</updated>
-            <summary>
+            <summary type="html">
                 <![CDATA[
                         <img src="https://amberja.in/media/posts/73/hybrid-funds-2026.png" alt="Hybrid Mutual Funds in India (2026)" />
                     Hybrid funds are mutual funds that allocate across equity and debt instruments&hellip;
