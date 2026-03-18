@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2026-03-19T02:50:44+05:30</updated>
+    <updated>2026-03-19T02:55:10+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -40,9 +40,9 @@
 <li><a href="#mcetoc_1jk1c3c7u46">Voice transcription using Grok</a></li>
 <li><a href="#mcetoc_1jk1c3c7u48">How to run 2 commands in background?</a></li>
 <li><a href="#mcetoc_1jjvvv72p19">Setting up Clawhub</a></li>
+<li><a href="#mcetoc_1jk1dd1th8c">Templates for: AGENTS.md / HEARTBEAT.md / SOUL.md / TOOLS.md / USER.md</a></li>
 <li><a href="#mcetoc_1jjvvv72p1a">Adding web browsing capability</a></li>
-<li><a href="#mcetoc_1jk1cmpel7p">Expose as POST API (+ callback or polling)</a></li>
-<li><a href="#mcetoc_1jk1c3c7u47">How to expose agent as api?</a></li>
+<li><a href="#mcetoc_1jk1cmpel7p">Expose agents as POST API (+ callback or polling)</a></li>
 <li><a href="#mcetoc_1jk1c3c7u49">Miscellaneous links</a></li>
 </ul>
 </div>
@@ -165,12 +165,15 @@ nanobot gateway</pre>
 <blockquote>
 <p>Can you search ClaudeAI subreddit using reddit-readonly skill and find top 10 posts in last 1 month? </p>
 </blockquote>
+<h2 id="mcetoc_1jk1dd1th8c">Templates for: AGENTS.md / HEARTBEAT.md / SOUL.md / TOOLS.md / USER.md</h2>
+<p>TBD</p>
 <h2 id="mcetoc_1jjvvv72p1a">Adding web browsing capability</h2>
 <p>TBD</p>
-<h2 id="mcetoc_1jk1cmpel7p">Expose as POST API (+ callback or polling)</h2>
-<p>TBD</p>
-<h2 id="mcetoc_1jk1c3c7u47">How to expose agent as api?</h2>
-<p>TBD</p>
+<h2 id="mcetoc_1jk1cmpel7p">Expose agents as POST API (+ callback or polling)</h2>
+<p>TBD:</p>
+<ul>
+<li>/reddit-read/ endpoint which runs a fixed prompt, api token, task id (url parameters/input?), polling</li>
+</ul>
 <h2 id="mcetoc_1jk1c3c7u49">Miscellaneous links</h2>
 <ul>
 <li><a href="https://github.com/HKUDS/nanobot/discussions/431">https://github.com/HKUDS/nanobot/discussions/431</a> </li>
