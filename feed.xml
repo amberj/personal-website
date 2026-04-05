@@ -3,30 +3,36 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2026-04-05T16:44:19+05:30</updated>
+    <updated>2026-04-06T01:01:35+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
     <id>https://amberja.in</id>
 
     <entry>
-        <title>Fine-Tuning LLMs: What I Learned From a Rabbit Hole That Started With a GGUF File</title>
+        <title>The LM Studio Model That Sent Me Down a Fine-Tuning Rabbit Hole</title>
         <author>
             <name>Written by Amber Jain</name>
         </author>
-        <link href="https://amberja.in/fine-tuning-llms-what-i-learned-from-a-rabbit-hole-that-started-with-a-gguf-file.html"/>
-        <id>https://amberja.in/fine-tuning-llms-what-i-learned-from-a-rabbit-hole-that-started-with-a-gguf-file.html</id>
+        <link href="https://amberja.in/the-lm-studio-model-that-sent-me-down-a-fine-tuning-rabbit-hole.html"/>
+        <id>https://amberja.in/the-lm-studio-model-that-sent-me-down-a-fine-tuning-rabbit-hole.html</id>
+        <media:content url="https://amberja.in/media/posts/96/fine-tuning-llm.png" medium="image" />
+            <category term="Tech &amp; Programming"/>
+            <category term="Blogposts"/>
+            <category term="AI / LLMs"/>
 
         <updated>2026-04-05T16:44:19+05:30</updated>
             <summary type="html">
                 <![CDATA[
+                        <img src="https://amberja.in/media/posts/96/fine-tuning-llm.png" alt="" />
                     I was poking around LM Studio yesterday, sorted by most downloads, and&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
+                    <p><img src="https://amberja.in/media/posts/96/fine-tuning-llm.png" class="type:primaryImage" alt="" /></p>
                 <p>I was poking around LM Studio yesterday, sorted by most downloads, and something caught my eye. Not the official Qwen release. Not Unsloth's version. The top downloaded model for Qwen 3.5 27B was this: <code class="bg-text-200/5 border border-0.5 border-border-300 text-danger-000 whitespace-pre-wrap rounded-[0.4rem] px-1 py-px text-[0.9rem]">Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled-GGUF</code></p>
-<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">That last part - <span style="text-decoration: underline;"><em>Claude-4.6-Opus-Reasoning-Distilled</em></span> - picqued my curiosity. What does that even mean?</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">That last part - <span style="text-decoration: underline;"><em>Claude-4.6-Opus-Reasoning-Distilled</em></span> - piqued my curiosity. What does that even mean?</p>
 <p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Paraphrasing the model description:</p>
 <blockquote>
 <p>The creator used Chain-of-Thought interactions with Claude 4.6 Opus as training data, then distilled those reasoning patterns into a much smaller open-source model. More specifically, they were targeting a known weakness in Qwen 3.5 — its tendency to over-explain and loop through redundant reasoning steps. By imitating Claude's more structured thinking style, they got the model to adopt a leaner internal monologue: <em>"Let me analyze this request carefully: 1, 2, 3"</em> — and stop there, instead of spiraling.</p>
@@ -112,6 +118,40 @@
 <li class="whitespace-normal break-words pl-2"><strong>Slop detection:</strong> like the browser extension above, but tuned to a different parameter like "tone" or "plagiarism".</li>
 </ul>
 <p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The pattern across all of these is the same: narrow task, high repeatable volume, needs to be done for cheap. Exactly the profile where fine-tuning starts to make sense v/s a frontier model.</p>
+<h2 class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Preliminary Evidence: Does It Actually Work?</strong></h2>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">I didn't want to just take Jackrong's word for it, so I ran the same prompt through both models locally - Unsloth's Qwen 3.5 27B and Jackrong's Qwen 3.5 27B (fine-tuned variant using Claude Opus 4.6 interactions.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Here's what came back:</p>
+<div class="overflow-x-auto w-full px-2 mb-6">
+<table class="min-w-full border-collapse text-sm leading-[1.7] whitespace-normal" style="width: 100%; height: 194.25px;">
+<thead class="text-left">
+<tr style="height: 48.5625px;">
+<th class="text-text-100 border-b-0.5 border-border-300/60 py-2 pr-4 align-top font-bold" style="width: 23.0157%; height: 48.5625px;" scope="col">Qwen 3.5 27B</th>
+<th class="text-text-100 border-b-0.5 border-border-300/60 py-2 pr-4 align-top font-bold" style="width: 49.6228%; height: 48.5625px;" scope="col">Jackrong (fine-tuned with Opus 4.6)</th>
+<th class="text-text-100 border-b-0.5 border-border-300/60 py-2 pr-4 align-top font-bold" style="width: 27.2191%; height: 48.5625px;" scope="col">Unsloth</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 48.5625px;">
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 23.0157%; height: 48.5625px;">Thinking time</td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 49.6228%; height: 48.5625px;">48.98 seconds</td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 27.2191%; height: 48.5625px;">1 min 41 seconds</td>
+</tr>
+<tr style="height: 48.5625px;">
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 23.0157%; height: 48.5625px;">Tokens used</td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 49.6228%; height: 48.5625px;">713</td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 27.2191%; height: 48.5625px;">2,766</td>
+</tr>
+<tr style="height: 48.5625px;">
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 23.0157%; height: 48.5625px;">Speed</td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 49.6228%; height: 48.5625px;">5.21 tok/sec</td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 27.2191%; height: 48.5625px;">22.42 tok/sec</td>
+</tr>
+</tbody>
+</table>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The fine-tuned model used <strong>~4x fewer tokens</strong> and finished thinking in <strong>roughly half the time</strong>. The thinking log itself was about 2 pages. Unsloth's ran to approximately 5 — looping through the same reasoning steps, restating intermediate conclusions, hedging before it hedged again.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">That's exactly the failure mode Jackrong was targeting. From the model card: <em>the distillation specifically addresses Qwen 3.5's tendency toward excessive transitional or repetitive reasoning on simple queries.</em></p>
+<p>Disclaimer: This is a small, informal test on one prompt. It's not a benchmark. But it is preliminary evidence that the fine-tuning did what it said on the tin: the model learned to stop earlier, not think more.</p>
+</div>
 <h2 id="mcetoc_1jlel4g3vdf">Mandatory reads</h2>
 <p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">If this post sent you down the same rabbit hole it sent me, these are worth your time:</p>
 <ul>
@@ -119,6 +159,7 @@
 <li class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong style="font-size: inherit;"><a class="underline underline underline-offset-2 decoration-1 decoration-current/40 hover:decoration-current focus:decoration-current" href="https://github.com/distil-labs/distil-ai-slop-detector?tab=readme-ov-file#how-we-trained-ai-slop-detector">"How We Trained the AI Slop Detector"</a>:</strong><span style="font-size: inherit;"> The specific section of the README that walks through their fine-tuning process: dataset choices, teacher model setup, and how they got a 270M model to match a 120B one at 95% accuracy.</span></li>
 </ul>
 <p>If you've been down this rabbit hole longer than me, <a href="https://api.whatsapp.com/send?phone=919769110914&amp;text=Hi" target="_blank" rel="noopener noreferrer">do message me</a>. I'd genuinely love to know what you're reading.</p>
+<p> </p>
 <p> </p>
 <p> </p>
 <p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"> </p>
