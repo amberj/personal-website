@@ -3,12 +3,130 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2026-03-19T02:55:10+05:30</updated>
+    <updated>2026-04-05T16:44:19+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
     <id>https://amberja.in</id>
 
+    <entry>
+        <title>Fine-Tuning LLMs: What I Learned From a Rabbit Hole That Started With a GGUF File</title>
+        <author>
+            <name>Written by Amber Jain</name>
+        </author>
+        <link href="https://amberja.in/fine-tuning-llms-what-i-learned-from-a-rabbit-hole-that-started-with-a-gguf-file.html"/>
+        <id>https://amberja.in/fine-tuning-llms-what-i-learned-from-a-rabbit-hole-that-started-with-a-gguf-file.html</id>
+
+        <updated>2026-04-05T16:44:19+05:30</updated>
+            <summary type="html">
+                <![CDATA[
+                    I was poking around LM Studio yesterday, sorted by most downloads, and&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>I was poking around LM Studio yesterday, sorted by most downloads, and something caught my eye. Not the official Qwen release. Not Unsloth's version. The top downloaded model for Qwen 3.5 27B was this: <code class="bg-text-200/5 border border-0.5 border-border-300 text-danger-000 whitespace-pre-wrap rounded-[0.4rem] px-1 py-px text-[0.9rem]">Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled-GGUF</code></p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">That last part - <span style="text-decoration: underline;"><em>Claude-4.6-Opus-Reasoning-Distilled</em></span> - picqued my curiosity. What does that even mean?</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Paraphrasing the model description:</p>
+<blockquote>
+<p>The creator used Chain-of-Thought interactions with Claude 4.6 Opus as training data, then distilled those reasoning patterns into a much smaller open-source model. More specifically, they were targeting a known weakness in Qwen 3.5 — its tendency to over-explain and loop through redundant reasoning steps. By imitating Claude's more structured thinking style, they got the model to adopt a leaner internal monologue: <em>"Let me analyze this request carefully: 1, 2, 3"</em> — and stop there, instead of spiraling.</p>
+</blockquote>
+<div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1jlek4ikvl">Why now?</a></li>
+<li><a href="#mcetoc_1jlek44tuj">Where Fine-Tuning Sits in the Stack</a></li>
+<li><a href="#mcetoc_1jlel4g3vdb">The Fine Tuning Methods (And The One That's Surprisingly Accessible)</a></li>
+<li><a href="#mcetoc_1jlel4g3vdc">Fine-Tuning on a Mac Is Surprisingly Simple</a></li>
+<li><a href="#mcetoc_1jlel4g3vdd">A Real Example That Stuck With Me</a></li>
+<li><a href="#mcetoc_1jlel4g3vde">What I Want to Try</a></li>
+<li><a href="#mcetoc_1jlel4g3vdf">Mandatory reads:</a></li>
+</ul>
+</div>
+<p>This is fine-tuning in action. And while I had seen projects that do it (e.g. <a href="https://github.com/distil-labs/distil-ai-slop-detector" target="_blank" rel="noopener noreferrer">Distil Labs AI slop detector</a>), I hadn't really thought hard about what that means until now.</p>
+<h2 id="mcetoc_1jlek4ikvl">Why now?</h2>
+<p>Honestly, frustration.</p>
+<ul>
+<li>Proprietary models keep moving the goalposts. They are either too expensive, too rate-limited, or both (Claude, I'm looking at you).</li>
+<li>Open models are more capable than ever but still hallucinate in ways that are hard to trust in production. With Qwen 3.5, Gemma 4 etc, the quality gap is closing, but it hasn't closed.</li>
+<li>The quality bar on inference set by the trillion-parameter proprietary SOTA giants makes it tempting to just stay dependent on them.</li>
+<li>Rolling your own deployment harness is very fragile. Duct-taping together your own inference stack means accumulating a class of bugs that only surface under load, at 2am, in front of real users.</li>
+</ul>
+<p><a href="https://www.joelonsoftware.com/2009/09/23/the-duct-tape-programmer/" target="_blank" rel="noopener noreferrer">Joel Spolsky's Duct Tape Programmer</a> was operating on decades of accumulated tooling (compilers, debuggers, deployment pipelines) that had survived contact with reality for years. The inference stack for open models doesn't have that luxury. ChatGPT launched less than 3.5 years ago (as of this writing). The harness is young, and the ground keeps shifting under it - <a href="https://amberja.in/understanding-llm-size-weights-parameters-quantization-kv-cache-and-inference-memory.html" target="_blank" rel="noopener noreferrer">K/Q/IQ quantizations</a>, <a href="https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/" target="_blank" rel="noopener noreferrer">TurboQuant</a>, Skills, MCPs, <a href="https://arxiv.org/abs/2312.11514" target="_blank" rel="noopener noreferrer">LLMs in flash memory</a>, <a href="https://arxiv.org/abs/2604.01193" target="_blank" rel="noopener noreferrer">self-distillation</a> - techniques that didn't exist 3-4 years ago. These fundamental changes are arriving faster than the tooling can absorb them. You're not taping over cracks in a mature system. You're taping over cracks in a system that's still deciding what shape it wants to be.</p>
+<p>Then I read a line from <a href="https://aishwaryasrinivasan.substack.com/p/when-fine-tuning-an-open-source-model" target="_blank" rel="noopener noreferrer">Aishwarya Srinivasan</a> that reframed it cleanly:</p>
+<blockquote>
+<p>the question for AI engineers has shifted from <em>"Can an AI do this?"</em> to <em>"What's the most efficient way to deploy intelligence in production?".</em></p>
+</blockquote>
+<p>That's exactly what I was thinking.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">But there's a growing class of use cases (e.g. Aishwarya's examples like <code>medical record classification, structured API response generation, legal contract parsing</code>; or my own cases like <code>keyword classifications, content writing/summarization, tone/slop detection, sentiment analysis etc.</code>) where you don't need general intelligence.</p>
+<blockquote>
+<p><strong>You need <em>narrow, fast, cheap and repeatable</em> performance.</strong></p>
+</blockquote>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">That's where fine-tuning makes sense. Open-source models have gotten good enough that their baseline performance is already high. Fine-tuning just points that baseline in a specific direction.</p>
+<h2 id="mcetoc_1jlek44tuj" class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">Where Fine-Tuning Sits in the Stack</h2>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Before getting into the methods, it helps to locate fine-tuning in the broader picture:</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Pre-training</strong> is the massive upfront phase where the model learns language from enormous datasets. This is the heavy lifting - it gives the model foundational intelligence, and you don't touch it.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Fine-tuning</strong> is the subsequent, focused training on a much smaller, specialized dataset. You're taking that broadly capable model and sharpening it for a specific task, style, or domain. Crucially, this <em>does</em> update the model's weights.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>RAG</strong> (Retrieval-Augmented Generation) is often contrasted with fine-tuning. Unlike fine-tuning, RAG doesn't change the model at all. Instead, it retrieves relevant information at inference time and feeds it alongside the user's prompt. Great for keeping models up to date - not so great for changing how they behave.</p>
+<p>TL;DR: Pre-training gives you the base. RAG gives you fresh information. Fine-tuning changes the model's actual behavior.</p>
+<h2 id="mcetoc_1jlel4g3vdb" class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">The Fine Tuning Methods (And The One That's Surprisingly Accessible)</h2>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">A second blogpost (from <a href="https://medium.com/@neevdeb26/the-hitchhikers-guide-to-fine-tune-llms-on-a-mac-85174455457a" target="_blank" rel="noopener noreferrer">Rhitam Deb on Medium</a>) shares a list of different methods used for fine tuning:</p>
+<ul>
+<li>Instruction Fine-tuning<br>Full Fine-tuning<br>Parameter-Efficient Fine-tuning (PEFT)<br>LoRA (Low-Rank Adaptation)<br>QLoRA (Quantized LoRA)</li>
+</ul>
+<p>For LoRA with MLX on Mac, Rhitam writes:</p>
+<blockquote>
+<p>For instance, LoRA can reduce memory usage by 65% and enable much faster training. With LoRA, a 7-billion parameter model that previously used 45GB memory and ran at 95 tokens/second could run at 328 tokens/second and only use 17GB of memory. It’s a game-changer!</p>
+</blockquote>
+<h2 id="mcetoc_1jlel4g3vdc" class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">Fine-Tuning on a Mac Is Surprisingly Simple</h2>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">What surprised me most was how approachable the actual process is — at least for LoRA fine-tuning with Apple's MLX framework. Paraphrasing the steps from Rhitam's blogpost:</p>
+<ol class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-decimal flex flex-col gap-1 pl-8 mb-3">
+<li><code>pip install</code> some packages.</li>
+<li class="whitespace-normal break-words pl-2"><strong>Create three JSONL files</strong>:
+<ol class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-decimal flex flex-col gap-1 pl-8 mb-3">
+<li class="whitespace-normal break-words pl-2"><code class="bg-text-200/5 border border-0.5 border-border-300 text-danger-000 whitespace-pre-wrap rounded-[0.4rem] px-1 py-px text-[0.9rem]">train.jsonl</code> (for training the model)</li>
+<li class="whitespace-normal break-words pl-2"><code class="bg-text-200/5 border border-0.5 border-border-300 text-danger-000 whitespace-pre-wrap rounded-[0.4rem] px-1 py-px text-[0.9rem]">valid.jsonl</code> (for validating its learning progress)</li>
+<li class="whitespace-normal break-words pl-2"><code class="bg-text-200/5 border border-0.5 border-border-300 text-danger-000 whitespace-pre-wrap rounded-[0.4rem] px-1 py-px text-[0.9rem]">test.jsonl</code> (for a final evaluation)</li>
+</ol>
+</li>
+<li>Use <code>huggingface-cli</code> to download some open source LLM model (base).</li>
+<li class="whitespace-normal break-words pl-2"><strong>Run fine-tuning</strong> with <code class="bg-text-200/5 border border-0.5 border-border-300 text-danger-000 whitespace-pre-wrap rounded-[0.4rem] px-1 py-px text-[0.9rem]">python -m mlx_lm.lora</code>.</li>
+<li class="whitespace-normal break-words pl-2"><strong>Test the result</strong> with <code class="bg-text-200/5 border border-0.5 border-border-300 text-danger-000 whitespace-pre-wrap rounded-[0.4rem] px-1 py-px text-[0.9rem]">python -m mlx_lm.generate</code>.</li>
+<li class="whitespace-normal break-words pl-2"><strong>Fuse your custom weights</strong> back into the base model with <code class="bg-text-200/5 border border-0.5 border-border-300 text-danger-000 whitespace-pre-wrap rounded-[0.4rem] px-1 py-px text-[0.9rem]">python -m mlx_lm.fuse</code>.</li>
+</ol>
+<p>In layman terms, Jackrong's Qwen model for instance, was trained on Claude Opus interactions. You could generate your own training data/JSONL using Claude or Codex CLI modes.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">That's essentially it. From there, you'd deploy with llama.cpp or something equivalent. The hard part is building a good training dataset, but proprietary SOTA models like Opus 4.x or GPT 5.x can help you with it.</p>
+<h2 id="mcetoc_1jlel4g3vdd" class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">A Real Example That Stuck With Me</h2>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">A few weeks ago I saw a project that made the potential very concrete. A team fine-tuned a tiny 270M parameter model to detect AI-generated text. The thing runs entirely in a browser extension.</p>
+<ul>
+<li class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The original/base model (Gemma 3 270M, out of the box) hit about 40% accuracy on their test set. Essentially random guessing.</li>
+<li class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The fine-tuned version matched a 120B parameter teacher model (gpt-oss-120b) at around 95% accuracy — while being over 400 times smaller. The quantized version is 242MB and runs locally in Chrome.</li>
+</ul>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">That's the point. The general model didn't know how to do this task. The fine-tuned model does, and it costs almost nothing to run.</p>
+<h2 id="mcetoc_1jlel4g3vde" class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">What I Want to Try</h2>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">All of this makes me want to test whether fine-tuning can solve a few specific problems I keep running into:</p>
+<ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
+<li class="whitespace-normal break-words pl-2"><strong>Keyword classification:</strong> labeling content at scale without expensive API calls per request</li>
+<li class="whitespace-normal break-words pl-2"><strong>Summarization with a specific style:</strong> getting outputs that match a particular format consistently</li>
+<li class="whitespace-normal break-words pl-2"><strong>Sentiment analysis:</strong> especially for domain-specific texts (such as reviews for specific financial products) where open models underperform</li>
+<li class="whitespace-normal break-words pl-2"><strong>Slop detection:</strong> like the browser extension above, but tuned to a different parameter like "tone" or "plagiarism".</li>
+</ul>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The pattern across all of these is the same: narrow task, high repeatable volume, needs to be done for cheap. Exactly the profile where fine-tuning starts to make sense v/s a frontier model.</p>
+<h2 id="mcetoc_1jlel4g3vdf">Mandatory reads</h2>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">If this post sent you down the same rabbit hole it sent me, these are worth your time:</p>
+<ul>
+<li class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong><a class="underline underline underline-offset-2 decoration-1 decoration-current/40 hover:decoration-current focus:decoration-current" href="https://github.com/R6410418/Jackrong-llm-finetuning-guide">Jackrong's LLM Fine-Tuning Guide</a>:</strong> The companion repo to the Qwen distillation model that started all of this. Includes a PDF guide and a <code class="bg-text-200/5 border border-0.5 border-border-300 text-danger-000 whitespace-pre-wrap rounded-[0.4rem] px-1 py-px text-[0.9rem]">.ipynb</code> notebook to get your hands dirty.</li>
+<li class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong style="font-size: inherit;"><a class="underline underline underline-offset-2 decoration-1 decoration-current/40 hover:decoration-current focus:decoration-current" href="https://github.com/distil-labs/distil-ai-slop-detector?tab=readme-ov-file#how-we-trained-ai-slop-detector">"How We Trained the AI Slop Detector"</a>:</strong><span style="font-size: inherit;"> The specific section of the README that walks through their fine-tuning process: dataset choices, teacher model setup, and how they got a 270M model to match a 120B one at 95% accuracy.</span></li>
+</ul>
+<p>If you've been down this rabbit hole longer than me, <a href="https://api.whatsapp.com/send?phone=919769110914&amp;text=Hi" target="_blank" rel="noopener noreferrer">do message me</a>. I'd genuinely love to know what you're reading.</p>
+<p> </p>
+<p> </p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"> </p>
+<p> </p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Nanobot: Install and Setup</title>
         <author>
@@ -577,192 +695,6 @@ PROMPT=&#39;%1~ %# &#39;
 </blockquote>
 <hr>
 <p>So skeptics of AI-powered development, here is my suggestion: consider this your invitation to try Opus 4.5 or GPT5.2 and see what's changed.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Sectoral and Thematic Funds: When to Consider (2026)</title>
-        <author>
-            <name>Written by Amber Jain</name>
-        </author>
-        <link href="https://amberja.in/sectoral-and-thematic-funds-when-to-consider-2026.html"/>
-        <id>https://amberja.in/sectoral-and-thematic-funds-when-to-consider-2026.html</id>
-        <media:content url="https://amberja.in/media/posts/75/2026-india-sectoral-vs-thematic-funds-2026.png" medium="image" />
-            <category term="What&#x27;s What in Finance"/>
-
-        <updated>2026-01-11T17:11:00+05:30</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://amberja.in/media/posts/75/2026-india-sectoral-vs-thematic-funds-2026.png" alt="" />
-                    <p class="mb-2 whitespace-pre-wrap">In 2026, many Indian investors look for focused ways to participate in visible trends such as manufacturing upgrades, energy transition, or domestic consumption. Sectoral and thematic mutual funds can offer that focused exposure within the mutual fund structure, with professional research, daily NAV disclosure, and portfolio transparency.</p>
-
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                    <p><img src="https://amberja.in/media/posts/75/2026-india-sectoral-vs-thematic-funds-2026.png" class="type:primaryImage" alt="" /></p>
-                <p class="mb-2 whitespace-pre-wrap">In 2026, many Indian investors look for focused ways to participate in visible trends such as manufacturing upgrades, energy transition, or domestic consumption. Sectoral and thematic mutual funds can offer that focused exposure within the mutual fund structure, with professional research, daily NAV disclosure, and portfolio transparency.</p>
-
-<div class="post__toc">
-<h3>Table of Contents</h3>
-<ul>
-<li><a href="#mcetoc_1jeoougip3nk">Sectoral and thematic funds in SEBI categories</a>
-<ul>
-<li><a href="#mcetoc_1jeoougip3nl">What is a sectoral fund?</a></li>
-<li><a href="#mcetoc_1jeoougip3nm">What is a thematic fund?</a></li>
-</ul>
-</li>
-<li><a href="#mcetoc_1jeoougip3nn">Sectoral vs thematic: key differences that matter to investors</a></li>
-<li><a href="#mcetoc_1jeoougip3no">Why investors use sectoral and thematic funds</a></li>
-<li><a href="#mcetoc_1jeoougip3np">When to consider sectoral and thematic funds</a>
-<ul>
-<li><a href="#mcetoc_1jeoougip3nq">1) When the portfolio already has a diversified equity core</a></li>
-<li><a href="#mcetoc_1jeoougip3nr">2) When the investor can stay invested through a full cycle</a></li>
-<li><a href="#mcetoc_1jeoougip3ns">3) When the theme has clear, measurable drivers</a></li>
-<li><a href="#mcetoc_1jeoougip3nt">4) When the investor can monitor and rebalance</a></li>
-<li><a href="#mcetoc_1jeoougip3nu">5) When position sizing stays modest and intentional</a></li>
-</ul>
-</li>
-<li><a href="#mcetoc_1jeoougip3nv">How to evaluate a sectoral or thematic fund before investing</a></li>
-<li><a href="#mcetoc_1jeoougip3o0">Taxation overview for Indian investors (2026)</a></li>
-<li><a href="#mcetoc_1jeoougip3o1">Checklist: when a sectoral or thematic fund fits well</a></li>
-<li><a href="#mcetoc_1jeoougip3o2">FAQs: People also ask about sectoral and thematic funds</a>
-<ul>
-<li><a href="#mcetoc_1jeoougip3o3">Are sectoral and thematic funds the same?</a></li>
-<li><a href="#mcetoc_1jeoougip3o4">When does it make sense to add a thematic fund?</a></li>
-<li><a href="#mcetoc_1jeoougip3o5">Can beginners invest in sectoral or thematic funds?</a></li>
-<li><a href="#mcetoc_1jeoougip3o6">Do sectoral or thematic SIPs reduce risk?</a></li>
-<li><a href="#mcetoc_1jeoougip3o7">How many sectoral or thematic funds can a portfolio hold?</a></li>
-</ul>
-</li>
-<li><a href="#mcetoc_1jeoougip3o8">Closing perspective</a></li>
-</ul>
-</div>
-<p class="mb-2 whitespace-pre-wrap">In this blogpost, I will explain when sectoral and thematic funds may fit, how they differ, and how to use them in a portfolio without losing sight of diversification and alignment to goals.</p>
-<h2 id="mcetoc_1jeoougip3nk">Sectoral and thematic funds - SEBI categories</h2>
-<p class="mb-2 whitespace-pre-wrap">Sectoral and Thematic schemes follow a focused mandate, typically by maintaining a high minimum allocation to the chosen sector or theme.</p>
-<p class="mb-2 whitespace-pre-wrap">That single design choice, <em><strong>concentration</strong></em>, is what can make these funds useful for targeted participation in a trend, and also what makes portfolio role and sizing important.</p>
-<h3 id="mcetoc_1jeoougip3nl">What is a sectoral fund?</h3>
-<p class="mb-2 whitespace-pre-wrap">A sectoral fund focuses on one sector or industry, for example banking, information technology, pharma, or infrastructure. Under SEBI’s categorisation, Sectoral and Thematic schemes are equity schemes with a minimum allocation to the relevant sector or theme.</p>
-<p class="mb-2 whitespace-pre-wrap">In practical terms, the fund’s fortunes track that sector’s business cycle more closely than a broad market diversified fund.</p>
-<h3 id="mcetoc_1jeoougip3nm">What is a thematic fund?</h3>
-<p class="mb-2 whitespace-pre-wrap">A thematic fund invests across multiple sectors that connect to a theme, for example manufacturing, digital ecosystem, or energy transition. Thematic portfolios can hold companies from different industries, as long as they fit the theme definition in the scheme’s documents.</p>
-<h2 id="mcetoc_1jeoougip3nn">Sectoral vs thematic: key differences that matter to investors</h2>
-<table>
-<thead>
-<tr>
-<th>Factor</th>
-<th>Sectoral funds</th>
-<th>Thematic funds</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Core idea</td>
-<td>One sector exposure</td>
-<td>Theme exposure across sectors</td>
-</tr>
-<tr>
-<td>Diversification within the fund</td>
-<td>Lower, because one sector dominates</td>
-<td>Often higher than sectoral, but still focused</td>
-</tr>
-<tr>
-<td>What drives returns</td>
-<td>Sector cycle, regulation, competition, credit, and pricing in that sector</td>
-<td>Theme adoption, policy tailwinds, innovation, and supply chain shifts</td>
-</tr>
-<tr>
-<td>Monitoring needs</td>
-<td>Higher</td>
-<td>High</td>
-</tr>
-<tr>
-<td>Portfolio role</td>
-<td>Tactical or satellite allocation</td>
-<td>Tactical or satellite allocation, sometimes longer theme horizon</td>
-</tr>
-</tbody>
-</table>
-<p class="mb-2 whitespace-pre-wrap">Even when a thematic fund holds multiple sectors, the holdings can still be correlated because they depend on the same economic driver. Reading the scheme’s portfolio and the theme definition in the Scheme Information Document matters.</p>
-<h2 id="mcetoc_1jeoougip3no">Why investors use sectoral and thematic funds</h2>
-<p class="mb-2 whitespace-pre-wrap">Sectoral and thematic funds are tools. When used with clarity, they can add intent to an equity allocation.</p>
-<p class="mb-2 whitespace-pre-wrap">Common investor motivations include:</p>
-<ul>
-<li>Expressing a specific market view without buying individual stocks</li>
-<li>Aligning a part of equity exposure to a structural trend</li>
-<li>Complementing a diversified core with a focused satellite sleeve</li>
-<li>Accessing professional research in a narrow opportunity set</li>
-</ul>
-<p class="mb-2 whitespace-pre-wrap">A practical way to think about them is that they are not substitutes for broad diversification. They are overlays.</p>
-<h2 id="mcetoc_1jeoougip3np">When to consider sectoral and thematic funds</h2>
-<p class="mb-2 whitespace-pre-wrap">The most useful question is not which theme is popular, but when a focused fund aligns with goals, horizon, and portfolio construction.</p>
-<h3 id="mcetoc_1jeoougip3nq">When the portfolio already has a diversified equity core</h3>
-<p class="mb-2 whitespace-pre-wrap">Focused funds tend to work better as additions, not foundations. If an investor’s equity allocation already includes diversified strategies such as flexi cap, large cap, multi cap, or broad index exposure, then a thematic or sectoral position can act as a satellite sleeve.</p>
-<p class="mb-2 whitespace-pre-wrap">This structure can help keep the overall equity portfolio diversified while still allowing a targeted tilt.</p>
-<h3 id="mcetoc_1jeoougip3nr">When the investor can stay invested through a full cycle</h3>
-<p class="mb-2 whitespace-pre-wrap">Sectors and themes move in cycles. A narrow exposure can go through long periods of relative underperformance even when the long-term story remains intact.</p>
-<p class="mb-2 whitespace-pre-wrap">An investor considering a sectoral or thematic fund generally benefits from aligning the holding period with the nature of the cycle, and with the financial goal timeline, rather than with short-term market narratives.</p>
-<h3 id="mcetoc_1jeoougip3ns">When the theme has clear, measurable drivers</h3>
-<p class="mb-2 whitespace-pre-wrap">A theme becomes easier to evaluate when it has observable drivers that can be tracked over time. Examples of measurable drivers include:</p>
-<ul>
-<li>Capacity expansion and capex indicators in a supply chain</li>
-<li>Credit growth and asset quality trends in financials</li>
-<li>Export order flows and currency sensitivity for specific industries</li>
-<li>Policy frameworks and tender pipelines where relevant</li>
-</ul>
-<p class="mb-2 whitespace-pre-wrap">This does not remove uncertainty. It simply improves the investor’s ability to monitor whether the original thesis remains relevant.</p>
-<h3 id="mcetoc_1jeoougip3nt">When the investor can monitor and rebalance</h3>
-<p class="mb-2 whitespace-pre-wrap">Sectoral and thematic funds are not set-and-forget products in the same way many diversified funds can be. Portfolio drift can occur if a theme performs strongly and becomes an outsized part of equity exposure.</p>
-<p class="mb-2 whitespace-pre-wrap">A rebalancing approach can be defined upfront, for example reviewing allocation at set intervals or when the position crosses a chosen band. The purpose is discipline, not prediction.</p>
-<h3 id="mcetoc_1jeoougip3nu">When position sizing stays modest and intentional</h3>
-<p class="mb-2 whitespace-pre-wrap">Many investors use focused funds to express a view while limiting impact on the overall portfolio. A small allocation can allow participation while keeping diversification intact.</p>
-<p class="mb-2 whitespace-pre-wrap">A simple framework is:</p>
-<ol>
-<li>Define the role: tactical tilt or longer theme participation</li>
-<li>Define maximum allocation within equity</li>
-<li>Define review frequency</li>
-<li>Define exit criteria linked to goals and allocation bands, not headlines</li>
-</ol>
-<p class="mb-2 whitespace-pre-wrap">Remember! This is a portfolio construction decision. It is not a return forecast.</p>
-<h2 id="mcetoc_1jeoougip3nv">How to evaluate a sectoral or thematic fund before investing</h2>
-<p class="mb-2 whitespace-pre-wrap">A sectoral or thematic fund can look similar to another fund on name alone, but differ meaningfully in holdings and implementation. Reviewing documented information is essential.</p>
-<p class="mb-2 whitespace-pre-wrap">Key checks that usually add clarity:</p>
-<ul>
-<li>Theme definition in the Scheme Information Document and how the AMC operationalises it</li>
-<li>Portfolio overlap with existing holdings in the investor’s portfolio</li>
-<li>Top holdings concentration and whether the fund relies on a small set of companies</li>
-<li>Market capitalisation mix and how that affects volatility</li>
-<li>Expense ratio, typically seen in the range of about 0.1 percent to 2.5 percent across mutual fund schemes in India, depending on category and plan type, and disclosed by the fund.</li>
-</ul>
-<h2 id="mcetoc_1jeoougip3o0">Taxation overview for Indian investors (2026)</h2>
-<p class="mb-2 whitespace-pre-wrap">Sectoral and thematic funds are equity mutual funds for taxation purposes when they meet equity exposure criteria as per applicable tax rules. Taxation depends on holding period and the nature of gains, and it can change through amendments.</p>
-<p class="mb-2 whitespace-pre-wrap">For tax decisions, investors generally benefit from checking the latest Income Tax Department guidance applicable on the transaction date.</p>
-<h2 id="mcetoc_1jeoougip3o1">Checklist: when a sectoral or thematic fund fits well</h2>
-<p class="mb-2 whitespace-pre-wrap">Use this quick checklist to decide whether the idea fits the portfolio context:</p>
-<ul>
-<li>The investor has a diversified equity core already in place</li>
-<li>The investment goal horizon allows staying invested through a sector or theme cycle</li>
-<li>The theme has clear drivers that can be tracked without relying on forecasts</li>
-<li>The allocation is capped as a satellite position within equity</li>
-<li>The investor has a review and rebalancing method defined in advance</li>
-<li>The fund’s scheme documents clearly explain the mandate and portfolio construction approach</li>
-</ul>
-<p class="mb-2 whitespace-pre-wrap">If multiple items are unclear, it can be useful to pause and first strengthen the core diversified allocation.</p>
-<h2 id="mcetoc_1jeoougip3o2">FAQs: People also ask about sectoral and thematic funds</h2>
-<h3 id="mcetoc_1jeoougip3o3">Are sectoral and thematic funds the same?</h3>
-<p class="mb-2 whitespace-pre-wrap">They are related but not identical. Sectoral funds focus on one sector, while thematic funds invest across sectors connected to a theme. </p>
-<h3 id="mcetoc_1jeoougip3o4">When does it make sense to add a thematic fund?</h3>
-<p class="mb-2 whitespace-pre-wrap">It can make sense when an investor already holds diversified equity funds for core exposure, and wants a modest satellite allocation aligned to a measurable, monitorable theme, with a holding period that can span the theme’s cycle.</p>
-<h3 id="mcetoc_1jeoougip3o5">Can beginners invest in sectoral or thematic funds?</h3>
-<p class="mb-2 whitespace-pre-wrap">Beginners often find diversified equity funds easier to understand and hold through volatility because diversification reduces reliance on one narrow driver. A focused fund can be considered later once the investor can track drivers, concentration, and portfolio overlap.</p>
-<h3 id="mcetoc_1jeoougip3o6">Do sectoral or thematic SIPs reduce risk?</h3>
-<p class="mb-2 whitespace-pre-wrap">A SIP mainly spreads entry timing over multiple dates. It can help manage timing risk, but it does not change the underlying concentration of a sectoral or thematic mandate. The portfolio will still reflect the sector or theme cycle.</p>
-<h3 id="mcetoc_1jeoougip3o7">How many sectoral or thematic funds can a portfolio hold?</h3>
-<p class="mb-2 whitespace-pre-wrap">Holding multiple focused funds can create hidden overlap and complexity. Many portfolios benefit from keeping focused allocations limited and ensuring each has a distinct role, with the diversified core doing most of the work.</p>
-<h2 id="mcetoc_1jeoougip3o8">Closing perspective</h2>
-<p class="mb-2 whitespace-pre-wrap">Sectoral and thematic funds can add precision to an equity portfolio when used intentionally. In 2026, with rapid shifts in technology, supply chains, and policy priorities, the ability to take targeted exposure through a regulated mutual fund structure is valuable. The key is to treat these funds as portfolio tools, define their role clearly, and keep the overall plan anchored to goals and diversification. (o-g-5-2)</p>
-<p class="mb-2 whitespace-pre-wrap msg msg--warning">Disclaimer: Mutual fund investments are subject to market risks. Read all scheme-related documents carefully before investing. Past performance is not indicative of future results. The content above is for educational and informational purposes only and should not be construed as investment advice.</p>
             ]]>
         </content>
     </entry>
