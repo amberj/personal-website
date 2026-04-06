@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2026-04-06T22:21:40+05:30</updated>
+    <updated>2026-04-06T22:23:07+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -48,8 +48,20 @@
 <li><a href="#mcetoc_1jlel4g3vde">What I Want to Try using fine tuning</a></li>
 <li><a href="#mcetoc_1jlh9qpv3fp">Preliminary Evidence: Does It Actually Work?</a>
 <ul>
-<li><a href="#mcetoc_1jlhr9ug6l1">Prompt 1</a></li>
-<li><a href="#mcetoc_1jlhr9ug6l2">Prompt 2</a></li>
+<li><a href="#mcetoc_1jlhr9ug6l1">Prompt 1</a>
+<ul>
+<li><a href="#mcetoc_1jlhrcfhtmc">Prompt</a></li>
+<li><a href="#mcetoc_1jlhrcfhtmd">Key Stats</a></li>
+<li><a href="#mcetoc_1jlhrcfhtme">Inference/output</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1jlhr9ug6l2">Prompt 2</a>
+<ul>
+<li><a href="#mcetoc_1jlhrcfhtmf">Prompt</a></li>
+<li><a href="#mcetoc_1jlhrcfhtmg">Key stats</a></li>
+<li><a href="#mcetoc_1jlhrcfhtmh">Inference/output</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#mcetoc_1jlel4g3vdf">Mandatory reads</a></li>
@@ -128,10 +140,11 @@
 <h2 id="mcetoc_1jlh9qpv3fp" class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Preliminary Evidence: Does It Actually Work?</strong></h2>
 <p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">I didn't want to just take Jackrong's word for it, so I ran the same prompt through both models locally - Unsloth's Qwen 3.5 27B and Jackrong's Qwen 3.5 27B (fine-tuned variant using Claude Opus 4.6 interactions).</p>
 <h3 id="mcetoc_1jlhr9ug6l1">Prompt 1</h3>
+<h4 id="mcetoc_1jlhrcfhtmc">Prompt</h4>
 <blockquote>
 <p class="p1"><strong>Girl barefoot, brother in oversized shoes. Why?</strong></p>
 </blockquote>
-<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Here are some key stats that matter to me:</p>
+<h4 id="mcetoc_1jlhrcfhtmd" class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Key Stats</h4>
 <div class="overflow-x-auto w-full px-2 mb-6">
 <table class="min-w-full border-collapse text-sm leading-[1.7] whitespace-normal" style="width: 100%; height: 194.25px;">
 <thead class="text-left">
@@ -160,6 +173,7 @@
 </tbody>
 </table>
 <p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The fine-tuned model used <strong>~4x fewer tokens</strong> and finished thinking in <strong>roughly half the time</strong>. The thinking log itself was about 2 pages. Unsloth's ran to approximately 5 — looping through the same reasoning steps, restating intermediate conclusions, hedging before it hedged again.</p>
+<h4 id="mcetoc_1jlhrcfhtme">Inference/output</h4>
 <p>As for the inference, these were the outputs from both variants:</p>
 <ul>
 <li>Unsloth's Qwen 3.5 27B: <a href="https://drive.google.com/file/d/1wB1QAo4ghDuu5AASLo9fAp6RCUhEGmOH/view?usp=sharing" target="_blank" rel="noopener noreferrer">Link</a></li>
@@ -167,12 +181,13 @@
 </ul>
 <p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">That's exactly the failure mode Jackrong was targeting. From the model card: <em>the distillation specifically addresses Qwen 3.5's tendency toward excessive transitional or repetitive reasoning on simple queries.</em></p>
 <h3 id="mcetoc_1jlhr9ug6l2">Prompt 2</h3>
+<h4 id="mcetoc_1jlhrcfhtmf">Prompt</h4>
 <blockquote>
 <p>which of the following keywords are relevant to bajaj finserv's business:<br><br>uppcl<br>airtel customer care number<br>atm<br>jio customer care contact number<br>jio customer care number<br>cng pump<br>Jio recharge<br>nbpdcl<br>airtel store<br>sbpdcl<br>uppcl bill<br>up power bill<br>airtel recharge<br>qr code scanner<br>the indian express<br>apspdcl<br>airtel recharge plan<br>electricity bill<br>jio recharge plan<br>jio recharge pack<br>jio plans for recharge<br>recharge plan of jio<br>reliance jio recharge plans<br>bsnl recharge plan<br>bsnl recharge pack<br>msedcl<br>jio fiber plan<br>dhbvn<br>payment<br>uppcl online<br>adani electricity bill download<br>life insurance corporation of india pay online<br>lic premium payment<br>lic policy online payment<br>tneb online payment<br>tamil nadu electricity board online payment<br>tamilnadu electricity bill online payment<br>jio fiber<br>tangedco<br>tneb online bill payment<br>life insurance corporation premium payment<br>bsnl customer care number<br>bsnl care number<br>bsnl helpline number<br>bijli bill<br>bsnl recharge<br>axis bank customer care<br>netflix subscription<br>uppcl bill pay</p>
 </blockquote>
 </div>
 <div> </div>
-<div class="overflow-x-auto w-full px-2 mb-6">Key stats:</div>
+<h4 id="mcetoc_1jlhrcfhtmg" class="overflow-x-auto w-full px-2 mb-6">Key stats</h4>
 <div>
 <table class="min-w-full border-collapse text-sm leading-[1.7] whitespace-normal" style="width: 100%; height: 350.812px;">
 <thead class="text-left">
@@ -211,7 +226,7 @@
 <p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Also, Unsloth's variant consumed 3,829 tokens and ran straight into the 4,096 context ceiling, truncating output midway. The fine-tune used only 1,436 tokens and completed its response fully within the same limit. In local inference where context is technically "free", this might seem academic - but on long-running or chained tasks, bloated context windows accumulate stale reasoning and degrade output quality over time. Leaner context is cleaner context.</p>
 </div>
 <div> </div>
-<div>Inference/output:</div>
+<h4 id="mcetoc_1jlhrcfhtmh">Inference/output</h4>
 <div class="overflow-x-auto w-full px-2 mb-6">
 <ul>
 <li>Unsloth's Qwen 3.5 27B: <a href="https://drive.google.com/file/d/1O6PMo_QxPOYdifrXoi3G18bwlOSF0k38/view?usp=sharing" target="_blank" rel="noopener noreferrer">Link</a></li>
