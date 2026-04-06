@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2026-04-07T00:33:26+05:30</updated>
+    <updated>2026-04-07T00:48:56+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -482,6 +482,13 @@ nanobot gateway</pre>
 <li> </li>
 </ul>
 </li>
+</ul>
+<h2>If you need to login with a different Codex account?</h2>
+<p>I'm using Nanobot with ChatGPT/Codex $20 plan.</p>
+<ul>
+<li>Open <a href="https://chatgpt.com/codex/settings/general#settings/Security" target="_blank" rel="noopener noreferrer">this URL</a>, make sure you are logged in with the same ChatGPT account that is being used in nanobot's Codex. </li>
+<li>Scroll down to "Secure sign in with ChatGPT", click on "Disconnect" button next to "Codex CLI".</li>
+<li>Use this command to start Codex OAuth login flow again: `nanobot provider login openai-codex`</li>
 </ul>
 <h2 id="mcetoc_1jjvvv72p17">How to clear context window?</h2>
 <p><code>/new</code> works on Whatsapp.</p>
