@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2026-04-06T01:01:35+05:30</updated>
+    <updated>2026-04-06T22:21:40+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -45,8 +45,15 @@
 <li><a href="#mcetoc_1jlel4g3vdb">The Fine Tuning Methods (And The One That's Surprisingly Accessible)</a></li>
 <li><a href="#mcetoc_1jlel4g3vdc">Fine-Tuning on a Mac Is Surprisingly Simple</a></li>
 <li><a href="#mcetoc_1jlel4g3vdd">A Real Example That Stuck With Me</a></li>
-<li><a href="#mcetoc_1jlel4g3vde">What I Want to Try</a></li>
-<li><a href="#mcetoc_1jlel4g3vdf">Mandatory reads:</a></li>
+<li><a href="#mcetoc_1jlel4g3vde">What I Want to Try using fine tuning</a></li>
+<li><a href="#mcetoc_1jlh9qpv3fp">Preliminary Evidence: Does It Actually Work?</a>
+<ul>
+<li><a href="#mcetoc_1jlhr9ug6l1">Prompt 1</a></li>
+<li><a href="#mcetoc_1jlhr9ug6l2">Prompt 2</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1jlel4g3vdf">Mandatory reads</a></li>
+<li><a href="#mcetoc_1jlh9qpv3fq">Optional Reads</a></li>
 </ul>
 </div>
 <p>This is fine-tuning in action. And while I had seen projects that do it (e.g. <a href="https://github.com/distil-labs/distil-ai-slop-detector" target="_blank" rel="noopener noreferrer">Distil Labs AI slop detector</a>), I hadn't really thought hard about what that means until now.</p>
@@ -109,7 +116,7 @@
 <li class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The fine-tuned version matched a 120B parameter teacher model (gpt-oss-120b) at around 95% accuracy — while being over 400 times smaller. The quantized version is 242MB and runs locally in Chrome.</li>
 </ul>
 <p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">That's the point. The general model didn't know how to do this task. The fine-tuned model does, and it costs almost nothing to run.</p>
-<h2 id="mcetoc_1jlel4g3vde" class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">What I Want to Try</h2>
+<h2 id="mcetoc_1jlel4g3vde" class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">What I Want to Try using fine tuning</h2>
 <p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">All of this makes me want to test whether fine-tuning can solve a few specific problems I keep running into:</p>
 <ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
 <li class="whitespace-normal break-words pl-2"><strong>Keyword classification:</strong> labeling content at scale without expensive API calls per request</li>
@@ -118,45 +125,112 @@
 <li class="whitespace-normal break-words pl-2"><strong>Slop detection:</strong> like the browser extension above, but tuned to a different parameter like "tone" or "plagiarism".</li>
 </ul>
 <p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The pattern across all of these is the same: narrow task, high repeatable volume, needs to be done for cheap. Exactly the profile where fine-tuning starts to make sense v/s a frontier model.</p>
-<h2 class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Preliminary Evidence: Does It Actually Work?</strong></h2>
-<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">I didn't want to just take Jackrong's word for it, so I ran the same prompt through both models locally - Unsloth's Qwen 3.5 27B and Jackrong's Qwen 3.5 27B (fine-tuned variant using Claude Opus 4.6 interactions.</p>
-<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Here's what came back:</p>
+<h2 id="mcetoc_1jlh9qpv3fp" class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Preliminary Evidence: Does It Actually Work?</strong></h2>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">I didn't want to just take Jackrong's word for it, so I ran the same prompt through both models locally - Unsloth's Qwen 3.5 27B and Jackrong's Qwen 3.5 27B (fine-tuned variant using Claude Opus 4.6 interactions).</p>
+<h3 id="mcetoc_1jlhr9ug6l1">Prompt 1</h3>
+<blockquote>
+<p class="p1"><strong>Girl barefoot, brother in oversized shoes. Why?</strong></p>
+</blockquote>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Here are some key stats that matter to me:</p>
 <div class="overflow-x-auto w-full px-2 mb-6">
 <table class="min-w-full border-collapse text-sm leading-[1.7] whitespace-normal" style="width: 100%; height: 194.25px;">
 <thead class="text-left">
 <tr style="height: 48.5625px;">
-<th class="text-text-100 border-b-0.5 border-border-300/60 py-2 pr-4 align-top font-bold" style="width: 23.0157%; height: 48.5625px;" scope="col">Qwen 3.5 27B</th>
-<th class="text-text-100 border-b-0.5 border-border-300/60 py-2 pr-4 align-top font-bold" style="width: 49.6228%; height: 48.5625px;" scope="col">Jackrong (fine-tuned with Opus 4.6)</th>
-<th class="text-text-100 border-b-0.5 border-border-300/60 py-2 pr-4 align-top font-bold" style="width: 27.2191%; height: 48.5625px;" scope="col">Unsloth</th>
+<th class="text-text-100 border-b-0.5 border-border-300/60 py-2 pr-4 align-top font-bold" style="width: 23.0157%; height: 48.5625px;" scope="col"><strong>Qwen 3.5 27B</strong></th>
+<th class="text-text-100 border-b-0.5 border-border-300/60 py-2 pr-4 align-top font-bold" style="width: 49.6228%; height: 48.5625px;" scope="col"><strong>Jackrong (fine-tuned with Opus 4.6)</strong></th>
+<th class="text-text-100 border-b-0.5 border-border-300/60 py-2 pr-4 align-top font-bold" style="width: 27.2191%; height: 48.5625px;" scope="col"><strong>Unsloth</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr style="height: 48.5625px;">
-<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 23.0157%; height: 48.5625px;">Thinking time</td>
-<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 49.6228%; height: 48.5625px;">48.98 seconds</td>
-<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 27.2191%; height: 48.5625px;">1 min 41 seconds</td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 23.0157%; height: 48.5625px;"><strong>Thinking time</strong></td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 49.6228%; height: 48.5625px;"><span style="color: #169179;">48.98 seconds</span></td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 27.2191%; height: 48.5625px;"><span style="color: #e03e2d;">1 min 41 seconds</span></td>
 </tr>
 <tr style="height: 48.5625px;">
-<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 23.0157%; height: 48.5625px;">Tokens used</td>
-<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 49.6228%; height: 48.5625px;">713</td>
-<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 27.2191%; height: 48.5625px;">2,766</td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 23.0157%; height: 48.5625px;"><strong>Tokens used</strong></td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 49.6228%; height: 48.5625px;"><span style="color: #169179;">713</span></td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 27.2191%; height: 48.5625px;"><span style="color: #e03e2d;">2,766</span></td>
 </tr>
 <tr style="height: 48.5625px;">
-<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 23.0157%; height: 48.5625px;">Speed</td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 23.0157%; height: 48.5625px;"><strong>Speed</strong></td>
 <td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 49.6228%; height: 48.5625px;">5.21 tok/sec</td>
 <td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 27.2191%; height: 48.5625px;">22.42 tok/sec</td>
 </tr>
 </tbody>
 </table>
 <p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The fine-tuned model used <strong>~4x fewer tokens</strong> and finished thinking in <strong>roughly half the time</strong>. The thinking log itself was about 2 pages. Unsloth's ran to approximately 5 — looping through the same reasoning steps, restating intermediate conclusions, hedging before it hedged again.</p>
+<p>As for the inference, these were the outputs from both variants:</p>
+<ul>
+<li>Unsloth's Qwen 3.5 27B: <a href="https://drive.google.com/file/d/1wB1QAo4ghDuu5AASLo9fAp6RCUhEGmOH/view?usp=sharing" target="_blank" rel="noopener noreferrer">Link</a></li>
+<li>Jackrong Qwen 3.5 27B: <a href="https://drive.google.com/file/d/1sxRYeXqkYfkjIlgwm0S_IpRIp7rwk-SL/view?usp=sharing" target="_blank" rel="noopener noreferrer">Link</a></li>
+</ul>
 <p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">That's exactly the failure mode Jackrong was targeting. From the model card: <em>the distillation specifically addresses Qwen 3.5's tendency toward excessive transitional or repetitive reasoning on simple queries.</em></p>
-<p>Disclaimer: This is a small, informal test on one prompt. It's not a benchmark. But it is preliminary evidence that the fine-tuning did what it said on the tin: the model learned to stop earlier, not think more.</p>
+<h3 id="mcetoc_1jlhr9ug6l2">Prompt 2</h3>
+<blockquote>
+<p>which of the following keywords are relevant to bajaj finserv's business:<br><br>uppcl<br>airtel customer care number<br>atm<br>jio customer care contact number<br>jio customer care number<br>cng pump<br>Jio recharge<br>nbpdcl<br>airtel store<br>sbpdcl<br>uppcl bill<br>up power bill<br>airtel recharge<br>qr code scanner<br>the indian express<br>apspdcl<br>airtel recharge plan<br>electricity bill<br>jio recharge plan<br>jio recharge pack<br>jio plans for recharge<br>recharge plan of jio<br>reliance jio recharge plans<br>bsnl recharge plan<br>bsnl recharge pack<br>msedcl<br>jio fiber plan<br>dhbvn<br>payment<br>uppcl online<br>adani electricity bill download<br>life insurance corporation of india pay online<br>lic premium payment<br>lic policy online payment<br>tneb online payment<br>tamil nadu electricity board online payment<br>tamilnadu electricity bill online payment<br>jio fiber<br>tangedco<br>tneb online bill payment<br>life insurance corporation premium payment<br>bsnl customer care number<br>bsnl care number<br>bsnl helpline number<br>bijli bill<br>bsnl recharge<br>axis bank customer care<br>netflix subscription<br>uppcl bill pay</p>
+</blockquote>
+</div>
+<div> </div>
+<div class="overflow-x-auto w-full px-2 mb-6">Key stats:</div>
+<div>
+<table class="min-w-full border-collapse text-sm leading-[1.7] whitespace-normal" style="width: 100%; height: 350.812px;">
+<thead class="text-left">
+<tr style="height: 75.5625px;">
+<th class="text-text-100 border-b-0.5 border-border-300/60 py-2 pr-4 align-top font-bold" style="width: 19.9687%; height: 75.5625px;" scope="col"><strong>Qwen 3.5 27B</strong></th>
+<th class="text-text-100 border-b-0.5 border-border-300/60 py-2 pr-4 align-top font-bold" style="width: 40.2866%; height: 75.5625px;" scope="col"><strong>Jackrong (fine-tuned with Opus 4.6)</strong></th>
+<th class="text-text-100 border-b-0.5 border-border-300/60 py-2 pr-4 align-top font-bold" style="width: 39.6023%; height: 75.5625px;" scope="col"><strong>Unsloth</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 75.5625px;">
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 19.9687%; height: 75.5625px;"><strong>Thinking time</strong></td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 40.2866%; height: 75.5625px;"><span style="color: #2dc26b;">1 min 47 sec</span></td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 39.6023%; height: 75.5625px;"><span style="color: #e03e2d;">12 min 2 sec</span></td>
+</tr>
+<tr style="height: 75.5625px;">
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 19.9687%; height: 75.5625px;"><strong>Tokens used</strong></td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 40.2866%; height: 75.5625px;"><span style="color: #2dc26b;">1,436</span></td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 39.6023%; height: 75.5625px;"><span style="color: #e03e2d;">3,829</span></td>
+</tr>
+<tr style="height: 48.5625px;">
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 19.9687%; height: 48.5625px;"><strong>Speed</strong></td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 40.2866%; height: 48.5625px;">4.35 tok/sec</td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 39.6023%; height: 48.5625px;">4.88 tok/sec</td>
+</tr>
+<tr style="height: 75.5625px;">
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 19.9687%; height: 75.5625px;"><strong>Output</strong></td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 40.2866%; height: 75.5625px;"><span style="color: #2dc26b;">Fully processed</span></td>
+<td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top" style="width: 39.6023%; height: 75.5625px;"><span style="color: #e03e2d;">Truncated (hit 4096 max context limit)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The stock Unsloth variant thought for 12 minutes and 2 seconds before producing output — a painful turnaround for anything resembling interactive use, and a poor return on GPU/CPU time when you measure tasks-per-minute. The jackrong fine-tune trimmed that down to 1 minute 47 seconds: the same reasoning loop, but far more disciplined about when to stop deliberating.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Also, Unsloth's variant consumed 3,829 tokens and ran straight into the 4,096 context ceiling, truncating output midway. The fine-tune used only 1,436 tokens and completed its response fully within the same limit. In local inference where context is technically "free", this might seem academic - but on long-running or chained tasks, bloated context windows accumulate stale reasoning and degrade output quality over time. Leaner context is cleaner context.</p>
+</div>
+<div> </div>
+<div>Inference/output:</div>
+<div class="overflow-x-auto w-full px-2 mb-6">
+<ul>
+<li>Unsloth's Qwen 3.5 27B: <a href="https://drive.google.com/file/d/1O6PMo_QxPOYdifrXoi3G18bwlOSF0k38/view?usp=sharing" target="_blank" rel="noopener noreferrer">Link</a></li>
+<li>Jackrong Qwen 3.5 27B: <a href="https://drive.google.com/file/d/1zEcg4w8PUZMTKUh-Pv2hl-pRsUazUQDH/view?usp=sharing" target="_blank" rel="noopener noreferrer">Link</a></li>
+</ul>
+<p><strong>Disclaimer</strong>: These are two small, informal tests on two prompts. These are not conclusive. These are not benchmarks. But it is preliminary evidence that the fine-tuning did what it said on the tin: the model learned to stop earlier, not think more.</p>
 </div>
 <h2 id="mcetoc_1jlel4g3vdf">Mandatory reads</h2>
 <p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">If this post sent you down the same rabbit hole it sent me, these are worth your time:</p>
 <ul>
 <li class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong><a class="underline underline underline-offset-2 decoration-1 decoration-current/40 hover:decoration-current focus:decoration-current" href="https://github.com/R6410418/Jackrong-llm-finetuning-guide">Jackrong's LLM Fine-Tuning Guide</a>:</strong> The companion repo to the Qwen distillation model that started all of this. Includes a PDF guide and a <code class="bg-text-200/5 border border-0.5 border-border-300 text-danger-000 whitespace-pre-wrap rounded-[0.4rem] px-1 py-px text-[0.9rem]">.ipynb</code> notebook to get your hands dirty.</li>
 <li class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong style="font-size: inherit;"><a class="underline underline underline-offset-2 decoration-1 decoration-current/40 hover:decoration-current focus:decoration-current" href="https://github.com/distil-labs/distil-ai-slop-detector?tab=readme-ov-file#how-we-trained-ai-slop-detector">"How We Trained the AI Slop Detector"</a>:</strong><span style="font-size: inherit;"> The specific section of the README that walks through their fine-tuning process: dataset choices, teacher model setup, and how they got a 270M model to match a 120B one at 95% accuracy.</span></li>
+</ul>
+<h2 id="mcetoc_1jlh9qpv3fq">Optional Reads</h2>
+<p>I haven't gone through these resources myself (yet!). My <a href="https://github.com/HKUDS/nanobot" target="_blank" rel="noopener noreferrer">nanobot</a> (openclaw alternative) found these using <a href="https://clawhub.ai/linshengli/github-search" target="_blank" rel="noopener noreferrer">github-search</a> skill, and so take these with a grain of salt. These are more like bookmarks for myself, if and when i read these in future.</p>
+<ul>
+<li><a href="https://github.com/IIIIQIIII/MSJ-Factory" target="_blank" rel="noopener noreferrer">README.md of this project</a>: A Complete Guide to Fine-tuning Qwen2.5-Coder for Chinese Sentiment Analysis: I have not read this one yet, so I'm not sure how much understanding of Chinese language is needed. </li>
+<li><a href="https://github.com/AmirhosseinHonardoust/Sentiment-Analysis-BERT" target="_blank" rel="noopener noreferrer">AmirhosseinHonardoust/Sentiment-Analysis-BERT</a>: End-to-end sentiment analysis of tweets using BERT. Includes preprocessing, training, and evaluation with classification reports, confusion matrices, ROC curves, and word clouds. Demonstrates fine-tuning of transformer models for text classification with modular, reproducible code.</li>
+<li>indranil143/Mental-Health-Sentiment-Analysis-using-Deep-Learning: A deep learning project using fine-tuned RoBERTa to classify mental health sentiments from text, aiming to provide early insights and support. ⚕️❤️</li>
 </ul>
 <p>If you've been down this rabbit hole longer than me, <a href="https://api.whatsapp.com/send?phone=919769110914&amp;text=Hi" target="_blank" rel="noopener noreferrer">do message me</a>. I'd genuinely love to know what you're reading.</p>
 <p> </p>
