@@ -3,12 +3,86 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2026-04-07T00:48:56+05:30</updated>
+    <updated>2026-04-15T15:12:10+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
     <id>https://amberja.in</id>
 
+    <entry>
+        <title>My experiments with Remotion + Codex to create videos</title>
+        <author>
+            <name>Written by Amber Jain</name>
+        </author>
+        <link href="https://amberja.in/my-experiments-with-remotion-codex-to-create-videos.html"/>
+        <id>https://amberja.in/my-experiments-with-remotion-codex-to-create-videos.html</id>
+
+        <updated>2026-04-13T05:18:00+05:30</updated>
+            <summary type="html">
+                <![CDATA[
+                    Disclaimer: This is a draft blogpost. I am dumping links, quotes and&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p class="msg msg--warning">Disclaimer: This is a draft blogpost. I am dumping links, quotes and thoughts here until I'm actually ready to finalize the blogpost. </p>
+<div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1jlrhnmj5o7">Installation</a></li>
+<li><a href="#mcetoc_1jlrhnmj5o8">Project setup</a></li>
+<li><a href="#mcetoc_1jlrhvealos">Create Video</a></li>
+<li><a href="#mcetoc_1jlrhvealot">Render a video</a></li>
+</ul>
+</div>
+<h2 id="mcetoc_1jlrhnmj5o7">Installation</h2>
+<p>Install npm and Codex</p>
+<h2 id="mcetoc_1jlrhnmj5o8">Project setup</h2>
+<p>Create a folder for video, cd in new folder and run:</p>
+<p><code>npx create-video@latest --blank ; npm i ; npm run dev</code></p>
+<p>(Choose defaults for all question</p>
+<p>Now live video preview will be running on <a href="http://localhost:3000/MyComp">http://localhost:3000/MyComp</a> </p>
+<h2 id="mcetoc_1jlrhvealos">Create Video</h2>
+<p>Open new tab in Terminal and cd to the project folder e.g.</p>
+<p><code>cd ~/Documents/my-video/</code></p>
+<p>Run codex cli in this folder:</p>
+<p><code>codex</code></p>
+<p>Run these prompts and preview video after each prompt:</p>
+<blockquote>
+<p>Use Remotion best practices skill. Create a 30-second video at 30fps. Start with a hook: white text on black background, Where do you even buy music anymore?' — fade it in, hold for 2 seconds, fade out.</p>
+</blockquote>
+<p>Preview video at <a href="http://localhost:3000/MyComp">http://localhost:3000/MyComp</a> </p>
+<blockquote>
+<p>Next section: show our logo from public/discdepot-logo.png. Use a warm orange gradient background. Add a subtle tagline below:</p>
+<p>"Music, delivered!"</p>
+</blockquote>
+<p>Preview video at <a href="http://localhost:3000/MyComp">http://localhost:3000/MyComp</a> </p>
+<blockquote>
+<p>In the next section, add a counter that counts up to 12,000 with a plus sign. Label it 'Happy customers. Keep the same background style!</p>
+</blockquote>
+<p>Preview video at <a href="http://localhost:3000/MyComp">http://localhost:3000/MyComp</a> </p>
+<blockquote>
+<p>In the next section: Create 5 CD album covers as abstract gradient cards. Different color combinations. Animate them sliding in one by one, arranged in a row.</p>
+<p>Add artist names and song titles.</p>
+</blockquote>
+<p>Preview video at <a href="http://localhost:3000/MyComp">http://localhost:3000/MyComp</a> </p>
+<blockquote>
+<p>Let's add a final section:</p>
+<p>End with a call to action: 'Find your sound.' and the URL 'discdepot.com'.<br>Fade to black</p>
+</blockquote>
+<p>Preview video at <a href="http://localhost:3000/MyComp">http://localhost:3000/MyComp</a> </p>
+<h2 id="mcetoc_1jlrhvealot">Render a video</h2>
+<p>To render a video, run:<br><code>npx remotion render</code></p>
+<p>Links to get you started:</p>
+<ul>
+<li>remotion.dev/docs</li>
+<li>remotion.dev/prompts</li>
+</ul>
+<p>Source for this blogpost: <a href="https://www.youtube.com/watch?v=5NRAOnKc3c8">https://www.youtube.com/watch?v=5NRAOnKc3c8</a></p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Fine tuning my first open LLM model</title>
         <author>
@@ -28,7 +102,7 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <p class="msg msg--warning">Disclaimer: This is a draft blogpost. I am dumping links, quotes and thoughts here until I'm  actually ready to finalize the blogpost. </p>
+                <p class="msg msg--warning">Disclaimer: This is a draft blogpost. I am dumping links, quotes and thoughts here until I'm actually ready to finalize the blogpost. </p>
 <div class="post__toc">
 <h3>Table of Contents</h3>
 <ul>
@@ -104,6 +178,7 @@
 <li>Minimum 100 rows for fine tuning, but possibly upto 1000 rows if huggingface or Codex can give training data in ChatML or ShareGPT format needed for Instruct models.</li>
 </ul>
 </li>
+<li>Import fine tune model in LM studio using this: <a href="https://lmstudio.ai/docs/app/advanced/import-model#lm-studios-expected-models-directory-structure">https://lmstudio.ai/docs/app/advanced/import-model#lm-studios-expected-models-directory-structure</a> </li>
 </ul>
             ]]>
         </content>
@@ -782,48 +857,6 @@ PROMPT=&#39;%1~ %# &#39;
 </ol>
 <h2 id="final-thoughts">Final Thoughts</h2>
 <p>This setup transforms your Android phone into a genuine remote development terminal. The combination of Tailscale’s reliable connectivity, tmux’s session persistence, and thoughtful configuration tweaks creates a surprisingly smooth mobile coding experience for me.</p><p>Whether you’re debugging an issue from a coffee shop, reviewing Claude Code output during your commute, or just checking on a long-running process, having remote access to your Claude Code opens up new possibilities for staying productive on the move.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Summarization in Claude Code to reduce Prompt Injection risk</title>
-        <author>
-            <name>Written by Amber Jain</name>
-        </author>
-        <link href="https://amberja.in/summarization-in-claude-code-to-reduce-prompt-injection-risk.html"/>
-        <id>https://amberja.in/summarization-in-claude-code-to-reduce-prompt-injection-risk.html</id>
-            <category term="Tech &amp; Programming"/>
-            <category term="Found in the Wild"/>
-            <category term="AI / LLMs"/>
-
-        <updated>2026-01-20T17:32:30+05:30</updated>
-            <summary type="html">
-                <![CDATA[
-                    Boris Cherny, creator of Claude Code posted on X: Summarization is one&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>Boris Cherny, creator of Claude Code <a href="https://x.com/bcherny/status/1989025306980860226" target="_blank" rel="noopener noreferrer">posted on X</a>:</p>
-<div class="css-175oi2r">
-<div class="css-175oi2r r-1s2bzr4">
-<blockquote>
-<div id="id__ljlk1ojfzwq" class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-1inkyih r-16dba41 r-bnwqim r-135wba7" dir="auto" lang="en" data-testid="tweetText"><span class="css-1jxf684 r-bcqeeo r-1ttztb7 r-qvutc0 r-poiln3">Summarization is one thing we do to reduce prompt injection risk. Are you running into specific issues with it?</span></div>
-</blockquote>
-</div>
-</div>
-<div class="css-175oi2r"> </div>
-<div>Interesting!</div>
-<div class="css-175oi2r"> </div>
-<div class="css-175oi2r r-12kyg2d">
-<div class="css-175oi2r r-k4xj1c r-18u37iz r-1wtj0ep">
-<div class="css-175oi2r r-1wbh5a2 r-1a11zyx">
-<div class="css-175oi2r r-1d09ksm r-18u37iz r-1wbh5a2 r-1471scf">
-<div class="css-146c3p1 r-bcqeeo r-1ttztb7 r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" dir="ltr"> </div>
-</div>
-</div>
-</div>
-</div>
             ]]>
         </content>
     </entry>
