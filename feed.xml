@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2026-04-20T13:57:08+05:30</updated>
+    <updated>2026-04-20T14:04:13+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -95,6 +95,7 @@
         </author>
         <link href="https://amberja.in/my-experiments-with-remotion-codex-to-create-videos.html"/>
         <id>https://amberja.in/my-experiments-with-remotion-codex-to-create-videos.html</id>
+        <media:content url="https://amberja.in/media/posts/98/remotion.png" medium="image" />
             <category term="Tech &amp; Programming"/>
             <category term="Blogposts"/>
             <category term="AI / LLMs"/>
@@ -102,12 +103,20 @@
         <updated>2026-04-13T05:18:00+05:30</updated>
             <summary type="html">
                 <![CDATA[
-                    Disclaimer: This is a draft blogpost. I am dumping links, quotes and&hellip;
+                        <img src="https://amberja.in/media/posts/98/remotion.png" alt="" />
+                    <p class="p1">If you’ve ever wanted to create videos using AI, try Remotion. It’s a powerful tool that lets you vibe code React to design, animate, and render videos, opening up a completely different way of thinking about content creation.</p>
+
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p class="msg msg--warning">Disclaimer: This is a draft blogpost. I am dumping links, quotes and thoughts here until I'm actually ready to finalize the blogpost. </p>
+                    <p><img src="https://amberja.in/media/posts/98/remotion.png" class="type:primaryImage" alt="" /></p>
+                <p class="p1">If you’ve ever wanted to create videos using AI, try Remotion. It’s a powerful tool that lets you vibe code React to design, animate, and render videos, opening up a completely different way of thinking about content creation.</p>
+
+<p class="p1">Unlike traditional video editing tools that rely on timelines and manual keyframes, Remotion treats videos as code. This means you can vibe code to build reusable components, generate dynamic content (like personalized videos or data-driven animations), and iterate much faster.</p>
+<p class="p1">In this post, we’ll walk through a simple, practical workflow to get started with Remotion on a Mac. Including installation, setting up a project, generating a video using prompts, previewing it locally, and finally rendering it into a shareable file.</p>
+<p class="p1">This is not a polished tutorial - think of it as a working notebook. It captures the exact steps, commands, and prompts used while exploring Remotion, so you can follow along, experiment, and adapt it to your own use case.</p>
+<p class="msg msg--warning">Disclaimer: This is a draft blogpost. I am dumping links, quotes and thoughts here until I'm actually ready to finalize the blogpost. </p>
 <div class="post__toc">
 <h3>Table of Contents</h3>
 <ul>
