@@ -3,14 +3,14 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2026-04-20T13:24:22+05:30</updated>
+    <updated>2026-04-20T13:44:09+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
     <id>https://amberja.in</id>
 
     <entry>
-        <title>Skills I use with Nanobot (openclaw alternative that I&#x27;m using)</title>
+        <title>Skills I use with Nanobot (Openclaw alternative that I&#x27;m using)</title>
         <author>
             <name>Written by Amber Jain</name>
         </author>
@@ -23,14 +23,24 @@
         <updated>2026-04-20T13:23:38+05:30</updated>
             <summary type="html">
                 <![CDATA[
-                    This is an ever growing list of skills that I use with&hellip;
+                    I'm using Nanobot (alternative to OpenClaw) which is installed on an old&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>This is an ever growing list of skills that I use with Nanobot, I will <em>try to</em> update this list periodically:</p>
+                <p>I'm using <a href="https://github.com/HKUDS/nanobot" target="_blank" rel="noopener noreferrer">Nanobot</a> (alternative to OpenClaw) which is installed on an old Intel Macbook Pro from 2015. If you want to set it up, I have <a href="https://amberja.in/installing-nanobot-llm-whatsapp-debian-mac.html" target="_blank" rel="noopener noreferrer">detailed installation instructions for nanobot in another blogpost</a>.</p>
+<p>This blogpost is an ever growing list of skills that I use with Nanobot, I will <em>try to</em> update this list periodically.</p>
+<p class="msg msg--highlight ">Note: None of these skills require a paid API key or any subscription (except $20 Codex subscription that is used with Nanobot). This is intentional as I wanted to keep the costs as low as possible and be able run this Nanobot instance indefinitely.</p>
 <ul>
-<li> </li>
+<li><a href="https://clawhub.ai/steipete/blogwatcher">https://clawhub.ai/steipete/blogwatcher</a> - Use with nanobot's cron to fetch RSS feeds periodically.</li>
+<li><a href="https://clawhub.ai/microck/catbox-upload">https://clawhub.ai/microck/catbox-upload</a> - Whenever nanobot generates any file (e.g. image or markdown) and can't upload it to Whatsapp, you can ask it to upload it here and share the link. No auth token needed.</li>
+<li><a href="https://clawhub.ai/linshengli/github-search">https://clawhub.ai/linshengli/github-search</a> - Search repos on Github (e.g. "Search github for projects that fine tune a LLM model on Mac"). No auth token needed.</li>
+<li><a href="https://clawhub.ai/gchapim/hackernews">https://clawhub.ai/gchapim/hackernews</a> - Use with nanobot's cron to fetch top posts from hackernews periodically. No auth token needed.</li>
+<li><a href="https://clawhub.ai/kingmadellc/product-strategy">https://clawhub.ai/kingmadellc/product-strategy</a> - Useful for product managers to analyze competition, get TAM/etc estimates, pricing strategy, positioning etc.</li>
+<li><a href="https://clawhub.ai/buksan1950/reddit-readonly">https://clawhub.ai/buksan1950/reddit-readonly</a> - Use with nanobot’s cron to fetch top posts from subreddit(s) periodically. No auth token needed.</li>
+<li><a href="https://clawhub.ai/axelhu/superpowers-brainstorming">https://clawhub.ai/axelhu/superpowers-brainstorming</a> - <a href="https://github.com/obra/superpowers" target="_blank" rel="noopener noreferrer">obra/superpowers</a> stolen/adapted as a nanobot skill. I primarily use it to brainstorm on vibe coding ideas (i.e. I give it a one liner idea, and AI asks me questions repeatedly to refine the idea by covering corner cases as well as vague or conflicting requirements).</li>
+<li><a href="https://clawhub.ai/hjw21century/x-tweet-fetcher">https://clawhub.ai/hjw21century/x-tweet-fetcher</a>: Fetch tweets from X. At some point, I want want to find (or vibe code) an alternative that can also fetch top replies to tweets, but this is what I use for now. No auth token needed.</li>
+<li><a href="https://clawhub.ai/mayank8290/youtube-factory">https://clawhub.ai/mayank8290/youtube-factory</a> - Make youtube videos. Only a Pexels API key is required which is free. The videos are not very good, but as a Proof of Concept, it interesting. I think the skill asks AI to write a script for the video, and then it downloads stock free footage from Pexels related to keywords in the script and uses ffmpeg to make the video (and edge tts for the audio narration of script).</li>
 </ul>
             ]]>
         </content>
@@ -496,6 +506,7 @@
 <li><a href="#mcetoc_1jk1c3c7u48">How to run 2 commands in background?</a></li>
 <li><a href="#mcetoc_1jjvvv72p19">Setting up Clawhub</a></li>
 <li><a href="#mcetoc_1jmktq96m2">Install Homebrew dependencies</a></li>
+<li><a href="#mcetoc_1jmku4ogvh">Useful skills</a></li>
 <li><a href="#mcetoc_1jk1dd1th8c">Templates for: AGENTS.md / HEARTBEAT.md / SOUL.md / TOOLS.md / USER.md</a></li>
 <li><a href="#mcetoc_1jjvvv72p1a">Adding web browsing capability</a></li>
 <li><a href="#mcetoc_1jk1cmpel7p">Expose agents as POST API (+ callback or polling)</a></li>
@@ -645,8 +656,8 @@ nanobot gateway</pre>
 <li>macdown-3000</li>
 <li>codex</li>
 </ul>
-<h2>Useful skills</h2>
-<p>Please visit my other blogpost for a list of useful skills.</p>
+<h2 id="mcetoc_1jmku4ogvh">Useful skills</h2>
+<p>Please <a href="https://amberja.in/skills-i-use-with-nanobot-openclaw-alternative-that-im-using.html" target="_blank" rel="noopener noreferrer">visit my other blogpost for a list of skills that I'm using reliably</a>.</p>
 <h2 id="mcetoc_1jk1dd1th8c">Templates for: AGENTS.md / HEARTBEAT.md / SOUL.md / TOOLS.md / USER.md</h2>
 <p>TBD</p>
 <h2 id="mcetoc_1jjvvv72p1a">Adding web browsing capability</h2>
