@@ -3,7 +3,7 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2026-04-20T13:44:09+05:30</updated>
+    <updated>2026-04-20T13:57:08+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
@@ -23,25 +23,68 @@
         <updated>2026-04-20T13:23:38+05:30</updated>
             <summary type="html">
                 <![CDATA[
-                    I'm using Nanobot (alternative to OpenClaw) which is installed on an old&hellip;
+                    <p>I'm using <a href="https://github.com/HKUDS/nanobot" target="_blank" rel="noopener noreferrer">Nanobot</a> (alternative to OpenClaw) which is installed on an old Intel Macbook Pro from 2015. If you want to set it up, I have <a href="https://amberja.in/installing-nanobot-llm-whatsapp-debian-mac.html" target="_blank" rel="noopener noreferrer">detailed installation instructions for nanobot in another blogpost</a>.</p>
+<p>This blogpost is an ever growing list of skills that I use with Nanobot, I will <em>try to</em> update this list periodically.</p>
+
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                 <p>I'm using <a href="https://github.com/HKUDS/nanobot" target="_blank" rel="noopener noreferrer">Nanobot</a> (alternative to OpenClaw) which is installed on an old Intel Macbook Pro from 2015. If you want to set it up, I have <a href="https://amberja.in/installing-nanobot-llm-whatsapp-debian-mac.html" target="_blank" rel="noopener noreferrer">detailed installation instructions for nanobot in another blogpost</a>.</p>
 <p>This blogpost is an ever growing list of skills that I use with Nanobot, I will <em>try to</em> update this list periodically.</p>
+
+<div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1jmkvvq5b35">Blogwatcher - RSS Feed Fetcher</a></li>
+<li><a href="#mcetoc_1jmkvvq5b36">Catbox - Temporary File uploader</a></li>
+<li><a href="#mcetoc_1jmkvvq5b37">Github Search - Search repos on Github</a></li>
+<li><a href="#mcetoc_1jmkvvq5b38">Hackernews - Fetch top posts from hackernews</a></li>
+<li><a href="#mcetoc_1jmkvvq5b39">Product Strategy - For PMs to analyze competition, TAM, positioning, pricing strategy etc</a></li>
+<li><a href="#mcetoc_1jmkvvq5c3a">Reddit readonly - Fetch top posts from subreddit(s)</a></li>
+<li><a href="#mcetoc_1jmkvvq5c3b">Superpowers Brainstorming - AI asks questions on ideas to refine product spec</a></li>
+<li><a href="#mcetoc_1jmkvvq5c3c">X Tweet Fetcher - Fetch tweets from X</a></li>
+<li><a href="#mcetoc_1jmkvvq5c3d">Youtube Factory - Make youtube videos</a></li>
+</ul>
+</div>
 <p class="msg msg--highlight ">Note: None of these skills require a paid API key or any subscription (except $20 Codex subscription that is used with Nanobot). This is intentional as I wanted to keep the costs as low as possible and be able run this Nanobot instance indefinitely.</p>
+<h2 id="mcetoc_1jmkvvq5b35">Blogwatcher - RSS Feed Fetcher</h2>
 <ul>
 <li><a href="https://clawhub.ai/steipete/blogwatcher">https://clawhub.ai/steipete/blogwatcher</a> - Use with nanobot's cron to fetch RSS feeds periodically.</li>
-<li><a href="https://clawhub.ai/microck/catbox-upload">https://clawhub.ai/microck/catbox-upload</a> - Whenever nanobot generates any file (e.g. image or markdown) and can't upload it to Whatsapp, you can ask it to upload it here and share the link. No auth token needed.</li>
-<li><a href="https://clawhub.ai/linshengli/github-search">https://clawhub.ai/linshengli/github-search</a> - Search repos on Github (e.g. "Search github for projects that fine tune a LLM model on Mac"). No auth token needed.</li>
-<li><a href="https://clawhub.ai/gchapim/hackernews">https://clawhub.ai/gchapim/hackernews</a> - Use with nanobot's cron to fetch top posts from hackernews periodically. No auth token needed.</li>
-<li><a href="https://clawhub.ai/kingmadellc/product-strategy">https://clawhub.ai/kingmadellc/product-strategy</a> - Useful for product managers to analyze competition, get TAM/etc estimates, pricing strategy, positioning etc.</li>
-<li><a href="https://clawhub.ai/buksan1950/reddit-readonly">https://clawhub.ai/buksan1950/reddit-readonly</a> - Use with nanobot’s cron to fetch top posts from subreddit(s) periodically. No auth token needed.</li>
-<li><a href="https://clawhub.ai/axelhu/superpowers-brainstorming">https://clawhub.ai/axelhu/superpowers-brainstorming</a> - <a href="https://github.com/obra/superpowers" target="_blank" rel="noopener noreferrer">obra/superpowers</a> stolen/adapted as a nanobot skill. I primarily use it to brainstorm on vibe coding ideas (i.e. I give it a one liner idea, and AI asks me questions repeatedly to refine the idea by covering corner cases as well as vague or conflicting requirements).</li>
-<li><a href="https://clawhub.ai/hjw21century/x-tweet-fetcher">https://clawhub.ai/hjw21century/x-tweet-fetcher</a>: Fetch tweets from X. At some point, I want want to find (or vibe code) an alternative that can also fetch top replies to tweets, but this is what I use for now. No auth token needed.</li>
-<li><a href="https://clawhub.ai/mayank8290/youtube-factory">https://clawhub.ai/mayank8290/youtube-factory</a> - Make youtube videos. Only a Pexels API key is required which is free. The videos are not very good, but as a Proof of Concept, it interesting. I think the skill asks AI to write a script for the video, and then it downloads stock free footage from Pexels related to keywords in the script and uses ffmpeg to make the video (and edge tts for the audio narration of script).</li>
 </ul>
+<h2 id="mcetoc_1jmkvvq5b36">Catbox - Temporary File uploader</h2>
+<ul>
+<li><a href="https://clawhub.ai/microck/catbox-upload">https://clawhub.ai/microck/catbox-upload</a> - Whenever nanobot generates any file (e.g. image or markdown) and can't upload it to Whatsapp, you can ask it to upload it here and share the link. No auth token needed.</li>
+</ul>
+<h2 id="mcetoc_1jmkvvq5b37">Github Search - Search repos on Github</h2>
+<ul>
+<li><a href="https://clawhub.ai/linshengli/github-search">https://clawhub.ai/linshengli/github-search</a> - Search repos on Github (e.g. "Search github for projects that fine tune a LLM model on Mac"). No auth token needed.</li>
+</ul>
+<h2 id="mcetoc_1jmkvvq5b38">Hackernews - Fetch top posts from hackernews</h2>
+<ul>
+<li><a href="https://clawhub.ai/gchapim/hackernews">https://clawhub.ai/gchapim/hackernews</a> - Use with nanobot's cron to fetch top posts from hackernews periodically. No auth token needed.</li>
+</ul>
+<h2 id="mcetoc_1jmkvvq5b39">Product Strategy - For PMs to analyze competition, TAM, positioning, pricing strategy etc</h2>
+<ul>
+<li><a href="https://clawhub.ai/kingmadellc/product-strategy">https://clawhub.ai/kingmadellc/product-strategy</a> - Useful for product managers to analyze competition, get TAM/etc estimates, pricing strategy, positioning etc.</li>
+</ul>
+<h2 id="mcetoc_1jmkvvq5c3a">Reddit readonly - Fetch top posts from subreddit(s)</h2>
+<ul>
+<li><a href="https://clawhub.ai/buksan1950/reddit-readonly">https://clawhub.ai/buksan1950/reddit-readonly</a> - Use with nanobot’s cron to fetch top posts from subreddit(s) periodically. No auth token needed.</li>
+</ul>
+<h2 id="mcetoc_1jmkvvq5c3b">Superpowers Brainstorming - AI asks questions on ideas to refine product spec</h2>
+<ul>
+<li><a href="https://clawhub.ai/axelhu/superpowers-brainstorming">https://clawhub.ai/axelhu/superpowers-brainstorming</a> - <a href="https://github.com/obra/superpowers" target="_blank" rel="noopener noreferrer">obra/superpowers</a> stolen/adapted as a nanobot skill. I primarily use it to brainstorm on vibe coding ideas (i.e. I give it a one liner idea, and AI asks me questions repeatedly to refine the idea by covering corner cases as well as vague or conflicting requirements).</li>
+</ul>
+<h2 id="mcetoc_1jmkvvq5c3c">X Tweet Fetcher - Fetch tweets from X</h2>
+<ul>
+<li><a href="https://clawhub.ai/hjw21century/x-tweet-fetcher">https://clawhub.ai/hjw21century/x-tweet-fetcher</a>: Fetch tweets from X. At some point, I want want to find (or vibe code) an alternative that can also fetch top replies to tweets, but this is what I use for now. No auth token needed.</li>
+</ul>
+<h2 id="mcetoc_1jmkvvq5c3d">Youtube Factory - Make youtube videos</h2>
+<ul>
+<li><a href="https://clawhub.ai/mayank8290/youtube-factory">https://clawhub.ai/mayank8290/youtube-factory</a> - Make youtube videos. Only a Pexels API key is required which is free. The videos are not very good, but as a Proof of Concept, it interesting. I think the skill asks AI to write a script for the video, and then it downloads stock free footage from Pexels related to keywords in the script and uses ffmpeg to make the video (and edge tts for the audio narration of script). Works mainly for motivational videos like "Importance of hardwork" or "How to be productive".</li>
+</ul>
+<p> </p>
             ]]>
         </content>
     </entry>
