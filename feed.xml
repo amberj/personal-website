@@ -3,12 +3,32 @@
     <title>Amber&#x27;s Journal</title>
     <link href="https://amberja.in/feed.xml" rel="self" />
     <link href="https://amberja.in" />
-    <updated>2026-04-23T17:27:28+05:30</updated>
+    <updated>2026-04-23T17:50:45+05:30</updated>
     <author>
         <name>Written by Amber Jain</name>
     </author>
     <id>https://amberja.in</id>
 
+    <entry>
+        <title>test</title>
+        <author>
+            <name>Written by Amber Jain</name>
+        </author>
+        <link href="https://amberja.in/test.html"/>
+        <id>https://amberja.in/test.html</id>
+
+        <updated>2026-04-23T17:50:45+05:30</updated>
+            <summary type="html">
+                <![CDATA[
+                    test
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>test</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Generating Images from the CLI Using ChatGPT&#x27;s $20 Plan (Without Getting Blocked by Cloudflare)</title>
         <author>
@@ -1007,38 +1027,6 @@ nanobot gateway</pre>
 <p>Your computer, your call.</p>
 </blockquote>
 <p>Source: <a href="https://www.reddit.com/r/macbookair/comments/1m25g35/comment/n3m8b5l/">https://www.reddit.com/r/macbookair/comments/1m25g35/comment/n3m8b5l/</a> </p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>How to access website deployed on Coder on your local laptop?</title>
-        <author>
-            <name>Written by Amber Jain</name>
-        </author>
-        <link href="https://amberja.in/how-to-access-website-deployed-on-coder-on-your-local-laptop.html"/>
-        <id>https://amberja.in/how-to-access-website-deployed-on-coder-on-your-local-laptop.html</id>
-            <category term="Tech &amp; Programming"/>
-            <category term="Blogposts"/>
-            <category term="AI / LLMs"/>
-
-        <updated>2026-02-20T00:00:16+05:30</updated>
-            <summary type="html">
-                <![CDATA[
-                    Install Coder Desktop. Approve any system permissions, login, and enable "Coder Connect"&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <ol>
-<li>Install <a href="https://coder.com/docs/user-guides/desktop#quick-start" target="_blank" rel="noopener noreferrer">Coder Desktop</a>. Approve any system permissions, login, and enable "Coder Connect" in icon in Mac's top menu bar.</li>
-<li>Open &lt;WORKSPACE_NAME&gt;.coder:&lt;PORT&gt;.
-<ul>
-<li>Suppose if your web app is getting served at port <code>8000</code>, workspace name is <code>Amber</code>, then you can access the remote webserver at URL <code>Amber.coder:8000</code>.</li>
-<li>If you are using Django, add <code>Amber.coder</code> to <code>ALLOWED_HOSTS</code>.</li>
-</ul>
-</li>
-</ol>
-<p>That's it!</p>
             ]]>
         </content>
     </entry>
