@@ -10,6 +10,24 @@
     },
     "items": [
         {
+            "id": "https://amberja.in/your-agentsmd-is-either-a-model-upgrade-or-a-liability.html",
+            "url": "https://amberja.in/your-agentsmd-is-either-a-model-upgrade-or-a-liability.html",
+            "title": "Your AGENTS.md Is Either a Model Upgrade or a Liability",
+            "summary": "A good AGENTS.md is a model upgrade. A bad one is worse&hellip;",
+            "content_html": "<blockquote>\n<p>A good AGENTS.md is a model upgrade. A bad one is worse than no docs at all.<br><br>We pulled dozens of AGENTS.md files from across our monorepo and measured their effect on code generation. <strong>The best ones gave our coding agent a quality jump equivalent to upgrading from Haiku to Opus.</strong> The worst ones made the output worse than having no AGENTS.md at all.</p>\n</blockquote>\n<p>Full article: <a href=\"https://x.com/augmentcode/status/2047164534310494709\">https://x.com/augmentcode/status/2047164534310494709</a></p>\n<p> </p>",
+            "author": {
+                "name": "Written by Amber Jain"
+            },
+            "tags": [
+                   "Tech &amp; Programming",
+                   "Found in the Wild",
+                   "Blogposts",
+                   "AI / LLMs"
+            ],
+            "date_published": "2026-04-30T00:31:30+05:30",
+            "date_modified": "2026-04-30T00:31:30+05:30"
+        },
+        {
             "id": "https://amberja.in/generating-images-from-the-cli-using-chatgpts-20-plan-without-getting-blocked-by-cloudflare.html",
             "url": "https://amberja.in/generating-images-from-the-cli-using-chatgpts-20-plan-without-getting-blocked-by-cloudflare.html",
             "title": "Generating Images from the CLI Using ChatGPT&#x27;s $20 Plan (Without Getting Blocked by Cloudflare)",
@@ -165,23 +183,6 @@
             ],
             "date_published": "2026-03-16T14:49:21+05:30",
             "date_modified": "2026-03-16T14:49:21+05:30"
-        },
-        {
-            "id": "https://amberja.in/how-to-access-website-deployed-on-coder-on-your-local-laptop.html",
-            "url": "https://amberja.in/how-to-access-website-deployed-on-coder-on-your-local-laptop.html",
-            "title": "How to access website deployed on Coder on your local laptop?",
-            "summary": "Install Coder Desktop. Approve any system permissions, login, and enable \"Coder Connect\"&hellip;",
-            "content_html": "<ol>\n<li>Install <a href=\"https://coder.com/docs/user-guides/desktop#quick-start\" target=\"_blank\" rel=\"noopener noreferrer\">Coder Desktop</a>. Approve any system permissions, login, and enable \"Coder Connect\" in icon in Mac's top menu bar.</li>\n<li>Open &lt;WORKSPACE_NAME&gt;.coder:&lt;PORT&gt;.\n<ul>\n<li>Suppose if your web app is getting served at port <code>8000</code>, workspace name is <code>Amber</code>, then you can access the remote webserver at URL <code>Amber.coder:8000</code>.</li>\n<li>If you are using Django, add <code>Amber.coder</code> to <code>ALLOWED_HOSTS</code>.</li>\n</ul>\n</li>\n</ol>\n<p>That's it!</p>",
-            "author": {
-                "name": "Written by Amber Jain"
-            },
-            "tags": [
-                   "Tech &amp; Programming",
-                   "Blogposts",
-                   "AI / LLMs"
-            ],
-            "date_published": "2026-02-20T00:00:16+05:30",
-            "date_modified": "2026-03-16T18:28:06+05:30"
         }
     ]
 }
